@@ -24,6 +24,7 @@ from frag.evaluation.qagen import (  # noqa: E402
     question_gold_overlap,
     EvalQuestion,
 )
+from frag.ingest.normalize import lexical_tokens  # noqa: E402
 
 
 class FakeRuntime:
@@ -77,6 +78,28 @@ def test_overlap_is_high_when_question_quotes_the_chunk():
     unrelated = "Yemekhanede bugün ne var?"
     assert question_gold_overlap(quoting, chunk) > question_gold_overlap(unrelated, chunk)
     assert question_gold_overlap(unrelated, chunk) < 0.15
+
+
+def test_overlap_is_containment_not_jaccard():
+    """A short question fully inside a long chunk must score 1.0.
+
+    Under Jaccard the same pair scores near zero purely because the chunk is
+    long, which is what made the first measurement of the eval set look like
+    nothing was happening. The distinction is the point of the metric, so it is
+    pinned here rather than left to the docstring.
+    """
+    question = "Takdirde askıya alınır?"          # every token occurs below
+    long_chunk = (
+        "Öğrencinin kaydı süresi içinde yenilenmediği takdirde askıya alınır. "
+        + "Bu durum ilgili birime yazılı olarak bildirilir ve dosyasına işlenir. " * 8
+    )
+    assert question_gold_overlap(question, long_chunk) == pytest.approx(1.0)
+
+    # The same pair under Jaccard, which the chunk's length drags towards zero.
+    q = set(lexical_tokens(question))
+    g = set(lexical_tokens(long_chunk))
+    jaccard = len(q & g) / len(q | g)
+    assert jaccard < 0.3
 
 
 def test_overlap_is_zero_for_empty_input():

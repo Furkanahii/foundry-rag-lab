@@ -9,6 +9,7 @@ Bu klasör, koddaki her önemli kararın *neden* öyle olduğunu açıklar. Kod
 | [02 — Chunking](02-chunking.md) | Dört strateji, örtüşme garantisi, yüzdelik eşik, Türkçe cümle bölme | `ingest/chunkers.py`, `ingest/normalize.py` |
 | [03 — BM25 ve hibrit](03-bm25-ve-hibrit.md) | IDF'nin log-olasılık türevi, doygunluk, RRF, Borda/Arrow bağlantısı, MMR | `index/store.py`, `index/fusion.py` |
 | [06 — Değerlendirmenin istatistiği](06-istatistik-degerlendirme.md) | nDCG'nin log indirimi, bootstrap, eşleştirilmiş permütasyon, Holm, güç, ECE | `evaluation/` |
+| [07 — Sunum anlatımı](07-sunum-anlatimi.md) | Projeyi sözlü anlatma metni, demo koreografisi, beklenen sorular | — |
 
 ---
 

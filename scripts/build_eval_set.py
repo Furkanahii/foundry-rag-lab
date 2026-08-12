@@ -25,7 +25,9 @@ from frag.evaluation.qagen import (  # noqa: E402
     build_unanswerable,
     eval_set_stats,
     generate_questions,
+    load_eval_set,
     paraphrase_questions,
+    question_gold_overlap,
     save_eval_set,
 )
 from frag.evaluation.stats import required_sample_size  # noqa: E402
@@ -46,6 +48,9 @@ def main() -> int:
     parser.add_argument("--out", default=DEFAULT_OUT)
     parser.add_argument("--model", default=None,
                         help="override the chat model used for generation")
+    parser.add_argument("--paraphrase-only", action="store_true",
+                        help="keep the existing generated questions and rebuild "
+                             "only their paraphrases")
     args = parser.parse_args()
 
     logging.basicConfig(level=logging.WARNING, format="%(levelname)s: %(message)s")
@@ -60,12 +65,35 @@ def main() -> int:
     print(f"index: {store.count_chunks()} chunks\n")
 
     started = time.perf_counter()
-    print(f"Generating {args.n} answerable questions...")
-    questions = generate_questions(runtime, store, n_questions=args.n)
 
-    if args.paraphrase and questions:
-        print(f"\nParaphrasing {len(questions)} questions...")
+    if args.paraphrase_only:
+        # Generation is the expensive half (~55 minutes for 60 questions on
+        # qwen2.5-7b) and it is not what usually needs fixing - the paraphrase
+        # prompt is. Reusing the saved questions keeps the gold labels and the
+        # sampling seed untouched, so the two runs remain the same experiment.
+        existing = load_eval_set(args.out)
+        questions = [q for q in existing if q.variant == "generated"]
+        if not questions:
+            print(f"No generated questions found in {args.out}")
+            return 1
+        print(f"Reusing {len(questions)} generated questions from {args.out}")
+        # Recompute overlap on the reused items: a set written by an older
+        # build carries whatever definition was current then, and comparing two
+        # variants scored under two different formulas is exactly the kind of
+        # silent mismatch this harness exists to prevent.
+        for q in questions:
+            q.meta["gold_overlap"] = round(
+                question_gold_overlap(q.question, q.gold_answer), 4
+            )
+        print(f"Paraphrasing {len(questions)} questions...")
         questions.extend(paraphrase_questions(runtime, questions))
+    else:
+        print(f"Generating {args.n} answerable questions...")
+        questions = generate_questions(runtime, store, n_questions=args.n)
+
+        if args.paraphrase and questions:
+            print(f"\nParaphrasing {len(questions)} questions...")
+            questions.extend(paraphrase_questions(runtime, questions))
 
     questions.extend(build_unanswerable())
 

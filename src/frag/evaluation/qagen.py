@@ -81,12 +81,32 @@ Kurallar:
 - "Bu maddede", "yukarıdaki bölümde" gibi ifadeler kullanma; soru tek başına anlaşılmalı.
 - SADECE soruyu yaz. Açıklama, numara, tırnak ekleme."""
 
-_PARAPHRASE_SYSTEM = """Sana bir soru verilecek. Onu bir öğrencinin WhatsApp'ta soracağı gibi, günlük konuşma diliyle yeniden yaz.
+# The first version of this prompt ("bir öğrencinin WhatsApp'ta soracağı gibi
+# yeniden yaz") failed on measurement, not on inspection: 42 of 60 outputs came
+# back token-identical to the input even after three retries at rising
+# temperature. A model asked to reword a sentence that is already a grammatical
+# question has no gradient to follow unless it is told *what* to change. The
+# rewrite below therefore names the operation (swap the content words), forbids
+# the failure mode explicitly, and shows it happening three times - few-shot
+# examples do the work that adjectives like "günlük" could not.
+_PARAPHRASE_SYSTEM = """Sana resmî dilde yazılmış bir soru verilecek. Onu, konuyu bilmeyen bir öğrencinin günlük konuşma diliyle soracağı hâle çevir.
 
 Kurallar:
-- Anlam aynı kalsın.
-- Resmî terimleri günlük karşılıklarıyla değiştir.
-- SADECE yeni soruyu yaz, başka hiçbir şey yazma."""
+- Anlam birebir aynı kalsın.
+- **Orijinal sorunun kelimelerini kullanma.** Her resmî terimi günlük karşılığıyla değiştir. Aynı cümleyi geri vermek yanlış cevaptır.
+- Cümle kuruluşunu da değiştir; sadece kelime değiştirmek yetmez.
+- SADECE yeni soruyu yaz. Açıklama, numara, tırnak ekleme.
+
+Örnekler:
+
+Soru: Öğrencinin kayıt yenileme işlemini hangi süre içinde tamamlaması gerekir?
+Yeni soru: Derslere yazılmak için kaç günüm var?
+
+Soru: Disiplin cezası alan bir öğrencinin itiraz hakkı var mıdır?
+Yeni soru: Ceza yersem buna karşı çıkabilir miyim?
+
+Soru: Lisansüstü programlarda azami öğrenim süresi ne kadardır?
+Yeni soru: Yüksek lisans en fazla kaç yıl sürebiliyor?"""
 
 _UNANSWERABLE_SYSTEM = """Bir üniversitenin öğrenci yönetmelikleri hakkında SORULABİLECEK ama bu konularda BİLGİ İÇERMEYEN sorular üret.
 
@@ -128,24 +148,37 @@ def _is_usable_question(text: str) -> bool:
 
 
 def question_gold_overlap(question: str, gold_text: str, stem: bool = True) -> float:
-    """Jaccard overlap between a question's lexical tokens and its gold chunk's.
+    """Fraction of a question's lexical tokens that also occur in its gold chunk.
 
     Deliberately computed with `lexical_tokens`, the same folding and stemming
     the BM25 arm applies at index and query time. That makes this number the
-    lexical signal itself rather than a proxy for it: an item scoring 0.5 shares
-    half its stemmed vocabulary with the passage it is supposed to find, and
-    BM25 will locate it without any understanding of the question.
+    lexical signal itself rather than a proxy for it: an item scoring 0.5 has
+    half its stemmed vocabulary sitting in the passage it is supposed to find,
+    and BM25 will locate it without any understanding of the question.
 
-    Jaccard rather than raw containment because both directions matter. A short
-    question quoting three words of a long chunk is a different failure from a
-    question that restates the whole passage, and dividing by the union
-    penalises the second more.
+    ## Why containment and not Jaccard
+
+    Jaccard was tried first and had to be replaced, which is worth recording
+    because the failure is not obvious from the formula. A question holds ~10
+    stemmed tokens; a 900-character chunk holds ~120. Their union is therefore
+    dominated by the chunk, and the ratio is squeezed into a narrow band near
+    the bottom of the scale no matter how much copying happened. Measured on
+    this corpus's 60 generated questions, Jaccard reported 0.101 where
+    containment reported 0.448 - and the paraphrased set moved by 0.007 under
+    Jaccard versus 0.041 under containment. The first reading suggests nothing
+    is happening; the second shows a real effect four times larger than the
+    noise floor.
+
+    Containment also matches what BM25 actually does. A query term contributes
+    score when it appears in the document; terms in the document that are absent
+    from the query contribute nothing. Dividing by the union charges the metric
+    for chunk length, which is a property of chunking, not of question quality.
     """
     q = set(lexical_tokens(question, stem=stem))
     g = set(lexical_tokens(gold_text, stem=stem))
     if not q or not g:
         return 0.0
-    return len(q & g) / len(q | g)
+    return len(q & g) / len(q)
 
 
 def generate_questions(
@@ -295,7 +328,12 @@ def paraphrase_questions(
                 raw = runtime.chat(
                     [
                         {"role": "system", "content": _PARAPHRASE_SYSTEM},
-                        {"role": "user", "content": q.question},
+                        # Framed as an instruction rather than passed bare: a
+                        # lone question in the user turn invites the model to
+                        # answer it or repeat it, which is what the first run
+                        # did 42 times out of 60.
+                        {"role": "user",
+                         "content": f"Soru: {q.question}\nYeni soru:"},
                     ],
                     temperature=0.7 + 0.15 * attempt,
                     max_tokens=90,

@@ -157,6 +157,8 @@ altında:
 - [02 — Chunking](docs/02-chunking.md)
 - [03 — BM25 ve hibrit](docs/03-bm25-ve-hibrit.md)
 - [06 — Değerlendirmenin istatistiği](docs/06-istatistik-degerlendirme.md)
+- [07 — Sunum anlatımı](docs/07-sunum-anlatimi.md) — projeyi sözlü anlatmak için
+  dakika dakika metin, demo koreografisi ve beklenen sorular
 
 ## Değerlendirme
 
@@ -200,7 +202,23 @@ PYTHONPATH=src ./.venv/bin/streamlit run app/dashboard.py
 
 ## Durum
 
-Tamamlanan: runtime, telemetri, ingestion, chunking, hibrit indeks, füzyon.
-Sırada: reranking + abstention, değerlendirme harness'ı (nDCG/MRR/Recall,
-bootstrap güven aralıkları, permütasyon testi, ECE kalibrasyonu), Streamlit
-dashboard, teori dokümanları.
+**Tamamlanan:** runtime ve telemetri, ingestion, chunking, hibrit indeks,
+füzyon, yeniden sıralama, değerlendirme harness'ı (nDCG/MRR/Recall, bootstrap
+güven aralıkları, eşleştirilmiş permütasyon testi, Holm-Bonferroni, ECE),
+Streamlit dashboard, teori dokümanları, ve geçerli bir benchmark koşusu
+(60 soru + 60 parafraz, varyantlar ayrı ölçülmüş).
+
+**Sırada:**
+1. Çekimserlik eşiğinin kalibrasyonu — `stats.find_best_threshold` hazır,
+   veri hazır, koşulmadı. `generation.abstention_threshold` hâlâ 0.0
+   yer tutucusunda.
+2. Sorgu genişletme — "kayıt dondurma" ile "izinli sayılma" arasındaki
+   kelime dağarcığı boşluğu ölçüldü ama kapatılmadı.
+3. Chunk boyutunun sweep'e sokulması — 900 karakter gerekçeli bir tahmin,
+   ölçülmüş bir seçim değil.
+4. MCP sunucusu — sistemi Microsoft ekosistemindeki araçlardan çağırılabilir
+   yapmak.
+
+**Bilinen sınırlar:** eval setini modelin kendisi üretiyor (parafraz katmanı
+hafifletiyor, çözmüyor); korpus tek kurum tek dil, İngilizce kontrol seti yok;
+gövdeleme morfolojik analizci değil, türetim eklerinde çalışmıyor.
