@@ -1,0 +1,257 @@
+[
+  {
+    "question": "Boğaziçi Üniversitesi'nin akademik araştırma ve iletişim için kullanabileceği kütüphanesi web sitesine başvuran öğrencisi neye ihtiyacı var?",
+    "gold_chunk_ids": [
+      "lisansustu_egitim_ogretim_yonetmeligi::6"
+    ],
+    "answerable": true,
+    "source_doc": "lisansustu_egitim_ogretim_yonetmeligi",
+    "gold_answer": "On The\nApp Store\n0 212 359 54 00\nBoğaziçi Üniversitesi 34342 Bebek/İstanbul Türkiye\ninfo@bogazici.edu.tr\nbogaziciuniversitesi@hs01.kep.tr\nAra\nHaberler\nBilgi İşlem\nBoğaziçi Rehber\nEtkinlikler\nÖğrenci İşleri\nDuyurular\nAnasayfa\nAKADEMİK\nÖğrenci Yönetmelik ve Yönergeler\nBoğaziçi Üniversitesi Lisansüstü Eğitim ve Öğretim Yönetmeliği\nGeri\nBOĞAZİÇİ ÜNİVERSİTESİ\nProgramlar\nFakülteler\nEnstitüler\nYüksekokul",
+    "variant": "generated",
+    "meta": {}
+  },
+  {
+    "question": "Kampüslar, sağlık hizmetleri sunan sağlık kafeterya/kantin var mı? (1/0)",
+    "gold_chunk_ids": [
+      "lisans_egitim_ogretim_yonetmeligi::3"
+    ],
+    "answerable": true,
+    "source_doc": "lisans_egitim_ogretim_yonetmeligi",
+    "gold_answer": "Sermaye İşletmesi\nCinsiyet Eşitliği Planı\nProje Ofisi\nGelen Öğrenciler\nGiden Öğrenciler\nAday Öğrenciler\nUluslararası Anlaşmalar\nUluslararası Eğitim\nErasmus+ Programı\nYurt Dışı Eğitim Fırsatları\nYabancı Dil Eğitim Programları\nKültürel Değişim Programları\nYurt Dışı Staj Olanakları\nYabancı Akademisyen İşbirlikleri\nUluslararası Hizmetler\nUluslararası İşbirlikleri\nUluslararası Projeler\nUluslararası Öğr",
+    "variant": "generated",
+    "meta": {}
+  },
+  {
+    "question": "Kampüslar, sağlık hizmetleri sunan sağlık kafeterya/kantin var mı? (1/0)",
+    "gold_chunk_ids": [
+      "lisansustu_egitim_ogretim_yonetmeligi::3"
+    ],
+    "answerable": true,
+    "source_doc": "lisansustu_egitim_ogretim_yonetmeligi",
+    "gold_answer": "Sermaye İşletmesi\nCinsiyet Eşitliği Planı\nProje Ofisi\nGelen Öğrenciler\nGiden Öğrenciler\nAday Öğrenciler\nUluslararası Anlaşmalar\nUluslararası Eğitim\nErasmus+ Programı\nYurt Dışı Eğitim Fırsatları\nYabancı Dil Eğitim Programları\nKültürel Değişim Programları\nYurt Dışı Staj Olanakları\nYabancı Akademisyen İşbirlikleri\nUluslararası Hizmetler\nUluslararası İşbirlikleri\nUluslararası Projeler\nUluslararası Öğr",
+    "variant": "generated",
+    "meta": {}
+  },
+  {
+    "question": "Ders saydırma işleminden başlamadan önceki yarıyılın kayıt dönemi ne zaman geçtiriyor?",
+    "gold_chunk_ids": [
+      "lisans_egitim_ogretim_yonetmeligi::24"
+    ],
+    "answerable": true,
+    "source_doc": "lisans_egitim_ogretim_yonetmeligi",
+    "gold_answer": "uygulanmaz.\n(7) Sınamalı ve başarısız öğrencilere uygulanacak kredi yükü 30 uncu maddede yer alan esaslara göre belirlenir.\nDers saydırma ve muafiyet\nMADDE 14 –\n(1) Öğrencilerin bir yükseköğretim kurumunda aldığı derslerin kredileri ilgili yönetim kurulu kararı ile transfer edilerek kayıtlı olduğu lisans programındaki yükümlülüklerinin yerine sayılabilir.\n(2) Ders saydırma işlemlerinde aşağıdaki k",
+    "variant": "generated",
+    "meta": {}
+  },
+  {
+    "question": "24 – Öğrenci İşleri Daire Başkanlığına başvuru yapmak zorunda kalan öğrenciler, ne kadar süre mazeret sınavlarına katılıp giderildiği durumda karar almalıdır?",
+    "gold_chunk_ids": [
+      "lisansustu_egitim_ogretim_yonetmeligi::57"
+    ],
+    "answerable": true,
+    "source_doc": "lisansustu_egitim_ogretim_yonetmeligi",
+    "gold_answer": "Notlardaki yanlışlıklar süresi içinde giderilmediği takdirde bu konuda Üniversite Yönetim Kurulu karar almaya yetkilidir.\n\nSınavlara katılmama\nMADDE 24 –\n(1) Sağlık veya başka bir mazereti nedeniyle yarıyıl sonu sınavlarından birine veya bir kaçına katılamayacak durumda olan öğrenciler, Üniversitenin mazeret komisyonunda görüşülmek üzere, ilgili belgelerle birlikte Öğrenci İşleri Daire Başkanlığın",
+    "variant": "generated",
+    "meta": {}
+  },
+  {
+    "question": "3-0-3 modülerle sınıf yönetimi nasıl etik bir öğretim ve öğrenme ortamı oluşturuyor?",
+    "gold_chunk_ids": [
+      "pedagojik_formasyon::18"
+    ],
+    "answerable": true,
+    "source_doc": "pedagojik_formasyon",
+    "gold_answer": "okulda etkili\nöğretim ve öğrenme; öğrenmede başarı; sınıf içi öğrenmelerin değerlendirilme si; eğitim ve\nöğretim sürecinde etik ilkelerdir.\nSınıf Yönetimi (3-0-3)\nBu dersin amacı bir eğitim ve öğrenme ortamı olarak sınıfı çeşitli yönleriyle tanımak olup başlıca\nkonular: Sınıf yönetimiyle ilgili temel kavramlar; sınıfın fiziksel, sosyal ve psikolojik boyutları;\nsınıf kuralları ve sınıfta disiplin; ",
+    "variant": "generated",
+    "meta": {}
+  },
+  {
+    "question": "11 Haziran 2016 CUMARTESİ'ndeki Boğaziçi Üniversitesi Lisans Eğitim ve Öğretim Yönetmeliği içindeki Fahri Doktora'nı tanımlayan senato onaylı yayınların amaç nedir?",
+    "gold_chunk_ids": [
+      "lisans_egitim_ogretim_yonetmeligi::7"
+    ],
+    "answerable": true,
+    "source_doc": "lisans_egitim_ogretim_yonetmeligi",
+    "gold_answer": "Danışmanlık\nKütüphane\nBoğaziçi Üniversitesi Kütüphanesi Web Sitesi\nElektronik Dergiler\nElektronik Veritabanları\nKatalog Tarama\nKullanıcı İşlemleri\nAkademik İş Başvuruları\nAtama - Yükseltme Kriterleri\nSenato Onaylı Yayınevleri\nFahri Doktora\nFahri Doktora Sahipleri\nÖğretim Üyeleri\nÖğrenci Koordinatörlüğü\nBoğaziçi Üniversitesi Lisans Eğitim ve Öğretim Yönetmeliği\n11 Haziran 2016 CUMARTESİ\nResmi Gazet",
+    "variant": "generated",
+    "meta": {}
+  },
+  {
+    "question": "Doktora tezinde araştırma yaptığı konuyu bilime yenilik getirmesi mi yerine getirmiş olun?",
+    "gold_chunk_ids": [
+      "lisansustu_egitim_ogretim_yonetmeligi::100"
+    ],
+    "answerable": true,
+    "source_doc": "lisansustu_egitim_ogretim_yonetmeligi",
+    "gold_answer": "üzere tez enstitü yönetim kuruluna gönderilir.\n(3) Öğrencinin tezinin sonuçlanabilmesi için en az üç tez izleme komitesi raporu sunulması gerekir.\n(4) Doktora tez jürisi danışman ve ilgili anabilim dalının önerisi ve ilgili enstitü yönetim kurulunun onayı ile görevlendirilir. Jüri, üçü öğrencinin tez izleme komitesinde yer alan öğretim üyeleri ve en az ikisi başka bir yükseköğretim kurumunun öğret",
+    "variant": "generated",
+    "meta": {}
+  },
+  {
+    "question": "(4) Kayıt işlemlerini süresi içinde yaptırsan üniversite öğrencisi, haklarında kanuni yapılacak, bu yarıyıl kaydın öğrenci hakkında ne dedi?",
+    "gold_chunk_ids": [
+      "lisans_egitim_ogretim_yonetmeligi::17"
+    ],
+    "answerable": true,
+    "source_doc": "lisans_egitim_ogretim_yonetmeligi",
+    "gold_answer": "tarafından aslı görülerek onaylanan örneği kabul edilir. Askerlik durumu ve adli sicil kaydına ilişkin işlemler adayın beyanına dayanılarak yapılır.\n(4) Sahte veya eksik belge verdiği ya da gerçek dışı beyanda bulunduğu sonradan anlaşılan öğrencilerin, bulundukları yarıyıla bakılmadan Üniversite ile ilişikleri kesilir. Söz konusu öğrenciler Üniversiteden ayrılmışlarsa, kendilerine verilen belgeler",
+    "variant": "generated",
+    "meta": {}
+  },
+  {
+    "question": "Öğretim elemanı, Ölçme, Seçme ve Yerleştirme Merkezini (ÖSYM) tarafından öğretildiği ders kredileri nedir?",
+    "gold_chunk_ids": [
+      "lisansustu_egitim_ogretim_yonetmeligi::10"
+    ],
+    "answerable": true,
+    "source_doc": "lisansustu_egitim_ogretim_yonetmeligi",
+    "gold_answer": "ders kredilerini,\nç) Doktora yeterlik komitesi: Doktora yeterlik sınavlarını yürütmekle görevli komiteyi,\nd) Enstitü: Üniversiteye bağlı enstitüleri,\ne) GMAT: Uluslararası sınavlardan olan Graduate Management Admission Test Sınavını,\nf) GNO: Genel not ortalamasını,\ng) GRE: Uluslararası sınavlardan olan Graduate Record Examination Sınavını,\nğ) İntihal: Başkalarının fikirlerini, metotlarını, veriler",
+    "variant": "generated",
+    "meta": {}
+  },
+  {
+    "question": "(5) 2.00 ve üzeri GNO ile tamamlanan ilk dört yarıyılın zorunlu derslerini tamamladan başvurmaları halinde ön lisans diploması neyine ayrılan öğrencilere verilir?",
+    "gold_chunk_ids": [
+      "lisans_egitim_ogretim_yonetmeligi::49"
+    ],
+    "answerable": true,
+    "source_doc": "lisans_egitim_ogretim_yonetmeligi",
+    "gold_answer": "son sınıf statüsünde olmayan öğrencilerin Üniversite ile ilişiği kesilir.\n\nDÖRDÜNCÜ BÖLÜM\n\nDiploma, Onur-Yüksek Onur, Derece ve Sertifikalar\n\nDiploma\nMADDE 33 –\n(1) Lisans diploması, bir lisans programının tüm gereklerini yerine getirip mezuniyet koşullarını sağlayan öğrencilere verilir.\n(2) Lisansla birleştirilmiş tezsiz yüksek lisans diploması, bir lisansla birleştirilmiş tezsiz yüksek lisans pr",
+    "variant": "generated",
+    "meta": {}
+  },
+  {
+    "question": "Konutun kullanımı sırasında oluşabilecek kira bedeli, bordro üzerinde gösterilmektedir?",
+    "gold_chunk_ids": [
+      "konut_tahsis_yonergesi::17"
+    ],
+    "answerable": true,
+    "source_doc": "konut_tahsis_yonergesi",
+    "gold_answer": "tutarda depozito ödemesi yapılır. Depozito dekontu\nYurtlar ve Konutlar Şube Müdürlüğüne teslim edilmeden konutun anahtarı teslim edilmez ve\nkonuta girilemez. Aksi hareket eden personelin konut tahsis kararı Yetkili Makamca iptal edilir\nve yasal işlem başlatılır.\n(3) Konuttan ayrılan personel konuta zarar vermemiş ve kira borcu yok ise ilgili\ndepozito tutarı iade edilir. Konuta zarar verilmiş ve de",
+    "variant": "generated",
+    "meta": {}
+  },
+  {
+    "question": "(1) Kayıt İşleri Şube Müdürlüğü, akademik takvimde belirtilen süreler içinde öğretim elemanının yarıyıl sonu notları nedir ve bu notları ne yapar?",
+    "gold_chunk_ids": [
+      "lisans_egitim_ogretim_yonetmeligi::37"
+    ],
+    "answerable": true,
+    "source_doc": "lisans_egitim_ogretim_yonetmeligi",
+    "gold_answer": "tamamladığı halde zorunlu stajını tamamlamamış öğrencilerin yarıyıl statüsünü gösterir.\nNotların verilmesi, açıklanması ve maddi hata düzeltmeleri\nMADDE 25 –\n(1) Yarıyıl sonu notları, akademik takvimde belirtilen süreler içinde öğretim elemanları tarafından verilerek kesinleşir ve Kayıt İşleri Şube Müdürlüğü tarafından ilan edilir.\n\n(2) Akademik takvimde belirtilen süreler içinde verilmeyen notlar",
+    "variant": "generated",
+    "meta": {}
+  },
+  {
+    "question": "26 – Kayıt İşleri Şube Müdürlüğünün kararı olumsuz olursa, ne zaman öğrenci mazeret sınavlarına katılacak?",
+    "gold_chunk_ids": [
+      "lisans_egitim_ogretim_yonetmeligi::38"
+    ],
+    "answerable": true,
+    "source_doc": "lisans_egitim_ogretim_yonetmeligi",
+    "gold_answer": "öncesine kadar Kayıt İşleri Şube Müdürlüğüne bildirilir. Özel durumlarda Üniversite Yönetim Kurulu karar almaya yetkilidir.\n\nSınavlara katılmama\nMADDE 26 –\n(1) Sağlık veya başka bir mazereti nedeniyle yarıyıl sonu sınavlarından birine veya birkaçına katılamayacak durumda olan öğrenciler, Üniversite Yönetim Kurulu tarafından belirlenen mazeret komisyonunda görüşülmek üzere, ilgili belgelerle birlik",
+    "variant": "generated",
+    "meta": {}
+  },
+  {
+    "question": "Hükümete Rektör tarafından 2008/01 tarihli \"Boğaziçi Üniversitesi Lisansüstü Burs İç Yönetmeliği\" yürütülmesi neyin dışında yürütülmesi mümkündü?",
+    "gold_chunk_ids": [
+      "burs_yonergesi::18"
+    ],
+    "answerable": true,
+    "source_doc": "burs_yonergesi",
+    "gold_answer": "dışında) alan öğrencilerin bursu iptal edilir. Bu öğrenciler burs\niçin tekrar başvuruda bulunamazlar.\nYürürlükten Kaldırılan Düzeltme\nMadde 14- (1) Bu Yönergenin yürürlüğe girmesi ile birlikte 25.08.2010 Tarih ve 2010/20\nsayılı Üniversite Yönetim Kurulu Toplantısında ka bul edilen “Boğaziçi Üniversitesi Lisans\nBursları İç Yönetmeliği” ve 09.01.2008 Tarih ve 2008/01 sayılı Üniversite Yönetim Kurulu",
+    "variant": "generated",
+    "meta": {}
+  },
+  {
+    "question": "Yemekhanede bugün ne var",
+    "gold_chunk_ids": [],
+    "answerable": false,
+    "source_doc": "",
+    "gold_answer": "",
+    "variant": "unanswerable",
+    "meta": {}
+  },
+  {
+    "question": "Kampüs wifi şifresi nedir",
+    "gold_chunk_ids": [],
+    "answerable": false,
+    "source_doc": "",
+    "gold_answer": "",
+    "variant": "unanswerable",
+    "meta": {}
+  },
+  {
+    "question": "Otopark ücreti aylık kaç lira",
+    "gold_chunk_ids": [],
+    "answerable": false,
+    "source_doc": "",
+    "gold_answer": "",
+    "variant": "unanswerable",
+    "meta": {}
+  },
+  {
+    "question": "Spor salonu hafta sonu kaça kadar açık",
+    "gold_chunk_ids": [],
+    "answerable": false,
+    "source_doc": "",
+    "gold_answer": "",
+    "variant": "unanswerable",
+    "meta": {}
+  },
+  {
+    "question": "Mezuniyet töreninde ne giymeliyim",
+    "gold_chunk_ids": [],
+    "answerable": false,
+    "source_doc": "",
+    "gold_answer": "",
+    "variant": "unanswerable",
+    "meta": {}
+  },
+  {
+    "question": "Staj bulmak için hangi siteye bakmalıyım",
+    "gold_chunk_ids": [],
+    "answerable": false,
+    "source_doc": "",
+    "gold_answer": "",
+    "variant": "unanswerable",
+    "meta": {}
+  },
+  {
+    "question": "Kütüphanede kaç kişilik çalışma odası var",
+    "gold_chunk_ids": [],
+    "answerable": false,
+    "source_doc": "",
+    "gold_answer": "",
+    "variant": "unanswerable",
+    "meta": {}
+  },
+  {
+    "question": "Servis otobüsü saatleri nedir",
+    "gold_chunk_ids": [],
+    "answerable": false,
+    "source_doc": "",
+    "gold_answer": "",
+    "variant": "unanswerable",
+    "meta": {}
+  },
+  {
+    "question": "Mars'ta yaşam var mı",
+    "gold_chunk_ids": [],
+    "answerable": false,
+    "source_doc": "",
+    "gold_answer": "",
+    "variant": "unanswerable",
+    "meta": {}
+  },
+  {
+    "question": "Python'da liste nasıl sıralanır",
+    "gold_chunk_ids": [],
+    "answerable": false,
+    "source_doc": "",
+    "gold_answer": "",
+    "variant": "unanswerable",
+    "meta": {}
+  }
+]

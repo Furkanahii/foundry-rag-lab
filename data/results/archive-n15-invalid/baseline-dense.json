@@ -1,0 +1,449 @@
+{
+  "config_name": "baseline-dense",
+  "fingerprint": "6ee872451337",
+  "n_queries": 15,
+  "retrieval_metrics": {
+    "recall@k": 0.7333333333333333,
+    "precision@k": 0.14666666666666667,
+    "mrr": 0.5244444444444444,
+    "ndcg@k": 0.5765808209584972,
+    "hit_rate": 0.7333333333333333,
+    "n_queries": 15.0
+  },
+  "answer_metrics": {},
+  "latency": {
+    "p50_ms": 75.76041703578085,
+    "p95_ms": 157.70612499909475,
+    "max_ms": 5739.305041031912,
+    "mean_ms": 456.0151860079107
+  },
+  "intervals": {
+    "recall@k": {
+      "estimate": 0.7333333333333333,
+      "lower": 0.4666666666666667,
+      "upper": 0.9333333333333333,
+      "n": 15
+    },
+    "mrr": {
+      "estimate": 0.5244444444444444,
+      "lower": 0.31333333333333335,
+      "upper": 0.7355555555555555,
+      "n": 15
+    },
+    "ndcg@k": {
+      "estimate": 0.5765808209584972,
+      "lower": 0.36785217072039994,
+      "upper": 0.7753953169047638,
+      "n": 15
+    }
+  },
+  "config": {
+    "name": "baseline-dense",
+    "runtime": {
+      "app_name": "foundry_rag_lab",
+      "chat_model": "phi-3.5-mini",
+      "embedding_model": "qwen3-embedding-0.6b",
+      "device": null,
+      "request_timeout": 180.0,
+      "max_retries": 3,
+      "embed_batch_size": 16,
+      "use_web_service": true,
+      "register_execution_providers": true
+    },
+    "chunking": {
+      "strategy": "recursive",
+      "chunk_size": 900,
+      "overlap": 150,
+      "window_size": 2,
+      "breakpoint_percentile": 90.0,
+      "min_chunk_chars": 120
+    },
+    "retrieval": {
+      "dense_top_k": 30,
+      "lexical_top_k": 30,
+      "fusion": "dense_only",
+      "rrf_k": 60,
+      "alpha": 0.5,
+      "rerank": "none",
+      "rerank_candidates": 12,
+      "use_mmr": false,
+      "mmr_lambda": 0.7,
+      "top_k": 5,
+      "query_instruction": false,
+      "lexical_stem": false,
+      "lexical_truncate": null
+    },
+    "generation": {
+      "temperature": 0.1,
+      "max_tokens": 700,
+      "require_citations": true,
+      "abstention_threshold": 0.0,
+      "enable_abstention": true,
+      "language": "auto"
+    },
+    "seed": 20260801
+  },
+  "elapsed_s": 6.974008416000288,
+  "records": [
+    {
+      "question": "Boğaziçi Üniversitesi'nin akademik araştırma ve iletişim için kullanabileceği kütüphanesi web sitesine başvuran öğrencisi neye ihtiyacı var?",
+      "answerable": true,
+      "retrieved_ids": [
+        "lisansustu_egitim_ogretim_yonetmeligi::7",
+        "lisans_egitim_ogretim_yonetmeligi::7",
+        "lisansustu_egitim_ogretim_yonetmeligi::4",
+        "lisans_egitim_ogretim_yonetmeligi::4",
+        "lisansustu_egitim_ogretim_yonetmeligi::5"
+      ],
+      "metrics": {
+        "recall@k": 0.0,
+        "precision@k": 0.0,
+        "mrr": 0.0,
+        "ndcg@k": 0.0
+      },
+      "latency_ms": 5739.305041031912,
+      "top_score": 1.0,
+      "answer_text": "",
+      "abstained": false,
+      "citations": [],
+      "invalid_citations": [],
+      "generation_ms": 0.0
+    },
+    {
+      "question": "Kampüslar, sağlık hizmetleri sunan sağlık kafeterya/kantin var mı? (1/0)",
+      "answerable": true,
+      "retrieved_ids": [
+        "lisansustu_egitim_ogretim_yonetmeligi::111",
+        "lisans_egitim_ogretim_yonetmeligi::59",
+        "lisansustu_egitim_ogretim_yonetmeligi::4",
+        "lisans_egitim_ogretim_yonetmeligi::4",
+        "lisansustu_egitim_ogretim_yonetmeligi::3"
+      ],
+      "metrics": {
+        "recall@k": 0.0,
+        "precision@k": 0.0,
+        "mrr": 0.0,
+        "ndcg@k": 0.0
+      },
+      "latency_ms": 53.74158301856369,
+      "top_score": 1.0,
+      "answer_text": "",
+      "abstained": false,
+      "citations": [],
+      "invalid_citations": [],
+      "generation_ms": 0.0
+    },
+    {
+      "question": "Kampüslar, sağlık hizmetleri sunan sağlık kafeterya/kantin var mı? (1/0)",
+      "answerable": true,
+      "retrieved_ids": [
+        "lisansustu_egitim_ogretim_yonetmeligi::111",
+        "lisans_egitim_ogretim_yonetmeligi::59",
+        "lisansustu_egitim_ogretim_yonetmeligi::4",
+        "lisans_egitim_ogretim_yonetmeligi::4",
+        "lisansustu_egitim_ogretim_yonetmeligi::3"
+      ],
+      "metrics": {
+        "recall@k": 1.0,
+        "precision@k": 0.2,
+        "mrr": 0.2,
+        "ndcg@k": 0.38685280723454163
+      },
+      "latency_ms": 53.40995901497081,
+      "top_score": 1.0,
+      "answer_text": "",
+      "abstained": false,
+      "citations": [],
+      "invalid_citations": [],
+      "generation_ms": 0.0
+    },
+    {
+      "question": "Ders saydırma işleminden başlamadan önceki yarıyılın kayıt dönemi ne zaman geçtiriyor?",
+      "answerable": true,
+      "retrieved_ids": [
+        "kayit_yonergesi::16",
+        "kayit_yonergesi::18",
+        "kayit_yonergesi::34",
+        "lisans_egitim_ogretim_yonetmeligi::15",
+        "kayit_yonergesi::20"
+      ],
+      "metrics": {
+        "recall@k": 0.0,
+        "precision@k": 0.0,
+        "mrr": 0.0,
+        "ndcg@k": 0.0
+      },
+      "latency_ms": 52.710833959281445,
+      "top_score": 1.0,
+      "answer_text": "",
+      "abstained": false,
+      "citations": [],
+      "invalid_citations": [],
+      "generation_ms": 0.0
+    },
+    {
+      "question": "24 – Öğrenci İşleri Daire Başkanlığına başvuru yapmak zorunda kalan öğrenciler, ne kadar süre mazeret sınavlarına katılıp giderildiği durumda karar almalıdır?",
+      "answerable": true,
+      "retrieved_ids": [
+        "lisansustu_egitim_ogretim_yonetmeligi::58",
+        "lisansustu_egitim_ogretim_yonetmeligi::57",
+        "lisans_egitim_ogretim_yonetmeligi::38",
+        "kayit_yonergesi::27",
+        "lisans_egitim_ogretim_yonetmeligi::39"
+      ],
+      "metrics": {
+        "recall@k": 1.0,
+        "precision@k": 0.2,
+        "mrr": 0.5,
+        "ndcg@k": 0.6309297535714575
+      },
+      "latency_ms": 69.65554098132998,
+      "top_score": 1.0,
+      "answer_text": "",
+      "abstained": false,
+      "citations": [],
+      "invalid_citations": [],
+      "generation_ms": 0.0
+    },
+    {
+      "question": "3-0-3 modülerle sınıf yönetimi nasıl etik bir öğretim ve öğrenme ortamı oluşturuyor?",
+      "answerable": true,
+      "retrieved_ids": [
+        "pedagojik_formasyon::18",
+        "pedagojik_formasyon::19",
+        "pedagojik_formasyon::17",
+        "pedagojik_formasyon::6",
+        "pedagojik_formasyon::21"
+      ],
+      "metrics": {
+        "recall@k": 1.0,
+        "precision@k": 0.2,
+        "mrr": 1.0,
+        "ndcg@k": 1.0
+      },
+      "latency_ms": 54.369332967326045,
+      "top_score": 1.0,
+      "answer_text": "",
+      "abstained": false,
+      "citations": [],
+      "invalid_citations": [],
+      "generation_ms": 0.0
+    },
+    {
+      "question": "11 Haziran 2016 CUMARTESİ'ndeki Boğaziçi Üniversitesi Lisans Eğitim ve Öğretim Yönetmeliği içindeki Fahri Doktora'nı tanımlayan senato onaylı yayınların amaç nedir?",
+      "answerable": true,
+      "retrieved_ids": [
+        "lisans_egitim_ogretim_yonetmeligi::7",
+        "lisansustu_egitim_ogretim_yonetmeligi::7",
+        "lisans_egitim_ogretim_yonetmeligi::8",
+        "lisansustu_egitim_ogretim_yonetmeligi::8",
+        "kayit_yonergesi::38"
+      ],
+      "metrics": {
+        "recall@k": 1.0,
+        "precision@k": 0.2,
+        "mrr": 1.0,
+        "ndcg@k": 1.0
+      },
+      "latency_ms": 83.04029202554375,
+      "top_score": 1.0,
+      "answer_text": "",
+      "abstained": false,
+      "citations": [],
+      "invalid_citations": [],
+      "generation_ms": 0.0
+    },
+    {
+      "question": "Doktora tezinde araştırma yaptığı konuyu bilime yenilik getirmesi mi yerine getirmiş olun?",
+      "answerable": true,
+      "retrieved_ids": [
+        "lisansustu_egitim_ogretim_yonetmeligi::100",
+        "lisansustu_egitim_ogretim_yonetmeligi::103",
+        "lisansustu_egitim_ogretim_yonetmeligi::99",
+        "ogrenci_disiplin_yonetmeligi::11",
+        "lisansustu_egitim_ogretim_yonetmeligi::94"
+      ],
+      "metrics": {
+        "recall@k": 1.0,
+        "precision@k": 0.2,
+        "mrr": 1.0,
+        "ndcg@k": 1.0
+      },
+      "latency_ms": 53.53616597130895,
+      "top_score": 1.0,
+      "answer_text": "",
+      "abstained": false,
+      "citations": [],
+      "invalid_citations": [],
+      "generation_ms": 0.0
+    },
+    {
+      "question": "(4) Kayıt işlemlerini süresi içinde yaptırsan üniversite öğrencisi, haklarında kanuni yapılacak, bu yarıyıl kaydın öğrenci hakkında ne dedi?",
+      "answerable": true,
+      "retrieved_ids": [
+        "lisans_egitim_ogretim_yonetmeligi::18",
+        "kayit_yonergesi::21",
+        "lisans_egitim_ogretim_yonetmeligi::17",
+        "kayit_yonergesi::8",
+        "kayit_yonergesi::15"
+      ],
+      "metrics": {
+        "recall@k": 1.0,
+        "precision@k": 0.2,
+        "mrr": 0.3333333333333333,
+        "ndcg@k": 0.5
+      },
+      "latency_ms": 71.16845803102478,
+      "top_score": 1.0,
+      "answer_text": "",
+      "abstained": false,
+      "citations": [],
+      "invalid_citations": [],
+      "generation_ms": 0.0
+    },
+    {
+      "question": "Öğretim elemanı, Ölçme, Seçme ve Yerleştirme Merkezini (ÖSYM) tarafından öğretildiği ders kredileri nedir?",
+      "answerable": true,
+      "retrieved_ids": [
+        "lisansustu_egitim_ogretim_yonetmeligi::10",
+        "pedagojik_formasyon::16",
+        "pedagojik_formasyon::17",
+        "pedagojik_formasyon::25",
+        "lisansustu_egitim_ogretim_yonetmeligi::11"
+      ],
+      "metrics": {
+        "recall@k": 1.0,
+        "precision@k": 0.2,
+        "mrr": 1.0,
+        "ndcg@k": 1.0
+      },
+      "latency_ms": 80.14979201834649,
+      "top_score": 1.0,
+      "answer_text": "",
+      "abstained": false,
+      "citations": [],
+      "invalid_citations": [],
+      "generation_ms": 0.0
+    },
+    {
+      "question": "(5) 2.00 ve üzeri GNO ile tamamlanan ilk dört yarıyılın zorunlu derslerini tamamladan başvurmaları halinde ön lisans diploması neyine ayrılan öğrencilere verilir?",
+      "answerable": true,
+      "retrieved_ids": [
+        "lisans_egitim_ogretim_yonetmeligi::50",
+        "lisans_egitim_ogretim_yonetmeligi::51",
+        "lisans_egitim_ogretim_yonetmeligi::47",
+        "lisans_egitim_ogretim_yonetmeligi::52",
+        "lisansustu_egitim_ogretim_yonetmeligi::33"
+      ],
+      "metrics": {
+        "recall@k": 0.0,
+        "precision@k": 0.0,
+        "mrr": 0.0,
+        "ndcg@k": 0.0
+      },
+      "latency_ms": 108.49300003610551,
+      "top_score": 1.0,
+      "answer_text": "",
+      "abstained": false,
+      "citations": [],
+      "invalid_citations": [],
+      "generation_ms": 0.0
+    },
+    {
+      "question": "Konutun kullanımı sırasında oluşabilecek kira bedeli, bordro üzerinde gösterilmektedir?",
+      "answerable": true,
+      "retrieved_ids": [
+        "konut_tahsis_yonergesi::18",
+        "konut_tahsis_yonergesi::17",
+        "konut_tahsis_yonergesi::16",
+        "lisans_egitim_ogretim_yonetmeligi::34",
+        "konut_tahsis_yonergesi::24"
+      ],
+      "metrics": {
+        "recall@k": 1.0,
+        "precision@k": 0.2,
+        "mrr": 0.5,
+        "ndcg@k": 0.6309297535714575
+      },
+      "latency_ms": 75.76041703578085,
+      "top_score": 1.0,
+      "answer_text": "",
+      "abstained": false,
+      "citations": [],
+      "invalid_citations": [],
+      "generation_ms": 0.0
+    },
+    {
+      "question": "(1) Kayıt İşleri Şube Müdürlüğü, akademik takvimde belirtilen süreler içinde öğretim elemanının yarıyıl sonu notları nedir ve bu notları ne yapar?",
+      "answerable": true,
+      "retrieved_ids": [
+        "lisans_egitim_ogretim_yonetmeligi::37",
+        "kayit_yonergesi::20",
+        "lisansustu_egitim_ogretim_yonetmeligi::56",
+        "kayit_yonergesi::15",
+        "lisans_egitim_ogretim_yonetmeligi::32"
+      ],
+      "metrics": {
+        "recall@k": 1.0,
+        "precision@k": 0.2,
+        "mrr": 1.0,
+        "ndcg@k": 1.0
+      },
+      "latency_ms": 103.60308300005272,
+      "top_score": 1.0,
+      "answer_text": "",
+      "abstained": false,
+      "citations": [],
+      "invalid_citations": [],
+      "generation_ms": 0.0
+    },
+    {
+      "question": "26 – Kayıt İşleri Şube Müdürlüğünün kararı olumsuz olursa, ne zaman öğrenci mazeret sınavlarına katılacak?",
+      "answerable": true,
+      "retrieved_ids": [
+        "lisans_egitim_ogretim_yonetmeligi::38",
+        "lisans_egitim_ogretim_yonetmeligi::39",
+        "lisansustu_egitim_ogretim_yonetmeligi::57",
+        "lisansustu_egitim_ogretim_yonetmeligi::58",
+        "lisans_egitim_ogretim_yonetmeligi::19"
+      ],
+      "metrics": {
+        "recall@k": 1.0,
+        "precision@k": 0.2,
+        "mrr": 1.0,
+        "ndcg@k": 1.0
+      },
+      "latency_ms": 83.57816602801904,
+      "top_score": 1.0,
+      "answer_text": "",
+      "abstained": false,
+      "citations": [],
+      "invalid_citations": [],
+      "generation_ms": 0.0
+    },
+    {
+      "question": "Hükümete Rektör tarafından 2008/01 tarihli \"Boğaziçi Üniversitesi Lisansüstü Burs İç Yönetmeliği\" yürütülmesi neyin dışında yürütülmesi mümkündü?",
+      "answerable": true,
+      "retrieved_ids": [
+        "lisansustu_egitim_ogretim_yonetmeligi::8",
+        "burs_yonergesi::0",
+        "burs_yonergesi::18",
+        "lisans_egitim_ogretim_yonetmeligi::8",
+        "lisansustu_egitim_ogretim_yonetmeligi::106"
+      ],
+      "metrics": {
+        "recall@k": 1.0,
+        "precision@k": 0.2,
+        "mrr": 0.3333333333333333,
+        "ndcg@k": 0.5
+      },
+      "latency_ms": 157.70612499909475,
+      "top_score": 1.0,
+      "answer_text": "",
+      "abstained": false,
+      "citations": [],
+      "invalid_citations": [],
+      "generation_ms": 0.0
+    }
+  ]
+}

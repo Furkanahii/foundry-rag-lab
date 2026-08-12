@@ -1,0 +1,36 @@
+# Virtual environment (794 MB; rebuild with requirements.txt)
+.venv/
+venv/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Foundry Local model cache lives in ~/.foundry_rag_lab, but guard against a
+# stray local copy - the model weights are gigabytes.
+.foundry_rag_lab/
+*.onnx
+*.onnx.data
+
+# Scratch index built by smoke tests. The real index (data/index/bogazici.db) is
+# committed on purpose: it makes the benchmark reproducible without waiting for
+# 347 chunks to be re-embedded.
+data/index/test.db
+
+# SQLite write-ahead log and shared-memory files: transient, and committing them
+# would store a snapshot of an open transaction rather than the database.
+*.db-shm
+*.db-wal
+
+# Eval set backups written by build_eval_set.py before each overwrite. The
+# active set is committed; the timestamped copies are local history.
+data/eval/*.bak.json
+
+# OS / editor
+.DS_Store
+.vscode/
+.idea/
+*.swp

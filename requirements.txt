@@ -1,0 +1,35 @@
+# ---- Foundry Local runtime -------------------------------------------------
+# NOTE: The published PyPI package (0.5.x) is a *service manager*, not an
+# inference library. It boots the local Foundry service and hands us an
+# OpenAI-compatible HTTP endpoint. Actual inference calls go through `openai`.
+# (Microsoft Learn currently documents a newer native SDK that is not on PyPI.)
+foundry-local-sdk>=0.5.1
+openai>=1.40.0
+
+# ---- Numerics & statistics -------------------------------------------------
+numpy>=1.26
+scipy>=1.11            # permutation tests, distributions
+scikit-learn>=1.4      # calibration curves, metrics helpers
+pandas>=2.1
+
+# ---- Storage ---------------------------------------------------------------
+sqlite-vec>=0.1.6      # dense vector search as a SQLite extension
+
+# ---- Document ingestion ----------------------------------------------------
+pypdf>=4.2             # PDF text extraction
+beautifulsoup4>=4.12   # HTML parsing
+lxml>=5.0
+markdown-it-py>=3.0
+
+# ---- Interface & reporting -------------------------------------------------
+streamlit>=1.36
+altair>=5.3
+matplotlib>=3.8
+
+# ---- Utilities -------------------------------------------------------------
+pyyaml>=6.0
+rich>=13.7             # readable CLI output
+tqdm>=4.66
+
+# ---- Tests -----------------------------------------------------------------
+pytest>=8.0
