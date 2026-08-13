@@ -156,8 +156,11 @@ altında:
 - [01 — Vektörler ve benzerlik](docs/01-vektorler-ve-benzerlik.md)
 - [02 — Chunking](docs/02-chunking.md)
 - [03 — BM25 ve hibrit](docs/03-bm25-ve-hibrit.md)
+- [04 — Üretim ve grounding](docs/04-uretim-ve-grounding.md)
+- [05 — Kalibrasyon ve çekimserlik](docs/05-kalibrasyon-abstention.md)
 - [06 — Değerlendirmenin istatistiği](docs/06-istatistik-degerlendirme.md)
-- [07 — Sunum anlatımı](docs/07-sunum-anlatimi.md) — projeyi sözlü anlatmak için
+- [07 — Model seçimi](docs/07-model-secimi.md)
+- [08 — Sunum anlatımı](docs/08-sunum-anlatimi.md) — projeyi sözlü anlatmak için
   dakika dakika metin, demo koreografisi ve beklenen sorular
 
 ## Değerlendirme
@@ -169,6 +172,78 @@ PYTHONPATH=src ./.venv/bin/python scripts/build_eval_set.py --n 60 --paraphrase 
 # Konfigürasyon taraması + eşleştirilmiş permütasyon testi + Holm düzeltmesi
 PYTHONPATH=src ./.venv/bin/python scripts/run_benchmark.py
 ```
+
+### Sonuçlar
+
+60 üretilmiş soru + 60 parafraz + 52 cevaplanamaz soru. Her konfigürasyon her
+iki kelime varyantında ayrı koşuldu; p değerleri eşleştirilmiş permütasyon
+testinden, anlamlılık Holm-Bonferroni sonrası.
+
+| konfigürasyon | üretilmiş | parafraz | temele karşı (üretilmiş) | (parafraz) |
+|---|---|---|---|---|
+| baseline-dense (referans) | 0.5796 | 0.5158 | — | — |
+| **weighted-0.5** | **0.7370** | **0.6295** | **+0.157 (p=0.0006) ✓** | **+0.114 (p=0.0002) ✓** |
+| weighted-0.7 | 0.7001 | 0.5915 | +0.121 (p=0.0005) ✓ | +0.076 (p=0.0011) ✓ |
+| lexical-only | 0.7040 | 0.5577 | +0.124 (p=0.065) | +0.042 (p=0.47) |
+| rrf | 0.6817 | 0.6130 | +0.102 (p=0.026) | +0.097 (p=0.0088) |
+| rrf-instruct | 0.6871 | 0.6233 | +0.108 (p=0.052) | +0.108 (p=0.028) |
+| lexical-nostem | 0.4912 | 0.3362 | −0.088 (p=0.23) | −0.180 (p=0.0091) |
+| rrf-mmr | 0.5481 | 0.4915 | −0.032 (p=0.21) | −0.024 (p=0.38) |
+
+✓ = Holm düzeltmesinden sonra ayakta kalan. Metrik nDCG@5.
+
+**Üç bulgu:**
+
+**1. Ağırlıklı füzyon, düzeltmeden sonra ayakta kalan tek erişim kazancı** — ve
+her iki varyantta da. RRF hiçbir varyantta geçemiyor. Bu, projenin varsayılanını
+`rrf`'ten `weighted` (alpha=0.5) değiştirdi.
+
+**2. Türkçe gövdeleme en büyük tek etki.** Planlı karşılaştırma (taramanın
+parçası değil, önceden kurulmuş hipotez):
+
+| hipotez | varyant | fark | p | d |
+|---|---|---|---|---|
+| Türkçe gövdeleme, BM25 kolunda | üretilmiş | +0.213 | 0.0014 | 0.45 |
+| Türkçe gövdeleme, BM25 kolunda | parafraz | +0.222 | 0.0004 | 0.45 |
+| hibrit füzyon, saf yoğun aramaya karşı | üretilmiş | +0.102 | 0.026 | 0.29 |
+| hibrit füzyon, saf yoğun aramaya karşı | parafraz | +0.097 | 0.0088 | 0.35 |
+
+**3. Sözlüksel üstünlük bir kurgu artefaktıydı.** Soru yeniden yazıldığında
+yalnızca BM25 kolları çöküyor:
+
+| konfigürasyon | düşüş | p | |
+|---|---|---|---|
+| lexical-nostem | −0.155 | 0.0014 | anlamlı düşüş |
+| lexical-only | −0.146 | 0.0020 | anlamlı düşüş |
+| weighted-0.5 | −0.108 | 0.0121 | Holm'a takıldı |
+| rrf | −0.069 | 0.0735 | anlamsız |
+| baseline-dense | −0.064 | 0.1121 | anlamsız |
+
+Geçersiz ilk koşuda sözlüksel arama 0.86 ile yoğun aramanın 0.58'ini eziyor
+görünüyordu. Şimdi: üretilmiş sette avantaj anlamsız (p=0.065), parafraz sette
+tamamen yok (p=0.47). O üstünlük soruların yazılış biçiminden geliyormuş.
+
+### Çekimserlik: füzyon skoru yanlış sinyal
+
+Sistemin cevabı bilmediğinde susması gerekiyor, ve eşik tahmin edilmemeli.
+`scripts/calibrate_abstention.py` üç aday sinyali 60 cevaplanabilir / 52
+cevaplanamaz soru üzerinde ölçtü:
+
+| sinyal | AUC | cevaplanamaz sorulardaki **en yüksek** skor |
+|---|---|---|
+| **ham BM25** | **0.843** | 19.07 (aralık 2.41–47.78) |
+| ham kosinüs | 0.792 | 0.672 |
+| füzyon skoru | 0.727 | **1.000** — mümkün olan en yüksek değer |
+
+Füzyon skoru yapısal olarak kaybediyor. `weighted_fusion` her kolu **o sorgu
+için getirilen adaylar içinde** min-max normalize ediyor, yani en iyi aday iyi
+olduğu için değil en iyi olduğu için 1.0 alıyor. "Hiçbir şey bulamadım"
+diyemeyen bir sayı, bir şey bulunup bulunmadığına karar veremez.
+
+Seçilen eşik 6.866: duyarlılığı %90'da tutan en katı kesme noktası. F1'i değil
+duyarlılığı hedeflemek bilinçli bir tercih — gereksiz ret kullanıcıyı sinirlendirir,
+uydurulmuş bir yönetmelik maddesi birinin eğitim hayatını etkiler.
+Gerekçe ve sınırlar: [docs/05](docs/05-kalibrasyon-abstention.md).
 
 ### Bir benchmark'ı ne geçerli kılar
 
@@ -208,17 +283,31 @@ güven aralıkları, eşleştirilmiş permütasyon testi, Holm-Bonferroni, ECE),
 Streamlit dashboard, teori dokümanları, ve geçerli bir benchmark koşusu
 (60 soru + 60 parafraz, varyantlar ayrı ölçülmüş).
 
+Çekimserlik eşiği de kalibre edildi ve varsayılanlar ölçüme göre değişti:
+füzyon `rrf` → `weighted` (alpha=0.5), çekimserlik sinyali ham BM25, eşik 6.866.
+
 **Sırada:**
-1. Çekimserlik eşiğinin kalibrasyonu — `stats.find_best_threshold` hazır,
-   veri hazır, koşulmadı. `generation.abstention_threshold` hâlâ 0.0
-   yer tutucusunda.
-2. Sorgu genişletme — "kayıt dondurma" ile "izinli sayılma" arasındaki
+1. Sorgu genişletme — "kayıt dondurma" ile "izinli sayılma" arasındaki
    kelime dağarcığı boşluğu ölçüldü ama kapatılmadı.
-3. Chunk boyutunun sweep'e sokulması — 900 karakter gerekçeli bir tahmin,
+2. Chunk boyutunun sweep'e sokulması — 900 karakter gerekçeli bir tahmin,
    ölçülmüş bir seçim değil.
+3. Dayanaklılık yargıcı — atıfların geçerliliği ölçülüyor, iddiayı gerçekten
+   destekleyip desteklemediği ölçülmüyor.
 4. MCP sunucusu — sistemi Microsoft ekosistemindeki araçlardan çağırılabilir
    yapmak.
 
-**Bilinen sınırlar:** eval setini modelin kendisi üretiyor (parafraz katmanı
-hafifletiyor, çözmüyor); korpus tek kurum tek dil, İngilizce kontrol seti yok;
-gövdeleme morfolojik analizci değil, türetim eklerinde çalışmıyor.
+**Bilinen sınırlar** (hepsi ölçülmüş, hiçbiri gizlenmemiş):
+
+- Eval setini modelin kendisi üretiyor. Parafraz katmanı bunu hafifletiyor ama
+  çözmüyor; 60 parafrazın 11'i (%18) orijinaliyle 0.80'in altında anlamsal
+  benzerlik gösteriyor (`scripts/check_paraphrase_fidelity.py`), yani ölçülen
+  kelime farkı gerçek sözlüksel avantajın bir **üst** sınırı.
+- Küçük etkiler için güç yetersiz: n=60, d=0.2'yi görmek için 197 gerekiyor.
+- Korpus tek kurum, tek dil. İngilizce kontrol seti yok.
+- Gövdeleme morfolojik analizci değil; çekim eklerinde çalışıyor, türetim
+  eklerinde çalışmıyor ("dondurulması" ile "dondurma" hâlâ eşleşmiyor).
+- Çekimserlik eşiği 52 negatif üzerinde kalibre edildi ve cevaplanamaz
+  soruların %38'ini kaçırıyor. BM25 skoru sorgu uzunluğuna duyarlı; bu
+  karıştırıcı kontrol edilmedi.
+- Bağlam bütçesi ablasyonu n=5 ile yapıldı. Etkinin yönü güvenilir, 1600
+  karakter rakamı gürültülü.

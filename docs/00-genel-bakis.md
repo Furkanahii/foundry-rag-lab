@@ -8,8 +8,11 @@ Bu klasör, koddaki her önemli kararın *neden* öyle olduğunu açıklar. Kod
 | [01 — Vektörler ve benzerlik](01-vektorler-ve-benzerlik.md) | Kosinüs, normalizasyon, boyutun laneti, Johnson–Lindenstrauss, asimetrik gömme | `runtime/foundry.py`, `index/store.py` |
 | [02 — Chunking](02-chunking.md) | Dört strateji, örtüşme garantisi, yüzdelik eşik, Türkçe cümle bölme | `ingest/chunkers.py`, `ingest/normalize.py` |
 | [03 — BM25 ve hibrit](03-bm25-ve-hibrit.md) | IDF'nin log-olasılık türevi, doygunluk, RRF, Borda/Arrow bağlantısı, MMR | `index/store.py`, `index/fusion.py` |
+| [04 — Üretim ve grounding](04-uretim-ve-grounding.md) | Bağlam bütçesi ablasyonu, atıf doğrulama, iki savunma hattı, dil seçimi | `generate/answerer.py` |
+| [05 — Kalibrasyon ve çekimserlik](05-kalibrasyon-abstention.md) | Sinyal seçimi (AUC), eşik türetimi, ECE'nin ne zaman reddedilmesi gerektiği | `evaluation/stats.py`, `generate/` |
 | [06 — Değerlendirmenin istatistiği](06-istatistik-degerlendirme.md) | nDCG'nin log indirimi, bootstrap, eşleştirilmiş permütasyon, Holm, güç, ECE | `evaluation/` |
-| [07 — Sunum anlatımı](07-sunum-anlatimi.md) | Projeyi sözlü anlatma metni, demo koreografisi, beklenen sorular | — |
+| [07 — Model seçimi](07-model-secimi.md) | Dört üretim modelinin ölçümü, tekrar metriğinin kör noktası, SDK mimari tuzağı | `runtime/foundry.py` |
+| [08 — Sunum anlatımı](08-sunum-anlatimi.md) | Projeyi sözlü anlatma metni, demo koreografisi, beklenen sorular | — |
 
 ---
 

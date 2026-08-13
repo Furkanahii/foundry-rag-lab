@@ -1,0 +1,108 @@
+eval set: generated=60, paraphrased=60
+
+==============================================================================
+variant: generated  (n=60)
+==============================================================================
+  baseline-dense   ndcg=0.5796 recall=0.7333 mrr=0.5275 hit=0.733  (13.1s)
+  lexical-only     ndcg=0.7040 recall=0.8167 mrr=0.6653 hit=0.817  (8.6s)
+  lexical-nostem   ndcg=0.4912 recall=0.5833 mrr=0.4597 hit=0.583  (8.2s)
+  rrf              ndcg=0.6817 recall=0.8833 mrr=0.6131 hit=0.883  (7.9s)
+  rrf-k20          ndcg=0.6825 recall=0.8833 mrr=0.6139 hit=0.883  (7.8s)
+  rrf-k120         ndcg=0.6753 recall=0.8667 mrr=0.6097 hit=0.867  (7.7s)
+  weighted-0.5     ndcg=0.7370 recall=0.8833 mrr=0.6867 hit=0.883  (7.0s)
+  weighted-0.7     ndcg=0.7001 recall=0.8833 mrr=0.6386 hit=0.883  (7.2s)
+  rrf-instruct     ndcg=0.6871 recall=0.9000 mrr=0.6144 hit=0.900  (9.3s)
+  rrf-truncate6    ndcg=0.6817 recall=0.8833 mrr=0.6131 hit=0.883  (7.2s)
+  rrf-mmr          ndcg=0.5481 recall=0.7000 mrr=0.4978 hit=0.700  (7.0s)
+
+  Paired comparison against 'baseline-dense' on ndcg@k
+  baseline: 0.5796 [0.4761, 0.6797] (95% CI, n=60)
+
+  config               mean      diff         p       d  verdict
+  --------------------------------------------------------------------------
+  lexical-only       0.7040   +0.1244    0.0653    0.24  n.s.
+  lexical-nostem     0.4912   -0.0884    0.2296   -0.16  n.s.
+  rrf                0.6817   +0.1022    0.0258    0.29  n.s. (raw p<0.05, lost to Holm)
+  rrf-k20            0.6825   +0.1029    0.0225    0.30  n.s. (raw p<0.05, lost to Holm)
+  rrf-k120           0.6753   +0.0957    0.0475    0.26  n.s. (raw p<0.05, lost to Holm)
+  weighted-0.5       0.7370   +0.1574    0.0006    0.44  SIGNIFICANT
+  weighted-0.7       0.7001   +0.1205    0.0005    0.48  SIGNIFICANT
+  rrf-instruct       0.6871   +0.1075    0.0523    0.26  n.s.
+  rrf-truncate6      0.6817   +0.1022    0.0258    0.29  n.s. (raw p<0.05, lost to Holm)
+  rrf-mmr            0.5481   -0.0315    0.2116   -0.17  n.s.
+
+==============================================================================
+variant: paraphrased  (n=60)
+==============================================================================
+  baseline-dense   ndcg=0.5158 recall=0.7000 mrr=0.4550 hit=0.700  (7.8s)
+  lexical-only     ndcg=0.5577 recall=0.6667 mrr=0.5214 hit=0.667  (7.0s)
+  lexical-nostem   ndcg=0.3362 recall=0.4167 mrr=0.3083 hit=0.417  (7.9s)
+  rrf              ndcg=0.6130 recall=0.8000 mrr=0.5506 hit=0.800  (8.0s)
+  rrf-k20          ndcg=0.6134 recall=0.8000 mrr=0.5511 hit=0.800  (9.0s)
+  rrf-k120         ndcg=0.6130 recall=0.8000 mrr=0.5506 hit=0.800  (8.3s)
+  weighted-0.5     ndcg=0.6295 recall=0.7667 mrr=0.5833 hit=0.767  (9.1s)
+  weighted-0.7     ndcg=0.5915 recall=0.7333 mrr=0.5436 hit=0.733  (8.5s)
+  rrf-instruct     ndcg=0.6233 recall=0.7667 mrr=0.5753 hit=0.767  (9.9s)
+  rrf-truncate6    ndcg=0.6130 recall=0.8000 mrr=0.5506 hit=0.800  (6.6s)
+  rrf-mmr          ndcg=0.4915 recall=0.6333 mrr=0.4447 hit=0.633  (6.7s)
+
+  Paired comparison against 'baseline-dense' on ndcg@k
+  baseline: 0.5158 [0.4148, 0.6150] (95% CI, n=60)
+
+  config               mean      diff         p       d  verdict
+  --------------------------------------------------------------------------
+  lexical-only       0.5577   +0.0419    0.4708    0.09  n.s.
+  lexical-nostem     0.3362   -0.1796    0.0091   -0.34  n.s. (raw p<0.05, lost to Holm)
+  rrf                0.6130   +0.0972    0.0088    0.35  n.s. (raw p<0.05, lost to Holm)
+  rrf-k20            0.6134   +0.0976    0.0068    0.37  n.s. (raw p<0.05, lost to Holm)
+  rrf-k120           0.6130   +0.0972    0.0088    0.35  n.s. (raw p<0.05, lost to Holm)
+  weighted-0.5       0.6295   +0.1137    0.0002    0.48  SIGNIFICANT
+  weighted-0.7       0.5915   +0.0757    0.0011    0.43  SIGNIFICANT
+  rrf-instruct       0.6233   +0.1075    0.0281    0.29  n.s. (raw p<0.05, lost to Holm)
+  rrf-truncate6      0.6130   +0.0972    0.0088    0.35  n.s. (raw p<0.05, lost to Holm)
+  rrf-mmr            0.4915   -0.0243    0.3766   -0.12  n.s.
+
+total 180.1s
+
+==============================================================================
+Planned comparisons (ndcg@k, not part of the Holm family)
+==============================================================================
+hypothesis                            variant           diff        p      d
+------------------------------------------------------------------------------
+Türkçe gövdeleme, BM25 kolunda        generated      +0.2128   0.0014   0.45
+Türkçe gövdeleme, BM25 kolunda        paraphrased    +0.2216   0.0004   0.45
+hibrit füzyon, saf yoğun aramaya karş generated      +0.1022   0.0258   0.29
+hibrit füzyon, saf yoğun aramaya karş paraphrased    +0.0972   0.0088   0.35
+
+==============================================================================
+Wording sensitivity: generated -> paraphrased (ndcg@k, paired by gold chunk)
+==============================================================================
+config           generated paraphrased      drop         p  verdict
+------------------------------------------------------------------------------
+baseline-dense      0.5796      0.5158   -0.0638    0.1121  n.s.
+lexical-only        0.7040      0.5577   -0.1463    0.0020  significant drop
+lexical-nostem      0.4912      0.3362   -0.1550    0.0014  significant drop
+rrf                 0.6817      0.6130   -0.0687    0.0735  n.s.
+rrf-k20             0.6825      0.6134   -0.0690    0.0745  n.s.
+rrf-k120            0.6753      0.6130   -0.0623    0.1105  n.s.
+weighted-0.5        0.7370      0.6295   -0.1075    0.0121  n.s. (raw p<0.05, lost to Holm)
+weighted-0.7        0.7001      0.5915   -0.1086    0.0068  n.s. (raw p<0.05, lost to Holm)
+rrf-instruct        0.6871      0.6233   -0.0638    0.1434  n.s.
+rrf-truncate6       0.6817      0.6130   -0.0687    0.0735  n.s.
+rrf-mmr             0.5481      0.4915   -0.0566    0.0951  n.s.
+
+A large drop means the configuration was scoring on shared vocabulary
+rather than on retrieval. Read the paraphrased column as the estimate of
+how the system behaves on questions a user actually types.
+
+Holm-Bonferroni applied within each family of comparisons: with 10
+comparisons at alpha=0.05 there is a ~40% chance of at least one false
+positive without correction.
+
+Power: this eval set has n=60 questions per variant.
+  small   effect (d=0.2): UNDERPOWERED (need 197)
+  medium  effect (d=0.5): sufficient
+  large   effect (d=0.8): sufficient
+
+A non-significant result on an underpowered set does not mean the
+configurations are equivalent - only that this set could not tell.

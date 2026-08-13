@@ -1,0 +1,49 @@
+positives: 60 (paraphrased)   negatives: 52
+config: fusion=weighted alpha=0.5 top_k=5
+
+  25/112...
+  50/112...
+  75/112...
+  100/112...
+
+retrieved 112 queries in 17.3s
+
+--- aday sinyaller (AUC: 0.5 = ayırt edemiyor, 1.0 = kusursuz) ---
+  lexical_raw  AUC 0.8429   cevaplanabilir ort 13.8648  cevaplanamaz ort 7.5630  cevaplanamaz maks 19.0699
+  dense_raw    AUC 0.7923   cevaplanabilir ort 0.5965  cevaplanamaz ort 0.4742  cevaplanamaz maks 0.6716
+  fused        AUC 0.7269   cevaplanabilir ort 0.8495  cevaplanamaz ort 0.7121  cevaplanamaz maks 1.0000
+
+  seçilen sinyal: lexical_raw (AUC 0.8429)
+  Füzyon skoru sorgu içinde normalize edildiği için mutlak bir
+  güven ifade edemiyor; ham skor bu yüzden daha iyi ayırıyor.
+
+--- F1-optimal eşik ---
+    eşik      6.590345
+    F1        0.8321   doğruluk 0.7946
+    kesinlik  0.7403   duyarlılık 0.9500
+    TP 57  FP 20  FN 3  TN 32
+
+--- doğruluk-optimal eşik ---
+    eşik      6.590345
+    F1        0.8321   doğruluk 0.7946
+    kesinlik  0.7403   duyarlılık 0.9500
+    TP 57  FP 20  FN 3  TN 32
+
+--- güvenlik ağırlıklı eşik (duyarlılık >= 90%) ---
+    eşik      6.865533
+    F1        0.8060   doğruluk 0.7679
+    kesinlik  0.7297   duyarlılık 0.9000
+    TP 54  FP 20  FN 6  TN 32
+
+--- kalibrasyon ---
+    ATLANDI: 'lexical_raw' [0,1] aralığında değil (gözlenen 2.410–47.779).
+    ECE bir skoru doğrulukla karşılaştırır; sınırsız bir skorda
+    tanımsızdır. Eşik yine de geçerli, çünkü eşik yalnızca
+    monotonluk gerektirir — skorun olasılık olmasını değil.
+
+saved to data/results/abstention_calibration.json
+
+Önerilen: generation.abstention_threshold = 6.865533
+Bu eşik 52 negatif örnek üzerinde kalibre edildi; küçük bir
+negatif sınıf, eşiğin kendisini gürültülü yapar. Negatif sayısını
+artırmak, bu sayıyı iyileştirmenin en ucuz yolu.

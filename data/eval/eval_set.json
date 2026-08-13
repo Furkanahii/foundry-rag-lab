@@ -1,167 +1,1976 @@
 [
   {
-    "question": "Boğaziçi Üniversitesi'nin akademik araştırma ve iletişim için kullanabileceği kütüphanesi web sitesine başvuran öğrencisi neye ihtiyacı var?",
+    "question": "Hangi dersler kredili olarak alınacak derslerden en çok iki tanesi olarak seçilebilir?",
     "gold_chunk_ids": [
-      "lisansustu_egitim_ogretim_yonetmeligi::6"
+      "lisansustu_egitim_ogretim_yonetmeligi::63"
     ],
     "answerable": true,
     "source_doc": "lisansustu_egitim_ogretim_yonetmeligi",
-    "gold_answer": "On The\nApp Store\n0 212 359 54 00\nBoğaziçi Üniversitesi 34342 Bebek/İstanbul Türkiye\ninfo@bogazici.edu.tr\nbogaziciuniversitesi@hs01.kep.tr\nAra\nHaberler\nBilgi İşlem\nBoğaziçi Rehber\nEtkinlikler\nÖğrenci İşleri\nDuyurular\nAnasayfa\nAKADEMİK\nÖğrenci Yönetmelik ve Yönergeler\nBoğaziçi Üniversitesi Lisansüstü Eğitim ve Öğretim Yönetmeliği\nGeri\nBOĞAZİÇİ ÜNİVERSİTESİ\nProgramlar\nFakülteler\nEnstitüler\nYüksekokul",
+    "gold_answer": "ilgili anabilim dalının teklifi, ilgili enstitü yönetim kurulu kararı ve Senatonun onayı ile belirlenir.\n\nTezli yüksek lisans programında ders yükü\nMADDE 28 –\n(1) Tezli yüksek lisans programı toplam 21 krediden az olmamak koşuluyla en az yedi adet kredili dersten, haftada bir saatten oluşan, not tipi P/F, kredisi sıfır olan bir adet seminer dersinden ve tez çalışmasından oluşur. Tezli yüksek lisan",
     "variant": "generated",
-    "meta": {}
+    "meta": {
+      "gold_overlap": 0.3
+    }
   },
   {
-    "question": "Kampüslar, sağlık hizmetleri sunan sağlık kafeterya/kantin var mı? (1/0)",
+    "question": "Nedense bir öğrenci birden fazla lisansüstü programda aynı zamanda öğrenim görebilir mi?",
     "gold_chunk_ids": [
-      "lisans_egitim_ogretim_yonetmeligi::3"
-    ],
-    "answerable": true,
-    "source_doc": "lisans_egitim_ogretim_yonetmeligi",
-    "gold_answer": "Sermaye İşletmesi\nCinsiyet Eşitliği Planı\nProje Ofisi\nGelen Öğrenciler\nGiden Öğrenciler\nAday Öğrenciler\nUluslararası Anlaşmalar\nUluslararası Eğitim\nErasmus+ Programı\nYurt Dışı Eğitim Fırsatları\nYabancı Dil Eğitim Programları\nKültürel Değişim Programları\nYurt Dışı Staj Olanakları\nYabancı Akademisyen İşbirlikleri\nUluslararası Hizmetler\nUluslararası İşbirlikleri\nUluslararası Projeler\nUluslararası Öğr",
-    "variant": "generated",
-    "meta": {}
-  },
-  {
-    "question": "Kampüslar, sağlık hizmetleri sunan sağlık kafeterya/kantin var mı? (1/0)",
-    "gold_chunk_ids": [
-      "lisansustu_egitim_ogretim_yonetmeligi::3"
+      "lisansustu_egitim_ogretim_yonetmeligi::38"
     ],
     "answerable": true,
     "source_doc": "lisansustu_egitim_ogretim_yonetmeligi",
-    "gold_answer": "Sermaye İşletmesi\nCinsiyet Eşitliği Planı\nProje Ofisi\nGelen Öğrenciler\nGiden Öğrenciler\nAday Öğrenciler\nUluslararası Anlaşmalar\nUluslararası Eğitim\nErasmus+ Programı\nYurt Dışı Eğitim Fırsatları\nYabancı Dil Eğitim Programları\nKültürel Değişim Programları\nYurt Dışı Staj Olanakları\nYabancı Akademisyen İşbirlikleri\nUluslararası Hizmetler\nUluslararası İşbirlikleri\nUluslararası Projeler\nUluslararası Öğr",
+    "gold_answer": "ve herhangi bir hak iddia edemezler.\n(4) Üniversitenin birden fazla lisansüstü programına kayıt yaptırılamaz ve devam edilemez.\nYarıyıl/dönem kaydı\nMADDE 18 –\n(1) Öğrenciler her yarıyıl/dönem akademik takvimde belirtilen tarihlerde kayıtlarını yenilemekle yükümlüdür.\n(2) Yarıyıl/dönem kaydının yapılabilmesi için ilgili mevzuatla belirlenen mali yükümlülüklerin akademik takvimde belirtilen tarihe k",
     "variant": "generated",
-    "meta": {}
+    "meta": {
+      "gold_overlap": 0.5455
+    }
   },
   {
-    "question": "Ders saydırma işleminden başlamadan önceki yarıyılın kayıt dönemi ne zaman geçtiriyor?",
+    "question": "Hangi sınıfın öğrencilerinin akademik yarıyıl kayıtları tamamlanmamış olabilir?",
     "gold_chunk_ids": [
-      "lisans_egitim_ogretim_yonetmeligi::24"
+      "kayit_yonergesi::18"
     ],
     "answerable": true,
-    "source_doc": "lisans_egitim_ogretim_yonetmeligi",
-    "gold_answer": "uygulanmaz.\n(7) Sınamalı ve başarısız öğrencilere uygulanacak kredi yükü 30 uncu maddede yer alan esaslara göre belirlenir.\nDers saydırma ve muafiyet\nMADDE 14 –\n(1) Öğrencilerin bir yükseköğretim kurumunda aldığı derslerin kredileri ilgili yönetim kurulu kararı ile transfer edilerek kayıtlı olduğu lisans programındaki yükümlülüklerinin yerine sayılabilir.\n(2) Ders saydırma işlemlerinde aşağıdaki k",
+    "source_doc": "kayit_yonergesi",
+    "gold_answer": "ders programının oluşturulması,\nc) Oluşturulan ders programının danışman onayına gönderilmesi,\nd) Ders programının danışman tarafından onaylanması.\n(5) Dördüncü fıkradaki işlemlerin tümünün tamamlanması halinde öğrencinin ilgili\nyarıyıl için dönem kaydı tamamlanmış olur. Bu işlemlerinden herhangi birinin eksik\nolması halinde, öğrencinin ilgili yarıyıl için dönem kaydı tamamlanmamış olur ve öğrenci",
     "variant": "generated",
-    "meta": {}
+    "meta": {
+      "gold_overlap": 0.25
+    }
   },
   {
-    "question": "24 – Öğrenci İşleri Daire Başkanlığına başvuru yapmak zorunda kalan öğrenciler, ne kadar süre mazeret sınavlarına katılıp giderildiği durumda karar almalıdır?",
+    "question": "Tezi hakkında düzeltme kararı alan bir öğrencinin ne zaman yeniden tezini savunabilir?",
     "gold_chunk_ids": [
-      "lisansustu_egitim_ogretim_yonetmeligi::57"
-    ],
-    "answerable": true,
-    "source_doc": "lisansustu_egitim_ogretim_yonetmeligi",
-    "gold_answer": "Notlardaki yanlışlıklar süresi içinde giderilmediği takdirde bu konuda Üniversite Yönetim Kurulu karar almaya yetkilidir.\n\nSınavlara katılmama\nMADDE 24 –\n(1) Sağlık veya başka bir mazereti nedeniyle yarıyıl sonu sınavlarından birine veya bir kaçına katılamayacak durumda olan öğrenciler, Üniversitenin mazeret komisyonunda görüşülmek üzere, ilgili belgelerle birlikte Öğrenci İşleri Daire Başkanlığın",
-    "variant": "generated",
-    "meta": {}
-  },
-  {
-    "question": "3-0-3 modülerle sınıf yönetimi nasıl etik bir öğretim ve öğrenme ortamı oluşturuyor?",
-    "gold_chunk_ids": [
-      "pedagojik_formasyon::18"
-    ],
-    "answerable": true,
-    "source_doc": "pedagojik_formasyon",
-    "gold_answer": "okulda etkili\nöğretim ve öğrenme; öğrenmede başarı; sınıf içi öğrenmelerin değerlendirilme si; eğitim ve\nöğretim sürecinde etik ilkelerdir.\nSınıf Yönetimi (3-0-3)\nBu dersin amacı bir eğitim ve öğrenme ortamı olarak sınıfı çeşitli yönleriyle tanımak olup başlıca\nkonular: Sınıf yönetimiyle ilgili temel kavramlar; sınıfın fiziksel, sosyal ve psikolojik boyutları;\nsınıf kuralları ve sınıfta disiplin; ",
-    "variant": "generated",
-    "meta": {}
-  },
-  {
-    "question": "11 Haziran 2016 CUMARTESİ'ndeki Boğaziçi Üniversitesi Lisans Eğitim ve Öğretim Yönetmeliği içindeki Fahri Doktora'nı tanımlayan senato onaylı yayınların amaç nedir?",
-    "gold_chunk_ids": [
-      "lisans_egitim_ogretim_yonetmeligi::7"
-    ],
-    "answerable": true,
-    "source_doc": "lisans_egitim_ogretim_yonetmeligi",
-    "gold_answer": "Danışmanlık\nKütüphane\nBoğaziçi Üniversitesi Kütüphanesi Web Sitesi\nElektronik Dergiler\nElektronik Veritabanları\nKatalog Tarama\nKullanıcı İşlemleri\nAkademik İş Başvuruları\nAtama - Yükseltme Kriterleri\nSenato Onaylı Yayınevleri\nFahri Doktora\nFahri Doktora Sahipleri\nÖğretim Üyeleri\nÖğrenci Koordinatörlüğü\nBoğaziçi Üniversitesi Lisans Eğitim ve Öğretim Yönetmeliği\n11 Haziran 2016 CUMARTESİ\nResmi Gazet",
-    "variant": "generated",
-    "meta": {}
-  },
-  {
-    "question": "Doktora tezinde araştırma yaptığı konuyu bilime yenilik getirmesi mi yerine getirmiş olun?",
-    "gold_chunk_ids": [
-      "lisansustu_egitim_ogretim_yonetmeligi::100"
+      "lisansustu_egitim_ogretim_yonetmeligi::71"
     ],
     "answerable": true,
     "source_doc": "lisansustu_egitim_ogretim_yonetmeligi",
-    "gold_answer": "üzere tez enstitü yönetim kuruluna gönderilir.\n(3) Öğrencinin tezinin sonuçlanabilmesi için en az üç tez izleme komitesi raporu sunulması gerekir.\n(4) Doktora tez jürisi danışman ve ilgili anabilim dalının önerisi ve ilgili enstitü yönetim kurulunun onayı ile görevlendirilir. Jüri, üçü öğrencinin tez izleme komitesinde yer alan öğretim üyeleri ve en az ikisi başka bir yükseköğretim kurumunun öğret",
+    "gold_answer": "yazımı ve benzeri gereklerini yerine getirmiş olmak koşuluyla kendisine tezsiz yüksek lisans diploması verilerek programla ilişkisi sona erdirilir.\n(7) Tezi hakkında düzeltme kararı verilen öğrenci, jüri tarafından verilen ve üç ayı aşmayan süre içinde gerekli düzeltmeleri yaparak tezini aynı jüri önünde yeniden savunur. Verilen ek düzeltme süresi sonunda savunmasını yapmayan ya da savunma sonunda",
     "variant": "generated",
-    "meta": {}
+    "meta": {
+      "gold_overlap": 0.5833
+    }
   },
   {
-    "question": "(4) Kayıt işlemlerini süresi içinde yaptırsan üniversite öğrencisi, haklarında kanuni yapılacak, bu yarıyıl kaydın öğrenci hakkında ne dedi?",
+    "question": "Yeni bir Öğretim Üyesi unvanıyla kadro tahsisli ve puanlama cetveline göre başvuran bir akademisyenin konut tahsisine nasıl adımlar atması gerekecektir?",
     "gold_chunk_ids": [
-      "lisans_egitim_ogretim_yonetmeligi::17"
-    ],
-    "answerable": true,
-    "source_doc": "lisans_egitim_ogretim_yonetmeligi",
-    "gold_answer": "tarafından aslı görülerek onaylanan örneği kabul edilir. Askerlik durumu ve adli sicil kaydına ilişkin işlemler adayın beyanına dayanılarak yapılır.\n(4) Sahte veya eksik belge verdiği ya da gerçek dışı beyanda bulunduğu sonradan anlaşılan öğrencilerin, bulundukları yarıyıla bakılmadan Üniversite ile ilişikleri kesilir. Söz konusu öğrenciler Üniversiteden ayrılmışlarsa, kendilerine verilen belgeler",
-    "variant": "generated",
-    "meta": {}
-  },
-  {
-    "question": "Öğretim elemanı, Ölçme, Seçme ve Yerleştirme Merkezini (ÖSYM) tarafından öğretildiği ders kredileri nedir?",
-    "gold_chunk_ids": [
-      "lisansustu_egitim_ogretim_yonetmeligi::10"
-    ],
-    "answerable": true,
-    "source_doc": "lisansustu_egitim_ogretim_yonetmeligi",
-    "gold_answer": "ders kredilerini,\nç) Doktora yeterlik komitesi: Doktora yeterlik sınavlarını yürütmekle görevli komiteyi,\nd) Enstitü: Üniversiteye bağlı enstitüleri,\ne) GMAT: Uluslararası sınavlardan olan Graduate Management Admission Test Sınavını,\nf) GNO: Genel not ortalamasını,\ng) GRE: Uluslararası sınavlardan olan Graduate Record Examination Sınavını,\nğ) İntihal: Başkalarının fikirlerini, metotlarını, veriler",
-    "variant": "generated",
-    "meta": {}
-  },
-  {
-    "question": "(5) 2.00 ve üzeri GNO ile tamamlanan ilk dört yarıyılın zorunlu derslerini tamamladan başvurmaları halinde ön lisans diploması neyine ayrılan öğrencilere verilir?",
-    "gold_chunk_ids": [
-      "lisans_egitim_ogretim_yonetmeligi::49"
-    ],
-    "answerable": true,
-    "source_doc": "lisans_egitim_ogretim_yonetmeligi",
-    "gold_answer": "son sınıf statüsünde olmayan öğrencilerin Üniversite ile ilişiği kesilir.\n\nDÖRDÜNCÜ BÖLÜM\n\nDiploma, Onur-Yüksek Onur, Derece ve Sertifikalar\n\nDiploma\nMADDE 33 –\n(1) Lisans diploması, bir lisans programının tüm gereklerini yerine getirip mezuniyet koşullarını sağlayan öğrencilere verilir.\n(2) Lisansla birleştirilmiş tezsiz yüksek lisans diploması, bir lisansla birleştirilmiş tezsiz yüksek lisans pr",
-    "variant": "generated",
-    "meta": {}
-  },
-  {
-    "question": "Konutun kullanımı sırasında oluşabilecek kira bedeli, bordro üzerinde gösterilmektedir?",
-    "gold_chunk_ids": [
-      "konut_tahsis_yonergesi::17"
+      "konut_tahsis_yonergesi::8"
     ],
     "answerable": true,
     "source_doc": "konut_tahsis_yonergesi",
-    "gold_answer": "tutarda depozito ödemesi yapılır. Depozito dekontu\nYurtlar ve Konutlar Şube Müdürlüğüne teslim edilmeden konutun anahtarı teslim edilmez ve\nkonuta girilemez. Aksi hareket eden personelin konut tahsis kararı Yetkili Makamca iptal edilir\nve yasal işlem başlatılır.\n(3) Konuttan ayrılan personel konuta zarar vermemiş ve kira borcu yok ise ilgili\ndepozito tutarı iade edilir. Konuta zarar verilmiş ve de",
+    "gold_answer": "Akademik Personel sıra tahsisli konutların tahsisi\nusulüne göre tahsis edilir.\n1) Yeni Akademik Personel sıra tahsisli konutların tahsisi usulü:\n Öğretim Üyesi unvanıyla kadro tahsisi yapılmış öğretim üyeleri, kadro tahsis tarihini\ntakip eden üç yılın sonuna kadar konut kullanımı için başvuru yapabilirler.\n Kadro şartını sağlayan hak sahiplerinin sıra tahsisli konut başvuruları Yönetmeliğe\nekli ",
     "variant": "generated",
-    "meta": {}
+    "meta": {
+      "gold_overlap": 0.4211
+    }
   },
   {
-    "question": "(1) Kayıt İşleri Şube Müdürlüğü, akademik takvimde belirtilen süreler içinde öğretim elemanının yarıyıl sonu notları nedir ve bu notları ne yapar?",
+    "question": "Kayıtlı olmamış bir öğrenci nasıl dersten çıkabilir?",
     "gold_chunk_ids": [
-      "lisans_egitim_ogretim_yonetmeligi::37"
+      "lisansustu_egitim_ogretim_yonetmeligi::40"
+    ],
+    "answerable": true,
+    "source_doc": "lisansustu_egitim_ogretim_yonetmeligi",
+    "gold_answer": "Kayıtlarını yaptırmayan öğrenciler kayıtsız duruma düşer ve kayıtlı öğrencilerin yararlandığı haklardan yararlanamazlar.\nDersten çekilme\nMADDE 19 –\n(1) Öğrenciler, tez ve bilimsel hazırlık programı dersleri hariç, derslerden çekilebilir.\n\n(2) Dersten çekilme dönemi akademik takvimde ilan edilen son ders gününden iki hafta önce başlar ve bir hafta sürer. Dersten çekilme başvurusu akademik takvimde ",
+    "variant": "generated",
+    "meta": {
+      "gold_overlap": 0.5714
+    }
+  },
+  {
+    "question": "Tezsiz yüksek lisans programından tezli programa geçiş yapabilirim mi?",
+    "gold_chunk_ids": [
+      "lisansustu_egitim_ogretim_yonetmeligi::76"
+    ],
+    "answerable": true,
+    "source_doc": "lisansustu_egitim_ogretim_yonetmeligi",
+    "gold_answer": "bu Yönetmelik hükümlerine ve öğrencinin kabul edildiği yüksek lisans programına uygun olarak onaylar.\nTezsiz yüksek lisans programında süre ve başarı\nMADDE 33 –\n(1) Tezsiz yüksek lisans programını tamamlama süresi, bilimsel hazırlıkta geçen süre hariç, kayıt olduğu programa ilişkin derslerin verildiği dönemden başlamak üzere, her dönem için kayıt yaptırıp yaptırmadığına bakılmaksızın en az iki yar",
+    "variant": "generated",
+    "meta": {
+      "gold_overlap": 0.5
+    }
+  },
+  {
+    "question": "Yedek listedeki öğrenci, ilan edilen tarihlerde asıl listeden kayıt yaptırmayan öğrencilerin yerine kayıt yaptırabilir mi?",
+    "gold_chunk_ids": [
+      "kayit_yonergesi::10"
+    ],
+    "answerable": true,
+    "source_doc": "kayit_yonergesi",
+    "gold_answer": "yedek sırasına göre asıl listeden kayıt yaptırmayan\nöğrencilerin yerine kayıt yaptırabilirler.\nLisansüstü Programlara Yeni Kabul Edilen Öğrenciler\nMADDE 8- (1) Yüksek lisans ve doktora programlarına yeni kabul edilen lisansüstü\nöğrenciler, ilan edilen tarihlerde kayıt için gerekli belgelerini teslim ederek Üniversiteye\nilk kayıtlarını yaptırırlar.\n(2) Asıl listeden kabul edildiği halde ilan edilen",
+    "variant": "generated",
+    "meta": {
+      "gold_overlap": 0.8462
+    }
+  },
+  {
+    "question": "TP işareti ne anlama geliyor ve hangi koşullarda verilir?",
+    "gold_chunk_ids": [
+      "lisansustu_egitim_ogretim_yonetmeligi::54"
+    ],
+    "answerable": true,
+    "source_doc": "lisansustu_egitim_ogretim_yonetmeligi",
+    "gold_answer": "işarettir.\nh) TP işareti, lisansüstü teze kayıtlı olan öğrenciye, tez çalışmalarının başarıyla sürmesi halinde, tez danışmanı tarafından verilir.\nı) W işareti, tez ve bilimsel hazırlık programı dersleri dışında, akademik takvimde belirtilen dersten çekilme süresi dolmadan, program danışmanının onayıyla dersten çekilen öğrencilere Öğrenci İşleri Daire Başkanlığı tarafından verilir.\ni) Q işareti, de",
+    "variant": "generated",
+    "meta": {
+      "gold_overlap": 0.4444
+    }
+  },
+  {
+    "question": "Doktora programında lisans derecesi ile kabul edilmiş bir öğrenci, en fazla kaç dersi transfer ederek tamamlayabilir?",
+    "gold_chunk_ids": [
+      "lisansustu_egitim_ogretim_yonetmeligi::81"
+    ],
+    "answerable": true,
+    "source_doc": "lisansustu_egitim_ogretim_yonetmeligi",
+    "gold_answer": "ve tez çalışması olmak üzere en az 300 AKTS kredisinden oluşur. Seminer dersi haftada bir saatlik, not tipi P/F, kredisi sıfır olan bir derstir.\n(2) İlgili enstitü yönetim kurulu, doktora yapacak öğrenciye ilgili anabilim dalının önerisi ile aynı anabilim dalından tam zamanlı bir öğretim üyesini program danışmanı olarak görevlendirir. Program danışmanı öğrencinin her yarıyılda alacağı dersleri bu ",
+    "variant": "generated",
+    "meta": {
+      "gold_overlap": 0.4375
+    }
+  },
+  {
+    "question": "Bir öğrenci dersi tekrar etmek isteyebilirken hangi şartlar altında \"E\" işareti verilir?",
+    "gold_chunk_ids": [
+      "lisans_egitim_ogretim_yonetmeligi::34"
     ],
     "answerable": true,
     "source_doc": "lisans_egitim_ogretim_yonetmeligi",
-    "gold_answer": "tamamladığı halde zorunlu stajını tamamlamamış öğrencilerin yarıyıl statüsünü gösterir.\nNotların verilmesi, açıklanması ve maddi hata düzeltmeleri\nMADDE 25 –\n(1) Yarıyıl sonu notları, akademik takvimde belirtilen süreler içinde öğretim elemanları tarafından verilerek kesinleşir ve Kayıt İşleri Şube Müdürlüğü tarafından ilan edilir.\n\n(2) Akademik takvimde belirtilen süreler içinde verilmeyen notlar",
+    "gold_answer": "üzere dersin öğretim elemanı tarafından veya bir başka yükseköğretim kurumundan transfer edilen derslere ilgili yönetim kurulu kararı ile verilir.\nİşaretlerMADDE 24 –\n(1) Öğrencilerin bir ders veya yarıyıldaki durumu, aşağıdaki işaretlerden birisiyle belirlenir.\nİŞARETLER\nAÇIKLAMA\nE\nTekrar sınava girer\nI\nEksik\nNP\nYarıyıl sonu sınavına girmedi\nR\nTekrar\nNC\nKredisiz\nL\nİzinli\nX\nDeğişim programında\nW\nD",
     "variant": "generated",
-    "meta": {}
+    "meta": {
+      "gold_overlap": 0.5833
+    }
   },
   {
-    "question": "26 – Kayıt İşleri Şube Müdürlüğünün kararı olumsuz olursa, ne zaman öğrenci mazeret sınavlarına katılacak?",
+    "question": "Lisansla birleştirilmiş tezsiz yüksek lisans programlarına başvuru ve kabul sürecinde, öğretim dilinin nasıl belirlenmesi kararlaştırılır?",
     "gold_chunk_ids": [
-      "lisans_egitim_ogretim_yonetmeligi::38"
+      "lisans_egitim_ogretim_yonetmeligi::12"
     ],
     "answerable": true,
     "source_doc": "lisans_egitim_ogretim_yonetmeligi",
-    "gold_answer": "öncesine kadar Kayıt İşleri Şube Müdürlüğüne bildirilir. Özel durumlarda Üniversite Yönetim Kurulu karar almaya yetkilidir.\n\nSınavlara katılmama\nMADDE 26 –\n(1) Sağlık veya başka bir mazereti nedeniyle yarıyıl sonu sınavlarından birine veya birkaçına katılamayacak durumda olan öğrenciler, Üniversite Yönetim Kurulu tarafından belirlenen mazeret komisyonunda görüşülmek üzere, ilgili belgelerle birlik",
+    "gold_answer": "ile kesinleşir.\n(7) Lisansla birleştirilmiş tezsiz yüksek lisans programları da bu Yönetmelik esaslarına göre yürütülür.\nLisans programına kabul\nMADDE 6 –\n(1) Lisans programlarına öğrenci kabulü, 2547 sayılı Yükseköğretim Kanunu ile Yükseköğretim Kurulu yönetmelikleri ve kararları çerçevesinde Senato tarafından belirlenen esaslara göre yapılır.\n\n(2) Yurt dışından öğrenci başvuru ve kabul işlemleri",
     "variant": "generated",
-    "meta": {}
+    "meta": {
+      "gold_overlap": 0.6
+    }
   },
   {
-    "question": "Hükümete Rektör tarafından 2008/01 tarihli \"Boğaziçi Üniversitesi Lisansüstü Burs İç Yönetmeliği\" yürütülmesi neyin dışında yürütülmesi mümkündü?",
+    "question": "Eğer bir lisansüstü dersimde CC notunu almak istemiyorum ve yarıyıl sonu sınavında da FF notunu alırsam ne yapmalıyım?",
     "gold_chunk_ids": [
-      "burs_yonergesi::18"
+      "lisansustu_egitim_ogretim_yonetmeligi::49"
+    ],
+    "answerable": true,
+    "source_doc": "lisansustu_egitim_ogretim_yonetmeligi",
+    "gold_answer": "Tez dersi hariç, not tipi P veya F olarak tanımlanmış bir dersin tamamlandığını göstermek üzere dersin öğretim elemanı tarafından verilir.\n3) Kayıtlı olduğu lisansüstü programındaki öğrenimi sırasında başka yükseköğretim kurumlarından alınmış ve başarıyla tamamlanmış lisansüstü dersler için ilgili enstitü yönetim kurulu tarafından verilir.\n4) 10 uncu maddenin üçüncü fıkrasının (b) bendine göre tra",
+    "variant": "generated",
+    "meta": {
+      "gold_overlap": 0.2353
+    }
+  },
+  {
+    "question": "Bir dersin kredi değeri hangi faktörlerden oluşur?",
+    "gold_chunk_ids": [
+      "lisans_egitim_ogretim_yonetmeligi::10"
+    ],
+    "answerable": true,
+    "source_doc": "lisans_egitim_ogretim_yonetmeligi",
+    "gold_answer": "Boğaziçi Üniversitesi Lisans Eğitim ve Öğretim Yönetmeliğini,\n\nifade eder.\n\nİKİNCİ BÖLÜM\n\nEğitim ve Öğretime İlişkin Esaslar\n\nLisans programı\nMADDE 5 –\n(1) Bir lisans programı, lisans diploması almak için öngörülen gerekli teorik ders, laboratuvar, uygulama, staj ve benzeri çalışmalar ile bu çalışmaların yarıyıllara dağılımı ve kredi değerlerinden oluşan sekiz yarıyıllık bir eğitim ve öğretim prog",
+    "variant": "generated",
+    "meta": {
+      "gold_overlap": 0.5714
+    }
+  },
+  {
+    "question": "Başvuruların değerlendirildikten sonra kabul edilen öğrenci tezli yüksek lisans programına geçiş yaparken, tezsiz yüksek lisans programında aldığı dersler hangi koşullar altında tezli programdaki derslere sayılabilir?",
+    "gold_chunk_ids": [
+      "lisansustu_egitim_ogretim_yonetmeligi::77"
+    ],
+    "answerable": true,
+    "source_doc": "lisansustu_egitim_ogretim_yonetmeligi",
+    "gold_answer": "başarısız olan veya programı tamamlayamayan öğrencinin Üniversite ile ilişiği kesilir.\n\nTezli ve tezsiz yüksek lisans programları arasında geçişler\nMADDE 34 –\n(1) Tezsiz yüksek lisans programına devam edenler, varsa aynı adlı tezli yüksek lisans programına geçiş için başvurabilirler. Başvuru koşulları anabilim dalının önerisiyle ilgili enstitü yönetim kurulu tarafından, Senatonun belirlediği esasl",
+    "variant": "generated",
+    "meta": {
+      "gold_overlap": 0.45
+    }
+  },
+  {
+    "question": "Doktora tezi için Danışmanı nasıl görevlendirebilirim?",
+    "gold_chunk_ids": [
+      "lisansustu_egitim_ogretim_yonetmeligi::86"
+    ],
+    "answerable": true,
+    "source_doc": "lisansustu_egitim_ogretim_yonetmeligi",
+    "gold_answer": "anılan dersler ilgili anabilim dalı önerisi ve ilgili enstitü yönetim kurulu kararıyla tezsiz yüksek lisans programındaki derslerin yerine sayılır.\n(2) Doğrudan lisans derecesiyle veya Üniversite içinden bir başka anabilim dalından yüksek lisans derecesiyle veya bir başka üniversiteden yüksek lisans derecesi ile doktora programına başlamış öğrencilerden, gerekli ders kredi yükü, proje ve benzeri d",
+    "variant": "generated",
+    "meta": {
+      "gold_overlap": 0.3333
+    }
+  },
+  {
+    "question": "Rektörlük tarafından yürütülecek gerekli yasal işlemler hangisidir?",
+    "gold_chunk_ids": [
+      "konut_tahsis_yonergesi::24"
+    ],
+    "answerable": true,
+    "source_doc": "konut_tahsis_yonergesi",
+    "gold_answer": "34 üncü maddesi uyarınca gerekli yasal işlemler\nRektörlük tarafından yürütülür.\n\nALTINCI BÖLÜM\nÇeşitli ve Diğer Hükümler\n\nHüküm Bulunmayan Haller\nMadde 17- (1) Bu Yönergede düzenlenmeyen veya uygulamasında tereddüde düşülen\nhallerde Kamu Konutları Kanunu ile Kamu Konutları Yönetmeliği hükümleri uygulanır.\nBuna rağmen tereddüt durumunun devam etmesi halinde Komisyonun kararları geçerlidir.\nUçaksava",
+    "variant": "generated",
+    "meta": {
+      "gold_overlap": 0.7143
+    }
+  },
+  {
+    "question": "Doktora tezinin intihal yazılım programı raporunda gerçek bir intihal tespit edildiğinde, komitenin hangi adımlarını atması gerekmektedir?",
+    "gold_chunk_ids": [
+      "lisansustu_egitim_ogretim_yonetmeligi::99"
+    ],
+    "answerable": true,
+    "source_doc": "lisansustu_egitim_ogretim_yonetmeligi",
+    "gold_answer": "edilir.\n(2) Komite tarafından üst üste iki kez veya aralıklı olarak üç kez başarısız bulunan öğrencinin Üniversite ile ilişiği kesilir.\nTez savunması\nMADDE 44 –\n(1) Doktora programındaki bir öğrenci, elde ettiği sonuçları Senato tarafından kabul edilen yazım kurallarına uygun biçimde yazar ve tezini jüri önünde sözlü olarak savunur.\n(2) Doktora tezinin savunmasından önce ve düzeltme verilen tezler",
+    "variant": "generated",
+    "meta": {
+      "gold_overlap": 0.2667
+    }
+  },
+  {
+    "question": "Kampüs hizmetleri bölümünde kafeterya ve kantinler hakkında ne bilgi veriliyor?",
+    "gold_chunk_ids": [
+      "lisans_egitim_ogretim_yonetmeligi::4"
+    ],
+    "answerable": true,
+    "source_doc": "lisans_egitim_ogretim_yonetmeligi",
+    "gold_answer": "& Hizmetler\nUlaşım / Park\nKampüsler\nKampüs Hizmetleri\nKafeterya / Kantinler\nSağlık\nSpor Etkinlikleri\nSanal Tur\nÖğrenci & Sosyal Yaşam\nKampüslerde Engellilik\nFlora / Fauna\nYeşil Kampüs\nSu Verimliliği Seferberliği\nÖğrenci Kulüpleri\nRehberlik Danışmanlık\nKariyer Merkezi\nKültür ve Sanat\nÖğrenci Hak ve Sorumlulukları\nToplumsal Dayanışma\nBoğaziçi\nHIZLI ERİŞİM\nSAYILARLA BOĞAZİÇİ\nBUCAMPUS\nTANITIM\nÜNİVERSİ",
+    "variant": "generated",
+    "meta": {
+      "gold_overlap": 0.5
+    }
+  },
+  {
+    "question": "Üniversitedeki bir dersi Boğaziçi Üniversitesi Yaz Öğretimi Yönergesine göre verebilecek ya da alabileceğimizi hangi yarıylda yapabiliriz?",
+    "gold_chunk_ids": [
+      "lisans_egitim_ogretim_yonetmeligi::15"
+    ],
+    "answerable": true,
+    "source_doc": "lisans_egitim_ogretim_yonetmeligi",
+    "gold_answer": "Değişim programları kapsamında diğer yükseköğretim kurumlarında geçirilen yarıyıllar normal ve azami süreye sayılır.\n\nEğitim-öğretim yılı\nMADDE 9 –\n(1) Bir eğitim-öğretim yılı iki yarıyıldan oluşur. Dersler yarıyıl olarak düzenlenir.\n\n(2) Eğitim-öğretim yılı kapsamında yaz dönemi de açılabilir ve öğrenciler bu dönemde de ders alabilirler. Yaz döneminde eğitim-öğretim, Boğaziçi Üniversitesi Yaz Öğr",
+    "variant": "generated",
+    "meta": {
+      "gold_overlap": 0.375
+    }
+  },
+  {
+    "question": "Öğretmenlik Uygulaması dersinde, bir eğitim ve öğrenme ortamı olarak okulu gözlemlemede hangi yönlerden bakılmalıdır?",
+    "gold_chunk_ids": [
+      "pedagojik_formasyon::24"
+    ],
+    "answerable": true,
+    "source_doc": "pedagojik_formasyon",
+    "gold_answer": "materyallerinin tasarımı;\ntematik öğretim materyali tasarlama; alana özgü nesne ambarı oluşturma ve öğretim materyali\ndeğerlendirme ölçütleridir.\nÖğretmenlik Uygulaması (1-8-5)\nBu dersin amacı öğretmenlik uygulaması yapılacak okulu ve sınıfı çeşitli yönleriyle\ngözlemleyerek yakından tanınmasını ve gözlem sonuçlarının raporlaştırılmasını sağlamak olup\nbaşlıca konular: Bir eğitim ve öğrenme ortamı o",
+    "variant": "generated",
+    "meta": {
+      "gold_overlap": 0.6429
+    }
+  },
+  {
+    "question": "Bir öğrenci sertifika programına başvurmak için ana dal programından mezuniyet aşamasında olmalıdır mi?",
+    "gold_chunk_ids": [
+      "sertifika_programlari_yonergesi::4"
+    ],
+    "answerable": true,
+    "source_doc": "sertifika_programlari_yonergesi",
+    "gold_answer": "yürüten\nbirimin web sitesinde ilan edilir.\n(4) Bir sertifika programı en az 5 ders veya 15 krediden oluşur.\n2\nBaşvuru Koşulları ve Süreci\nMADDE 6 – (1) Sertifika programlarına Üniversitede yer alan diplomalı lisans programlarına kayıtlı\nöğrenciler başvurabilir. Lisansüstü programlara kayıtlı öğrenciler sertifika programlarına başvuramaz.\n(2) Seçtiği sertifika programının tamamlama koşullarını sağl",
+    "variant": "generated",
+    "meta": {
+      "gold_overlap": 0.3333
+    }
+  },
+  {
+    "question": "Bir adli yargının kesinleşmesine kadar disiplin cezası verme yetkisinin zamanaşımı ne zaman başlar?",
+    "gold_chunk_ids": [
+      "ogrenci_disiplin_yonetmeligi::18"
+    ],
+    "answerable": true,
+    "source_doc": "ogrenci_disiplin_yonetmeligi",
+    "gold_answer": "bir ay içinde,\nb) Yükseköğretim kurumundan bir veya iki yarıyıl için uzaklaştırma ile yükseköğretim kurumundan çıkarma cezalarında üç ay içinde,\ndisiplin soruşturmasına başlanmadığı takdirde, disiplin cezası verme yetkisi zaman aşımına uğrar.\n(3) Disiplin cezasını gerektiren eylemlerin işlendiği tarihten itibaren, en geç iki yıl içinde disiplin cezası verilmediği takdirde, disiplin cezası verme\nye",
+    "variant": "generated",
+    "meta": {
+      "gold_overlap": 0.3846
+    }
+  },
+  {
+    "question": "E-kayıt veya şahsen kayıt yapılmamış ve kayıt hakkından vazgeçmiş bir öğrenci, ilan edilen tarihlerde Üniversiteye kayıtlarını yaptırabilir mi?",
+    "gold_chunk_ids": [
+      "kayit_yonergesi::7"
+    ],
+    "answerable": true,
+    "source_doc": "kayit_yonergesi",
+    "gold_answer": "içinde, Üniversiteye e-kayıt veya şahsen kayıt yaptırmayan\nöğrenciler, kayıt hakkından vazgeçmiş sayılır ve herhangi bir hak iddia edemezler.\n(5) E- kayıt ve şahsen kayıt tarihi sona erdikten sonra, ek kontenjanların tespit edilmesi\niçin programlar bazında kayıt olan öğrenci sayıları ÖSYM’ye bildirilir.\n(6) ÖSYM tarafından boş kalan kontenjanlar belirlenir ve ilan edilir. Boş kalan\nkontenjanlara e",
+    "variant": "generated",
+    "meta": {
+      "gold_overlap": 0.75
+    }
+  },
+  {
+    "question": "Neden dil hazırlık sınıfı hariç akademik yarıyıl kayıtları çevrimiçi olarak yapılır?",
+    "gold_chunk_ids": [
+      "kayit_yonergesi::15"
+    ],
+    "answerable": true,
+    "source_doc": "kayit_yonergesi",
+    "gold_answer": "yapılır. Bu öğrencilerin çevrim içi kayıt yapmalarına gerek yoktur.\n\nÜÇÜNCÜ BÖLÜM\nAkademik Yarıyıl Kayıt Dönemi\n\nAkademik Yarıyıl Kayıtları\nMADDE 10- (1) Üniversite bünyesinde kayıt hakkı olan tüm öğrenciler, ilgili yarıyılda ve\ndevam eden her yarıyılda , akademik takvimde ilan edilen tarihlerde akademik yarıyıl\nkayıtlarını bizzat yenilemekle yükümlüdürler.\n\n(2) Akademik yarıyıl kayıtları, dil haz",
+    "variant": "generated",
+    "meta": {
+      "gold_overlap": 0.4545
+    }
+  },
+  {
+    "question": "Bir tezli yüksek lisans programından alinan derslerin doktora programına ne şekilde yerine sayılacağı?",
+    "gold_chunk_ids": [
+      "lisansustu_egitim_ogretim_yonetmeligi::79"
+    ],
+    "answerable": true,
+    "source_doc": "lisansustu_egitim_ogretim_yonetmeligi",
+    "gold_answer": "kurulu kararıyla tezli yüksek lisans programındaki derslerin yerine sayılır.\nALTINCI BÖLÜM\nDoktora Programlarına İlişkin Esaslar\nDoktora programı\nMADDE 35 –\n(1) Bir doktora programının yürütülmesine ilişkin esaslar ilgili anabilim dalının önerisi, ilgili enstitü yönetim kurulu kararı ve Senatonun onayı ile belirlenir.\n\nDoktora programında ders yükü",
+    "variant": "generated",
+    "meta": {
+      "gold_overlap": 0.6667
+    }
+  },
+  {
+    "question": "15 gün içinde konut taşınmazlarsa, konut tahsis başvuru haklarının yanı sıra tahsis edilen konut üzerindeki diğer hakları da kaybedebilecekler mi?",
+    "gold_chunk_ids": [
+      "konut_tahsis_yonergesi::10"
+    ],
+    "answerable": true,
+    "source_doc": "konut_tahsis_yonergesi",
+    "gold_answer": "15 gün içinde konuta taşınmadıkları takdirde, konut tahsis başvuru hakkı da\ndahil olmak üzere, tahsis edilen konut üzerindeki haklarını kaybederler.\n2) Diğer Akademik Personel sıra tahsisli konutların tahsisi usulü:\n A bendinde tanımlanan; kadro tahsisi yapıldıktan sonra 3 yıl içinde başvurmuş olma\nşartını ilgili sürenin geçmiş olması nedeniyle karşılamayan akademik personel için aşağıdaki\nusulle",
+    "variant": "generated",
+    "meta": {
+      "gold_overlap": 0.75
+    }
+  },
+  {
+    "question": "Bilimsel hazırlık programında başarısız olunan bir dersi nasıl tekrar alabilirim?",
+    "gold_chunk_ids": [
+      "lisansustu_egitim_ogretim_yonetmeligi::33"
+    ],
+    "answerable": true,
+    "source_doc": "lisansustu_egitim_ogretim_yonetmeligi",
+    "gold_answer": "ilgili lisansüstü programını tamamlamak için gerekli olan derslerden oluşamaz. Özel durumlarda Üniversite Yönetim Kurulu karar almaya yetkilidir.\n(5) Bilimsel hazırlık dersleri kredili olarak alınır. Bu derslerin lisans seviyesinde olması durumunda 11/6/2016 tarihli ve 29739 sayılı Resmî Gazete’de yayımlanan Boğaziçi Üniversitesi Lisans Eğitim-Öğretim Yönetmeliğinde belirtilen not sistemi geçerlid",
+    "variant": "generated",
+    "meta": {
+      "gold_overlap": 0.4
+    }
+  },
+  {
+    "question": "Tezli yüksek lisans programında P notu almak için hangi dersleri ve minimum GNO puanını nasıl karşılamam gerekmektedir?",
+    "gold_chunk_ids": [
+      "lisansustu_egitim_ogretim_yonetmeligi::66"
+    ],
+    "answerable": true,
+    "source_doc": "lisansustu_egitim_ogretim_yonetmeligi",
+    "gold_answer": "tarafından transferinin onaylanması durumunda bu dersler öğrencinin kaydına P notu olarak geçer.\nTezli yüksek lisans programında süre ve başarı\nMADDE 29 –\n(1) Tezli yüksek lisans programının süresi bilimsel hazırlıkta geçen süre hariç, kayıt olduğu programa ilişkin derslerin verildiği dönemden başlamak üzere, her dönem için kayıt yaptırıp yaptırmadığına bakılmaksızın dört yarıyıl olup, program en ",
+    "variant": "generated",
+    "meta": {
+      "gold_overlap": 0.5294
+    }
+  },
+  {
+    "question": "Resmî Gazeteden hangi tarihli sayılarda yapılan değişikliklerin bildirildiği bilgileri içermektedir?",
+    "gold_chunk_ids": [
+      "ogrenci_disiplin_yonetmeligi::39"
+    ],
+    "answerable": true,
+    "source_doc": "ogrenci_disiplin_yonetmeligi",
+    "gold_answer": "sonra Danıştay İdari Dava Daireleri Kurulunun 3/11/2014 tarihli ve YD İtiraz No: 2014/843 sayılı Kararı ile bu\nKarara yapılan itiraz ret edilmiştir.\nYönetmeliğin Yayımlandığı Resmî\nGazete’nin\nTarihi\nSayısı\n18/8/2012\n28388\nYönetmelikte Değişiklik Yapan\nYönetmeliklerin Yayımlandığı Resmî\nGazetelerin\nTarihi\nSayısı\n1.\n7/11/2013\n28814\n2.\n23/12/2016\n29927\n3.",
+    "variant": "generated",
+    "meta": {
+      "gold_overlap": 0.6
+    }
+  },
+  {
+    "question": "Yürürlükten kaldırılan kurumların listesini verebilir misiniz?",
+    "gold_chunk_ids": [
+      "ogrenci_disiplin_yonetmeligi::38"
+    ],
+    "answerable": true,
+    "source_doc": "ogrenci_disiplin_yonetmeligi",
+    "gold_answer": "Kurumları Öğrenci Disiplin Yönetmeliği\nyürürlükten kaldırılmıştır.\nYürürlük\nMADDE 31 –\n(1) Bu Yönetmelik yayımı tarihinde yürürlüğe girer.\nYürütme\nMADDE 32 –\n(1) Bu Yönetmelik hükümlerini Yükseköğretim Kurulu Başkanı yürütür.\n___________________\n1\nDanıştay İdari Dava Daireleri Kurulunun 3/11/2014 tarihli ve YD İtiraz No: 2014/843 sayılı Kararı ile 8 inci maddesinin birinci\nfıkrasının (c) bendinde ",
+    "variant": "generated",
+    "meta": {
+      "gold_overlap": 0.3333
+    }
+  },
+  {
+    "question": "Soruşturma raporunda hangi noktalarda detaylı olarak açıklanması gerektiği?",
+    "gold_chunk_ids": [
+      "ogrenci_disiplin_yonetmeligi::24"
+    ],
+    "answerable": true,
+    "source_doc": "ogrenci_disiplin_yonetmeligi",
+    "gold_answer": "olarak gönderebilecekleri bildirilir.\n(5) Soruşturma öğrencinin kendini gereği gibi savunmasına imkân verecek şekilde yürütülür.\nSoruşturma raporu\nMADDE 16 –\n(1) Soruşturma sonuçlandığında bir rapor düzenlenir. Raporda soruşturma onayı, soruşturmaya başlama tarihi, soruşturulanın\nkimliği, isnat edilen suç konuları, soruşturmanın safhaları, deliller ve alınan savunma özetlenir. İsnat edilen suçun s",
+    "variant": "generated",
+    "meta": {
+      "gold_overlap": 0.375
+    }
+  },
+  {
+    "question": "Bir öğrenci, hangi yıllardan sonra half a year (yarıyıllık) eğitim sayılır ve hangileri sayılmaz?",
+    "gold_chunk_ids": [
+      "lisansustu_egitim_ogretim_yonetmeligi::16"
+    ],
+    "answerable": true,
+    "source_doc": "lisansustu_egitim_ogretim_yonetmeligi",
+    "gold_answer": "hariç, kayıtlı olduğu veya kayıt yenilememe nedeni ile kayıtsız olarak geçirdiği tüm yarıyıllar normal ve azami eğitim ve öğretim süresine dâhildir.\n(4) Yabancı dil ve bilimsel hazırlık programlarında geçirilen süreler lisansüstü programın normal ve azami süresine dâhil değildir.\n(5) Değişim programları ile uluslararası ortak programlar kapsamında yurt içi veya yurt dışı yükseköğretim kurumlarında",
+    "variant": "generated",
+    "meta": {
+      "gold_overlap": 0.2308
+    }
+  },
+  {
+    "question": "Öğretim planlarında hangi faktörlerin en önemlisi olduğuna dair görüşler nelerdir?",
+    "gold_chunk_ids": [
+      "pedagojik_formasyon::17"
+    ],
+    "answerable": true,
+    "source_doc": "pedagojik_formasyon",
+    "gold_answer": "öğretmenlik ve\nöğretmenlik meslek etiği; öğretmen yetiştirmede güncel gelişmeler; yirmi birinci yüzyılda okul\nve eğitimle ilgili temel yönelimlerdir.\nÖğretim İlke ve Yöntemleri (3-0-3)\nBu dersin amacı öğretim ve öğrenm eyle ilgili temel kavram, kuram, strateji, yaklaşım ve\nmodelleri tanıtmak olup başlıca konular: Öğretim ilke ve yöntemleriyle ilgili temel kavramlar;\nöğretim ve öğrenme ilkeleri, mo",
+    "variant": "generated",
+    "meta": {
+      "gold_overlap": 0.1
+    }
+  },
+  {
+    "question": "Enstitü yönetim kurulu onayı olmadan tez danışmanınızı nasıl değiştirebilirim?",
+    "gold_chunk_ids": [
+      "lisansustu_egitim_ogretim_yonetmeligi::68"
+    ],
+    "answerable": true,
+    "source_doc": "lisansustu_egitim_ogretim_yonetmeligi",
+    "gold_answer": "en geç ikinci yarıyılın sonuna kadar enstitüye önerir. Tez danışmanı ve tez konusu enstitü yönetim kurulu onayı ile kesinleşir.\n\nYüksek lisans tezi\nMADDE 31 –\n(1) Öğrenci en geç tez danışmanının atanmasını izleyen yarıyıldan itibaren her yarıyıl tez dersine kayıt yaptırmak zorundadır.\n(2) Jüri, biri öğrencinin tez danışmanı, en az biri de başka bir yükseköğretim kurumundan olmak üzere üç veya beş ",
+    "variant": "generated",
+    "meta": {
+      "gold_overlap": 0.6667
+    }
+  },
+  {
+    "question": "Bir adayın doktora tezinin reddedildiğinde üniversitenin hangi adımlarını atması gerekmektedir?",
+    "gold_chunk_ids": [
+      "lisansustu_egitim_ogretim_yonetmeligi::101"
+    ],
+    "answerable": true,
+    "source_doc": "lisansustu_egitim_ogretim_yonetmeligi",
+    "gold_answer": "bir bilimsel yöntem geliştirmesi,\nc) Bilinen bir yöntemi yeni bir alana uygulaması,\nkoşullarından en az birini yerine getirmiş olması zorunludur.\n(6) Aday, jüri önünde tezini savunur. Tez savunmasının tarihi en geç on beş gün öncesinde ilgili enstitü tarafından ilan edilir. Tez savunma toplantıları öğretim elemanları, lisansüstü öğrenciler ve alanın uzmanlarından oluşan dinleyicilerin katılımına a",
+    "variant": "generated",
+    "meta": {
+      "gold_overlap": 0.2
+    }
+  },
+  {
+    "question": "Öğrencinin bir yarıyılda fazla kredi alabileceği maksimum ders sayısını neye göre hesaplar?",
+    "gold_chunk_ids": [
+      "lisans_egitim_ogretim_yonetmeligi::23"
+    ],
+    "answerable": true,
+    "source_doc": "lisans_egitim_ogretim_yonetmeligi",
+    "gold_answer": "kredisi, toplam mezuniyet kredisinin programın normal süresine karşılık gelen yarıyıl sayısına bölünerek ve en yakın tam sayıya tamamlanarak bulunur.\n(5) Öğrenciler bir yarıyılda fazla kredi yükü olarak, kredisiz alınan dersler hariç, ortalama yarıyıl kredisi üzerine en fazla toplam sekiz kredi değerinde ders alabilir. Fazla ders yükü ile ilgili uygulama esasları ve özel durumlar ilgili yönetim ku",
+    "variant": "generated",
+    "meta": {
+      "gold_overlap": 0.5
+    }
+  },
+  {
+    "question": "Hangi durumda disiplin kurulunun bir üyesinden soruşturma işlemlerinin tamamlanmasını isteyebileceksiniz?",
+    "gold_chunk_ids": [
+      "ogrenci_disiplin_yonetmeligi::28"
+    ],
+    "answerable": true,
+    "source_doc": "ogrenci_disiplin_yonetmeligi",
+    "gold_answer": "soruşturma işlemlerinin tamamlanmasını aynı\nsoruşturmacıdan veya disiplin kurulunun bir üyesinden isteyebilir.\nDisiplin kurulunun çalışma usulü\nMADDE 19 –\n(1) Disiplin kurulu, başkanın çağrısı üzerine belirlenecek yer, gün ve saatte toplanır.\n(2) Toplantı gündeminin hazırlanması, ilgililere duyurulması, kurul çalışmalarının düzenli yürütülmesi, başkan tarafından sağlanır.\n(3) Disiplin kurulu olara",
+    "variant": "generated",
+    "meta": {
+      "gold_overlap": 0.7
+    }
+  },
+  {
+    "question": "Doktora programında lisans derecesi ile kabul edilen öğrencilerin maksimum kaç kredi alabilirler?",
+    "gold_chunk_ids": [
+      "lisansustu_egitim_ogretim_yonetmeligi::80"
+    ],
+    "answerable": true,
+    "source_doc": "lisansustu_egitim_ogretim_yonetmeligi",
+    "gold_answer": "esaslar ilgili anabilim dalının önerisi, ilgili enstitü yönetim kurulu kararı ve Senatonun onayı ile belirlenir.\n\nDoktora programında ders yükü\nMADDE 36 –\n(1) Yüksek lisans derecesi olan öğrenciler için doktora programı, toplam 21 krediden ve bir eğitim-öğretim yılı 60 AKTS’den az olmamak koşuluyla en az yedi adet kredili lisansüstü ders, seminer, yeterlik sınavı, tez önerisi ve tez çalışması olma",
+    "variant": "generated",
+    "meta": {
+      "gold_overlap": 0.5833
+    }
+  },
+  {
+    "question": "Yedek listedeki öğrenciler, ders ekleme-bırakma dönemi başlangıç tarihine kadar eksik belgelerini tamamladıkları takdirde, ilk kayıtlarını nasıl yaptırabilirler?",
+    "gold_chunk_ids": [
+      "kayit_yonergesi::11"
+    ],
+    "answerable": true,
+    "source_doc": "kayit_yonergesi",
+    "gold_answer": "yedek listedeki\nöğrenciler, ilan edilen tarihlerde yedek sırasına göre , asıl listeden kayıt yaptırmayan\nöğrencilerin yerine kayıt yaptırabilirler.\n(4) Asıl listeden kabul edilen ancak eksik belgesi olduğu için ilan edilen kayıt süresi içinde\nkayıt yaptıramayan lisansüstü öğrenciler;\na) Başvurdukları programa yedek listeden kabul edilen öğrenciler olmaması halinde,\nders ekleme -bırakma dönemi başl",
+    "variant": "generated",
+    "meta": {
+      "gold_overlap": 0.6111
+    }
+  },
+  {
+    "question": "Bölümde bahsedilen derslerden hangisinin sadece teorik konularda eğitim alacak ve praktik uygulamaları olmayan ders olduğunu sorabilir?",
+    "gold_chunk_ids": [
+      "pedagojik_formasyon::1"
+    ],
+    "answerable": true,
+    "source_doc": "pedagojik_formasyon",
+    "gold_answer": "programs beginning\nfrom the third semester,\nSpecified by YÖK\nCorresponding Courses in Boğaziçi University\nNew Courses with PF code\nTerm COURSE T P(U) L Cr. ECTS\n3 Introduction to Education 3 0 3 4\nED 101 Introduction to Education (3+0+0) 3 ECTS 6 3 0 0 3 6\nPF 201 Introduction to Education (3+0+0) 3 ECTS 6 3 0 0 3 6\n3 Educational Psychology 3 0 3 4\nED 211 Educational Psychology (3+0+0) 3 ECTS 5 3 0",
+    "variant": "generated",
+    "meta": {
+      "gold_overlap": 0.0
+    }
+  },
+  {
+    "question": "Yurt dışına giden öğrencilerin izinli olma şartlarını nasıl karşılaması gerekmektedir?",
+    "gold_chunk_ids": [
+      "burs_yonergesi::13"
     ],
     "answerable": true,
     "source_doc": "burs_yonergesi",
-    "gold_answer": "dışında) alan öğrencilerin bursu iptal edilir. Bu öğrenciler burs\niçin tekrar başvuruda bulunamazlar.\nYürürlükten Kaldırılan Düzeltme\nMadde 14- (1) Bu Yönergenin yürürlüğe girmesi ile birlikte 25.08.2010 Tarih ve 2010/20\nsayılı Üniversite Yönetim Kurulu Toplantısında ka bul edilen “Boğaziçi Üniversitesi Lisans\nBursları İç Yönetmeliği” ve 09.01.2008 Tarih ve 2008/01 sayılı Üniversite Yönetim Kurulu",
+    "gold_answer": "diğer vakıf, kişi, kurum ve kuruluşlardan nakdi burs alan\nöğrencilerin durumları bu kurumların belirlediği kriterlere uymadığında bursları kesilir.\nç) Yurtlarda kalan öğrenciler, herhangi bir nedenle süreye sayılan ya da sa yılmayan izin\naldıklarında (Boğaziçi Üniversitesi Değişim Programları çerçevesinde başka üniversitelere\ngiden öğrenciler hariç) bursları kesilir.\nİzinli Olma",
     "variant": "generated",
+    "meta": {
+      "gold_overlap": 0.5
+    }
+  },
+  {
+    "question": "Başarısız öğrencilerin en çok kaç kredi alabilirler ve bu krediler hangi notlarla elde edilebilir?",
+    "gold_chunk_ids": [
+      "lisans_egitim_ogretim_yonetmeligi::44"
+    ],
+    "answerable": true,
+    "source_doc": "lisans_egitim_ogretim_yonetmeligi",
+    "gold_answer": "devam edebilmeleri için GNO'larını 2.00 veya üzerine çıkarmaları gerekir.\n(4) Sınamalı öğrenciler ortalama yarıyıl kredisi üzerinde ders yükü alamaz.\n(5) Başarısız öğrenciler; ortalama yarıyıl kredisi üzerinde ders yükü alamaz, F tekrarının yanı sıra ortalama yarıyıl kredisini aşmayacak şekilde DD, DC notu aldıkları dersleri tekrarlayabilir ve/veya en çok iki yeni ders alabilirler. Tekrar edebilec",
+    "variant": "generated",
+    "meta": {
+      "gold_overlap": 0.5385
+    }
+  },
+  {
+    "question": "Başvuruların sadece yıllık olarak gerçekleştirilmesi nedenidir?",
+    "gold_chunk_ids": [
+      "konut_tahsis_yonergesi::19"
+    ],
+    "answerable": true,
+    "source_doc": "konut_tahsis_yonergesi",
+    "gold_answer": "tahsil edilir. Konutun kullanımı sırasında oluşacak her\ntürlü masraf, elektrik, su, ısınma giderleri dahil olmak üzere kişinin ödemesi altındadır.\n(6) Sıra tahsisli konutlara başvurular yılda bir kez Rektörlük Makamı tarafından\nbelirlenen tarihler arasında gerçekleştirilir. Konut başvuruları 1 (bir) yıl süreyle geçerli olup,\nharicinde yapılan başvurular ise dikkate alın maz. Üniversite Akademik ve",
+    "variant": "generated",
+    "meta": {
+      "gold_overlap": 0.1667
+    }
+  },
+  {
+    "question": "Çerez politikası hakkında bilgi almak için nereden tıklayacağım?",
+    "gold_chunk_ids": [
+      "lisans_egitim_ogretim_yonetmeligi::60"
+    ],
+    "answerable": true,
+    "source_doc": "lisans_egitim_ogretim_yonetmeligi",
+    "gold_answer": "Merkezi\nKültür ve Sanat\nÖğrenci Hak ve Sorumlulukları\nToplumsal Dayanışma\nDİL SEÇENEKLERİ\nTR\nEN\nBOĞAZİÇİ'NİN\nGÜNLÜK RİTMİNİ YAKALA\nTÜM ETKİNLİKLER\nBu web sitesi deneyiminizi geliştirmek için çerezleri kullanır. Devam ederek çerez kullanımımızı kabul etmiş olursunuz.\nÇerez Politikamızı İncelemek İçin Tıklayınız.\nKabul Et\nReddet",
+    "variant": "generated",
+    "meta": {
+      "gold_overlap": 0.25
+    }
+  },
+  {
+    "question": "Rektör Yardımcısı olmadığında, kimin Komisyon başkanlığını yapar?",
+    "gold_chunk_ids": [
+      "konut_tahsis_yonergesi::14"
+    ],
+    "answerable": true,
+    "source_doc": "konut_tahsis_yonergesi",
+    "gold_answer": "de eşit ise, Komisyonca ad çekme yoluyla, konut tahsis edilir.\n\nDÖRDÜNCÜ BÖLÜM\nKonut Tahsis Komisyonu ve Çalışma Esasları\n\nKonut Tahsis Komisyonu\nMADDE 11- (1) Konut Tahsis Komisyonu Rektör tarafından belirlenen R ektör\nYardımcısı, Genel Sekreter ve Sağlık, Kültür ve Spor Daire Başkanı olmak üzere 3 asil,\nPersonel Daire Başkanı ve Yapı İşleri ve Teknik Daire Başkanı olmak üzere 2 yede k üyeden\nolu",
+    "variant": "generated",
+    "meta": {
+      "gold_overlap": 0.4286
+    }
+  },
+  {
+    "question": "Hangi durumlarda öğrenciye savunma süresi verilir?",
+    "gold_chunk_ids": [
+      "ogrenci_disiplin_yonetmeligi::23"
+    ],
+    "answerable": true,
+    "source_doc": "ogrenci_disiplin_yonetmeligi",
+    "gold_answer": "Geçerli bir özür bildiren veya mücbir sebep dolayısıyla davete uymadığı anlaşılan öğrenciye uygun bir süre verilir. Tutuklu öğrencilere\nsavunmalarını yazılı olarak gönderebilecekleri bildirilir.\n(5) Soruşturma öğrencinin kendini gereği gibi savunmasına imkân verecek şekilde yürütülür.\nSoruşturma raporu",
+    "variant": "generated",
+    "meta": {
+      "gold_overlap": 0.5
+    }
+  },
+  {
+    "question": "Öğrenme sürecinde motivasyonun nasıl etkilendiği ve farklı öğretim teknolojilerinin bu motivasyona nasıl katkıda bulunabileceğini anlamak için ne tür bir yaklaşım kullanılır?",
+    "gold_chunk_ids": [
+      "pedagojik_formasyon::23"
+    ],
+    "answerable": true,
+    "source_doc": "pedagojik_formasyon",
+    "gold_answer": "ilgili temel kavramlar; öğrenmeyi etkileyen faktörler; eğitim ve öğrenme\nsüreçleri çerçevesinde öğrenme kuramları ve öğrenme sürecinde motivasyondur.\nÖğretim Teknolojileri (2-0-2)\nBu dersin amacı bilişim ve bilgi teknolojilerinin eğitim ve öğrenme sürecindeki etkilerini\ntanımak ve bunlardan yararlanabilmeyi sağlamak olup başlıca konular: Eğitimde bilgi\nteknolojileri; öğretim süreci ve öğretim tekn",
+    "variant": "generated",
+    "meta": {
+      "gold_overlap": 0.3158
+    }
+  },
+  {
+    "question": "Sertifika programını tamamlamak isteyen öğrenci ana dal danışmanına hangi dersleri seçeceğinden önceden bilgilendirmesi gerekmektedir?",
+    "gold_chunk_ids": [
+      "sertifika_programlari_yonergesi::8"
+    ],
+    "answerable": true,
+    "source_doc": "sertifika_programlari_yonergesi",
+    "gold_answer": "müdürünü/bölüm başkanını bilgilendirmekle yükümlüdür.\n\nSertifika Programı Derslerine Devam, Ders Yükü, Başarı Şartı ve Süre\nMADDE 8 – (1) Sertifika programını tamamlamayı hedefleyen öğrenci sertifika programına sayılan\nderslerin önkoşullarını sağlamakla yükümlüdür.\n3\n(2) Sertifika programını tamamlamayı hedefleyen öğrenci, ana dal danışmanını bu hedefi hakkında\nönceden bilgilendirmelidir. Öğrencin",
+    "variant": "generated",
+    "meta": {
+      "gold_overlap": 0.5
+    }
+  },
+  {
+    "question": "Neler gözlemlemek ve raporlamak istediğinize dair daha fazla bilgi verebileceğimiz bir sınıf programı kapsamında hangi belirli öğretim materyallerini değerlendireceğiz?",
+    "gold_chunk_ids": [
+      "pedagojik_formasyon::13"
+    ],
+    "answerable": true,
+    "source_doc": "pedagojik_formasyon",
+    "gold_answer": "materials;\ndesigning thematic teaching materials; creating field -specific learning object repository,\nevaluation criteria for teaching materials.\nTeaching Practicum (1-8-5)\nThe aim of this course is to ensure that the school and the classroom where the teaching practice\nwill be carried out are observed closely, and the results of the observations are reported. The\nmain topics to be covered are: O",
+    "variant": "generated",
+    "meta": {
+      "gold_overlap": 0.0
+    }
+  },
+  {
+    "question": "Onur derecesini kazanmak için minimum GNO değeri nedir?",
+    "gold_chunk_ids": [
+      "lisans_egitim_ogretim_yonetmeligi::51"
+    ],
+    "answerable": true,
+    "source_doc": "lisans_egitim_ogretim_yonetmeligi",
+    "gold_answer": "olup lisans öğrenimlerini tamamlamadan Üniversiteden ayrılan öğrencilere, başvurmaları halinde ön lisans diploması verilir.\nOnur-yüksek onur, derece\nMADDE 34 –\n(1) Öğrenimlerini Üniversite tarafından onaylanan bir değişim programında geçirilen süreler hariç normal öğrenim süresi içinde tamamlayan ve öğrenim süresince disiplin cezası almamış öğrencilerden GNO’ları 3.50 ve üzeri olanlar yüksek onur,",
+    "variant": "generated",
+    "meta": {
+      "gold_overlap": 0.375
+    }
+  },
+  {
+    "question": "Nerede itiraz hakkımı kullanarak disiplin cezasından kaçınılabilir?",
+    "gold_chunk_ids": [
+      "ogrenci_disiplin_yonetmeligi::33"
+    ],
+    "answerable": true,
+    "source_doc": "ogrenci_disiplin_yonetmeligi",
+    "gold_answer": "uygulanacağı belirtilmediği takdirde,\ndisiplin cezaları verildikleri tarihten itibaren uygulanırlar.\nDisiplin cezalarına karşı başvuru yolları\nMADDE 26 –\n(1) Disiplin amirleri ve kurullarınca verilen disiplin cezalarına karşı onbeş gün içinde üniversite yönetim kuruluna itiraz edilebilir.\n(2) İtiraz halinde, itiraz mercii olan üniversite yönetim kurulu, itirazı onbeş gün içinde kesin olarak karara",
+    "variant": "generated",
+    "meta": {
+      "gold_overlap": 0.4286
+    }
+  },
+  {
+    "question": "Hangi aşamada ders ekleme-bırkaema işlemleriniz eksik kalabilir ve nasıl bildirilecektir?",
+    "gold_chunk_ids": [
+      "kayit_yonergesi::28"
+    ],
+    "answerable": true,
+    "source_doc": "kayit_yonergesi",
+    "gold_answer": "geçerli görülenler, ders ekleme-bırakma\nsüresinin bitimine kadar akademik kayıtlarını tamamlayabilirler.\nDers Ekleme-Bırakma Dönemi Sonu Verileri\nMADDE 18- (1) Ders ekleme-bırakma döneminde öğrenciler tarafından çevrim içi yapılan\nişlemler, ders ekleme -bırakma dönemi bittikten sonra kayıt sistemi üzerinden\nöğrencilerin ilgili yarıyıl kayıtlarına aktarılır.\n\n(2) Kayıt İşleri Şube Müdürlüğü tarafın",
+    "variant": "generated",
+    "meta": {
+      "gold_overlap": 0.2727
+    }
+  },
+  {
+    "question": "Bir öğrenci tez önerisini savunmada reddedildiyse, Üniversite ile hangi ilişkiyi keser? TP işareti almadan önce.",
+    "gold_chunk_ids": [
+      "lisansustu_egitim_ogretim_yonetmeligi::97"
+    ],
+    "answerable": true,
+    "source_doc": "lisansustu_egitim_ogretim_yonetmeligi",
+    "gold_answer": "önerisi bu savunmada da reddedilen veya verilen süre içinde tez önerisini savunmamış öğrencinin Üniversite ile ilişiği kesilir.\nDoktora tezi\nMADDE 43 –\n(1) Tez önerisi kabul edilen öğrenci için tez izleme komitesi, her yarıyılda bir kez olmak üzere en az iki kez toplanır. Öğrenci, toplantı tarihinden en az bir ay önce komite üyelerine yazılı bir rapor sunar. Bu raporda o ana kadar yapılan çalışmal",
+    "variant": "generated",
+    "meta": {
+      "gold_overlap": 0.5333
+    }
+  },
+  {
+    "question": "İzin verilen öğrenci, birinci yarıyıldan sonra üniversitede dönmek istemiyorsa ne yapmalıdır?",
+    "gold_chunk_ids": [
+      "lisans_egitim_ogretim_yonetmeligi::30"
+    ],
+    "answerable": true,
+    "source_doc": "lisans_egitim_ogretim_yonetmeligi",
+    "gold_answer": "akademik takvimde belirtilen süreler içinde yapılır. İzin süresi zorunlu hallerde, izni veren ilgili yönetim kurulu tarafından uzatılabilir.\n(5) Öğrenciler, izin süreleri sonunda yarıyıl kayıtlarını yaptırmak suretiyle öğrenimlerine devam ederler. İki yarıyıl izin verilmiş öğrencilerden birinci yarıyıl sonunda Üniversiteye dönmek isteyenlerin, bir dilekçe ile ilgili yönetim kuruluna başvurmaları g",
+    "variant": "generated",
+    "meta": {
+      "gold_overlap": 0.5455
+    }
+  },
+  {
+    "question": "Bir lisansüstü programının müfredatında en az bir dersin hangi konuları içermesi gerekmektedir?",
+    "gold_chunk_ids": [
+      "lisansustu_egitim_ogretim_yonetmeligi::13"
+    ],
+    "answerable": true,
+    "source_doc": "lisansustu_egitim_ogretim_yonetmeligi",
+    "gold_answer": "Diller Yüksekokulu: Boğaziçi Üniversitesi Yabancı Diller Yüksekokulunu,\nifade eder.\nİKİNCİ BÖLÜM\nEğitim ve Öğretime İlişkin Esaslar\nLisansüstü eğitim\nMADDE 5 –\n(1) Lisansüstü eğitim, tezli ve tezsiz yüksek lisans, doktora ve lisans sonrası doktora programlarını kapsar.\n(2) İzlenecek eğitim ve öğretim programları ve mezuniyet için gerekli koşullar, ilgili anabilim dalı tarafından hazırlanır, ilgili",
+    "variant": "generated",
+    "meta": {
+      "gold_overlap": 0.1818
+    }
+  },
+  {
+    "question": "Lisans öğrenimini tamamlamayan başvuranların da lisansüstü programlarına başvurabilir mi?",
+    "gold_chunk_ids": [
+      "lisansustu_egitim_ogretim_yonetmeligi::22"
+    ],
+    "answerable": true,
+    "source_doc": "lisansustu_egitim_ogretim_yonetmeligi",
+    "gold_answer": "içinde Öğrenci İşleri Daire Başkanlığına bildirilir. Enstitülerin kararları Üniversite Yönetim Kurulunun onayıyla Üniversite tarafından ilan edilir.\n(2) Üniversitede lisansüstü eğitim ve öğretime giriş başvuruları, akademik takvimde belirtilen süreler içinde ilgili enstitünün öğrenci işleri ofisine yapılır. Başvuru için istenen belgeleri belirtilen süre içinde eksik veren adayların başvuruları işl",
+    "variant": "generated",
+    "meta": {
+      "gold_overlap": 0.1111
+    }
+  },
+  {
+    "question": "Bir öğrencinin dersinden çekilmek isteyebilir ve bu kararı verebileceği en son tarih nedir?",
+    "gold_chunk_ids": [
+      "lisansustu_egitim_ogretim_yonetmeligi::46"
+    ],
+    "answerable": true,
+    "source_doc": "lisansustu_egitim_ogretim_yonetmeligi",
+    "gold_answer": "kurulunun önerisi ve Üniversite Yönetim Kurulunun kararı ile en geç dersten çekilme tarihinin son gününe kadar değiştirilebilir.\nNotlar ve işaretler\nMADDE 22 –\n(1) Öğrencilere lisansüstü programı çerçevesinde bilimsel hazırlık dersleri dışında aldıkları lisansüstü dersler için aşağıdaki not veya işaretlerden birisi verilir:\nNot\nAçıklama\nAğırlık\nAA Pekiyi 4,00\nBA Çok iyi 3,50\nBB İyi 3,00\nCB Yeterli",
+    "variant": "generated",
+    "meta": {
+      "gold_overlap": 0.5385
+    }
+  },
+  {
+    "question": "Burs Komisyonu'nun her yıl belirlediği miktarın üzerinde nakdi burs alan öğrencilere birden fazla nakdi burs verilemeyeceğinden neden emin olabilirim?",
+    "gold_chunk_ids": [
+      "burs_yonergesi::10"
+    ],
+    "answerable": true,
+    "source_doc": "burs_yonergesi",
+    "gold_answer": "gözetiminde fakülte/yüksekokulların kurduğu geçici komisyonlar tarafından yürütülür.\nMülakat sonuçları Burs Komisyonu tarafından karara bağlanır.\n(4) Bir öğrenciye gereksinimine göre birden fazla burs bağlanabilir. Ancak Burs Kom isyonu\ntarafından her yıl belirlenen miktarın üzerinde nakdi burs alan öğrencilere birden fazla nakdi\nburs verilemez. KYK Öğrenim Kredisi bu kapsamda değildir. İstisnalar",
+    "variant": "generated",
+    "meta": {
+      "gold_overlap": 0.6471
+    }
+  },
+  {
+    "question": "GNO'ları 3.50 ve üzerinde olan öğrencilerin, yüksek onur listesine alınması için hangi koşulların sağlandığı belirtilmiştir?",
+    "gold_chunk_ids": [
+      "lisans_egitim_ogretim_yonetmeligi::52"
+    ],
+    "answerable": true,
+    "source_doc": "lisans_egitim_ogretim_yonetmeligi",
+    "gold_answer": "koşulunu yerine getiren öğrencilerden, GNO’ları 3.50 ve üzeri olanlar yüksek onur, GNO’ları 3.00 ile 3.49 arasında olanlar onur listesine alınırlar.\n(3) Fakülte/Yüksekokul, bölüm sıralamasında ilk üçe girenler, öğrenimlerini, Üniversite tarafından onaylanan bir değişim programında geçirilen süreler hariç normal süresinde tamamlayan ve disiplin cezası almamış öğrenciler arasından belirlenir. Bu sür",
+    "variant": "generated",
+    "meta": {
+      "gold_overlap": 0.7059
+    }
+  },
+  {
+    "question": "Hangi dersleri en fazla iki adet kredi olarak seçebilirim?",
+    "gold_chunk_ids": [
+      "lisansustu_egitim_ogretim_yonetmeligi::63"
+    ],
+    "answerable": true,
+    "source_doc": "lisansustu_egitim_ogretim_yonetmeligi",
+    "gold_answer": "ilgili anabilim dalının teklifi, ilgili enstitü yönetim kurulu kararı ve Senatonun onayı ile belirlenir.\n\nTezli yüksek lisans programında ders yükü\nMADDE 28 –\n(1) Tezli yüksek lisans programı toplam 21 krediden az olmamak koşuluyla en az yedi adet kredili dersten, haftada bir saatten oluşan, not tipi P/F, kredisi sıfır olan bir adet seminer dersinden ve tez çalışmasından oluşur. Tezli yüksek lisan",
+    "variant": "paraphrased",
+    "meta": {
+      "original": "Hangi dersler kredili olarak alınacak derslerden en çok iki tanesi olarak seçilebilir?",
+      "gold_overlap": 0.4444,
+      "echo": false,
+      "semantic_similarity": 0.8442
+    }
+  },
+  {
+    "question": "Nedense bir öğrenci birden fazla yüksek lisans programında aynı anda okuyamaz mı?",
+    "gold_chunk_ids": [
+      "lisansustu_egitim_ogretim_yonetmeligi::38"
+    ],
+    "answerable": true,
+    "source_doc": "lisansustu_egitim_ogretim_yonetmeligi",
+    "gold_answer": "ve herhangi bir hak iddia edemezler.\n(4) Üniversitenin birden fazla lisansüstü programına kayıt yaptırılamaz ve devam edilemez.\nYarıyıl/dönem kaydı\nMADDE 18 –\n(1) Öğrenciler her yarıyıl/dönem akademik takvimde belirtilen tarihlerde kayıtlarını yenilemekle yükümlüdür.\n(2) Yarıyıl/dönem kaydının yapılabilmesi için ilgili mevzuatla belirlenen mali yükümlülüklerin akademik takvimde belirtilen tarihe k",
+    "variant": "paraphrased",
+    "meta": {
+      "original": "Nedense bir öğrenci birden fazla lisansüstü programda aynı zamanda öğrenim görebilir mi?",
+      "gold_overlap": 0.4167,
+      "echo": false,
+      "semantic_similarity": 0.9263
+    }
+  },
+  {
+    "question": "Hangi sınıfın öğrencilerinin yarıyıl notlarını vermediği var mı?",
+    "gold_chunk_ids": [
+      "kayit_yonergesi::18"
+    ],
+    "answerable": true,
+    "source_doc": "kayit_yonergesi",
+    "gold_answer": "ders programının oluşturulması,\nc) Oluşturulan ders programının danışman onayına gönderilmesi,\nd) Ders programının danışman tarafından onaylanması.\n(5) Dördüncü fıkradaki işlemlerin tümünün tamamlanması halinde öğrencinin ilgili\nyarıyıl için dönem kaydı tamamlanmış olur. Bu işlemlerinden herhangi birinin eksik\nolması halinde, öğrencinin ilgili yarıyıl için dönem kaydı tamamlanmamış olur ve öğrenci",
+    "variant": "paraphrased",
+    "meta": {
+      "original": "Hangi sınıfın öğrencilerinin akademik yarıyıl kayıtları tamamlanmamış olabilir?",
+      "gold_overlap": 0.125,
+      "echo": false,
+      "semantic_similarity": 0.7849
+    }
+  },
+  {
+    "question": "Düzeltme kararı aldığımda tezi ne zaman yeniden savunabilirim?",
+    "gold_chunk_ids": [
+      "lisansustu_egitim_ogretim_yonetmeligi::71"
+    ],
+    "answerable": true,
+    "source_doc": "lisansustu_egitim_ogretim_yonetmeligi",
+    "gold_answer": "yazımı ve benzeri gereklerini yerine getirmiş olmak koşuluyla kendisine tezsiz yüksek lisans diploması verilerek programla ilişkisi sona erdirilir.\n(7) Tezi hakkında düzeltme kararı verilen öğrenci, jüri tarafından verilen ve üç ayı aşmayan süre içinde gerekli düzeltmeleri yaparak tezini aynı jüri önünde yeniden savunur. Verilen ek düzeltme süresi sonunda savunmasını yapmayan ya da savunma sonunda",
+    "variant": "paraphrased",
+    "meta": {
+      "original": "Tezi hakkında düzeltme kararı alan bir öğrencinin ne zaman yeniden tezini savunabilir?",
+      "gold_overlap": 0.5,
+      "echo": false,
+      "semantic_similarity": 0.8291
+    }
+  },
+  {
+    "question": "Yeni bir öğretmen unvanına başvuran akademisyenin konut tahsisine nasıl başvurmalı?",
+    "gold_chunk_ids": [
+      "konut_tahsis_yonergesi::8"
+    ],
+    "answerable": true,
+    "source_doc": "konut_tahsis_yonergesi",
+    "gold_answer": "Akademik Personel sıra tahsisli konutların tahsisi\nusulüne göre tahsis edilir.\n1) Yeni Akademik Personel sıra tahsisli konutların tahsisi usulü:\n Öğretim Üyesi unvanıyla kadro tahsisi yapılmış öğretim üyeleri, kadro tahsis tarihini\ntakip eden üç yılın sonuna kadar konut kullanımı için başvuru yapabilirler.\n Kadro şartını sağlayan hak sahiplerinin sıra tahsisli konut başvuruları Yönetmeliğe\nekli ",
+    "variant": "paraphrased",
+    "meta": {
+      "original": "Yeni bir Öğretim Üyesi unvanıyla kadro tahsisli ve puanlama cetveline göre başvuran bir akademisyenin konut tahsisine nasıl adımlar atması gerekecektir?",
+      "gold_overlap": 0.2,
+      "echo": false,
+      "semantic_similarity": 0.8646
+    }
+  },
+  {
+    "question": "Kayıtsız olmamış bir öğrenci nasıl dersden ayrılabilir?",
+    "gold_chunk_ids": [
+      "lisansustu_egitim_ogretim_yonetmeligi::40"
+    ],
+    "answerable": true,
+    "source_doc": "lisansustu_egitim_ogretim_yonetmeligi",
+    "gold_answer": "Kayıtlarını yaptırmayan öğrenciler kayıtsız duruma düşer ve kayıtlı öğrencilerin yararlandığı haklardan yararlanamazlar.\nDersten çekilme\nMADDE 19 –\n(1) Öğrenciler, tez ve bilimsel hazırlık programı dersleri hariç, derslerden çekilebilir.\n\n(2) Dersten çekilme dönemi akademik takvimde ilan edilen son ders gününden iki hafta önce başlar ve bir hafta sürer. Dersten çekilme başvurusu akademik takvimde ",
+    "variant": "paraphrased",
+    "meta": {
+      "original": "Kayıtlı olmamış bir öğrenci nasıl dersten çıkabilir?",
+      "gold_overlap": 0.5714,
+      "echo": false,
+      "semantic_similarity": 0.8019
+    }
+  },
+  {
+    "question": "Tezli yüksek lisans programına geçebilirim mi?",
+    "gold_chunk_ids": [
+      "lisansustu_egitim_ogretim_yonetmeligi::76"
+    ],
+    "answerable": true,
+    "source_doc": "lisansustu_egitim_ogretim_yonetmeligi",
+    "gold_answer": "bu Yönetmelik hükümlerine ve öğrencinin kabul edildiği yüksek lisans programına uygun olarak onaylar.\nTezsiz yüksek lisans programında süre ve başarı\nMADDE 33 –\n(1) Tezsiz yüksek lisans programını tamamlama süresi, bilimsel hazırlıkta geçen süre hariç, kayıt olduğu programa ilişkin derslerin verildiği dönemden başlamak üzere, her dönem için kayıt yaptırıp yaptırmadığına bakılmaksızın en az iki yar",
+    "variant": "paraphrased",
+    "meta": {
+      "original": "Tezsiz yüksek lisans programından tezli programa geçiş yapabilirim mi?",
+      "gold_overlap": 0.5,
+      "echo": false,
+      "semantic_similarity": 0.8844
+    }
+  },
+  {
+    "question": "Yedek listedeki öğrenci, asıl listede kaydırmamış olan öğrencilerin yerine kaydırama şansı var mı?",
+    "gold_chunk_ids": [
+      "kayit_yonergesi::10"
+    ],
+    "answerable": true,
+    "source_doc": "kayit_yonergesi",
+    "gold_answer": "yedek sırasına göre asıl listeden kayıt yaptırmayan\nöğrencilerin yerine kayıt yaptırabilirler.\nLisansüstü Programlara Yeni Kabul Edilen Öğrenciler\nMADDE 8- (1) Yüksek lisans ve doktora programlarına yeni kabul edilen lisansüstü\nöğrenciler, ilan edilen tarihlerde kayıt için gerekli belgelerini teslim ederek Üniversiteye\nilk kayıtlarını yaptırırlar.\n(2) Asıl listeden kabul edildiği halde ilan edilen",
+    "variant": "paraphrased",
+    "meta": {
+      "original": "Yedek listedeki öğrenci, ilan edilen tarihlerde asıl listeden kayıt yaptırmayan öğrencilerin yerine kayıt yaptırabilir mi?",
+      "gold_overlap": 0.4167,
+      "echo": false,
+      "semantic_similarity": 0.8872
+    }
+  },
+  {
+    "question": "TP işareti ne demek ve hangi durumlarda alırım?",
+    "gold_chunk_ids": [
+      "lisansustu_egitim_ogretim_yonetmeligi::54"
+    ],
+    "answerable": true,
+    "source_doc": "lisansustu_egitim_ogretim_yonetmeligi",
+    "gold_answer": "işarettir.\nh) TP işareti, lisansüstü teze kayıtlı olan öğrenciye, tez çalışmalarının başarıyla sürmesi halinde, tez danışmanı tarafından verilir.\nı) W işareti, tez ve bilimsel hazırlık programı dersleri dışında, akademik takvimde belirtilen dersten çekilme süresi dolmadan, program danışmanının onayıyla dersten çekilen öğrencilere Öğrenci İşleri Daire Başkanlığı tarafından verilir.\ni) Q işareti, de",
+    "variant": "paraphrased",
+    "meta": {
+      "original": "TP işareti ne anlama geliyor ve hangi koşullarda verilir?",
+      "gold_overlap": 0.375,
+      "echo": false,
+      "semantic_similarity": 0.905
+    }
+  },
+  {
+    "question": "Doktora programında lisans derecesinden alınan dersleri en fazla kaç adet transfer edebilirim?",
+    "gold_chunk_ids": [
+      "lisansustu_egitim_ogretim_yonetmeligi::81"
+    ],
+    "answerable": true,
+    "source_doc": "lisansustu_egitim_ogretim_yonetmeligi",
+    "gold_answer": "ve tez çalışması olmak üzere en az 300 AKTS kredisinden oluşur. Seminer dersi haftada bir saatlik, not tipi P/F, kredisi sıfır olan bir derstir.\n(2) İlgili enstitü yönetim kurulu, doktora yapacak öğrenciye ilgili anabilim dalının önerisi ile aynı anabilim dalından tam zamanlı bir öğretim üyesini program danışmanı olarak görevlendirir. Program danışmanı öğrencinin her yarıyılda alacağı dersleri bu ",
+    "variant": "paraphrased",
+    "meta": {
+      "original": "Doktora programında lisans derecesi ile kabul edilmiş bir öğrenci, en fazla kaç dersi transfer ederek tamamlayabilir?",
+      "gold_overlap": 0.3333,
+      "echo": false,
+      "semantic_similarity": 0.9059
+    }
+  },
+  {
+    "question": "Bir öğrenci dersi tekrar etmek isteyebilirken hangi koşullar altında \"E\" notu verilir?",
+    "gold_chunk_ids": [
+      "lisans_egitim_ogretim_yonetmeligi::34"
+    ],
+    "answerable": true,
+    "source_doc": "lisans_egitim_ogretim_yonetmeligi",
+    "gold_answer": "üzere dersin öğretim elemanı tarafından veya bir başka yükseköğretim kurumundan transfer edilen derslere ilgili yönetim kurulu kararı ile verilir.\nİşaretlerMADDE 24 –\n(1) Öğrencilerin bir ders veya yarıyıldaki durumu, aşağıdaki işaretlerden birisiyle belirlenir.\nİŞARETLER\nAÇIKLAMA\nE\nTekrar sınava girer\nI\nEksik\nNP\nYarıyıl sonu sınavına girmedi\nR\nTekrar\nNC\nKredisiz\nL\nİzinli\nX\nDeğişim programında\nW\nD",
+    "variant": "paraphrased",
+    "meta": {
+      "original": "Bir öğrenci dersi tekrar etmek isteyebilirken hangi şartlar altında \"E\" işareti verilir?",
+      "gold_overlap": 0.5,
+      "echo": false,
+      "semantic_similarity": 0.9421
+    }
+  },
+  {
+    "question": "Lisans ile birleşmiş yüksek lisans başvurusunda öğretim dilini nasıl seçerler?",
+    "gold_chunk_ids": [
+      "lisans_egitim_ogretim_yonetmeligi::12"
+    ],
+    "answerable": true,
+    "source_doc": "lisans_egitim_ogretim_yonetmeligi",
+    "gold_answer": "ile kesinleşir.\n(7) Lisansla birleştirilmiş tezsiz yüksek lisans programları da bu Yönetmelik esaslarına göre yürütülür.\nLisans programına kabul\nMADDE 6 –\n(1) Lisans programlarına öğrenci kabulü, 2547 sayılı Yükseköğretim Kanunu ile Yükseköğretim Kurulu yönetmelikleri ve kararları çerçevesinde Senato tarafından belirlenen esaslara göre yapılır.\n\n(2) Yurt dışından öğrenci başvuru ve kabul işlemleri",
+    "variant": "paraphrased",
+    "meta": {
+      "original": "Lisansla birleştirilmiş tezsiz yüksek lisans programlarına başvuru ve kabul sürecinde, öğretim dilinin nasıl belirlenmesi kararlaştırılır?",
+      "gold_overlap": 0.3333,
+      "echo": false,
+      "semantic_similarity": 0.8483
+    }
+  },
+  {
+    "question": "Eğer lisansüstü dersimde FF notunu alırsa ve CC'yi istemiyorsam ne yapmalıyım?",
+    "gold_chunk_ids": [
+      "lisansustu_egitim_ogretim_yonetmeligi::49"
+    ],
+    "answerable": true,
+    "source_doc": "lisansustu_egitim_ogretim_yonetmeligi",
+    "gold_answer": "Tez dersi hariç, not tipi P veya F olarak tanımlanmış bir dersin tamamlandığını göstermek üzere dersin öğretim elemanı tarafından verilir.\n3) Kayıtlı olduğu lisansüstü programındaki öğrenimi sırasında başka yükseköğretim kurumlarından alınmış ve başarıyla tamamlanmış lisansüstü dersler için ilgili enstitü yönetim kurulu tarafından verilir.\n4) 10 uncu maddenin üçüncü fıkrasının (b) bendine göre tra",
+    "variant": "paraphrased",
+    "meta": {
+      "original": "Eğer bir lisansüstü dersimde CC notunu almak istemiyorum ve yarıyıl sonu sınavında da FF notunu alırsam ne yapmalıyım?",
+      "gold_overlap": 0.25,
+      "echo": false,
+      "semantic_similarity": 0.9123
+    }
+  },
+  {
+    "question": "Bir dersin kredi değeri neye göre hesaplanır?",
+    "gold_chunk_ids": [
+      "lisans_egitim_ogretim_yonetmeligi::10"
+    ],
+    "answerable": true,
+    "source_doc": "lisans_egitim_ogretim_yonetmeligi",
+    "gold_answer": "Boğaziçi Üniversitesi Lisans Eğitim ve Öğretim Yönetmeliğini,\n\nifade eder.\n\nİKİNCİ BÖLÜM\n\nEğitim ve Öğretime İlişkin Esaslar\n\nLisans programı\nMADDE 5 –\n(1) Bir lisans programı, lisans diploması almak için öngörülen gerekli teorik ders, laboratuvar, uygulama, staj ve benzeri çalışmalar ile bu çalışmaların yarıyıllara dağılımı ve kredi değerlerinden oluşan sekiz yarıyıllık bir eğitim ve öğretim prog",
+    "variant": "paraphrased",
+    "meta": {
+      "original": "Bir dersin kredi değeri hangi faktörlerden oluşur?",
+      "gold_overlap": 0.5714,
+      "echo": false,
+      "semantic_similarity": 0.8622
+    }
+  },
+  {
+    "question": "Başvurular değerlendirildikten sonra tezli programı seçmiş öğrenci, tezsiz programda aldığı dersleri tezli programdaki derslere say Kanyeç?",
+    "gold_chunk_ids": [
+      "lisansustu_egitim_ogretim_yonetmeligi::77"
+    ],
+    "answerable": true,
+    "source_doc": "lisansustu_egitim_ogretim_yonetmeligi",
+    "gold_answer": "başarısız olan veya programı tamamlayamayan öğrencinin Üniversite ile ilişiği kesilir.\n\nTezli ve tezsiz yüksek lisans programları arasında geçişler\nMADDE 34 –\n(1) Tezsiz yüksek lisans programına devam edenler, varsa aynı adlı tezli yüksek lisans programına geçiş için başvurabilirler. Başvuru koşulları anabilim dalının önerisiyle ilgili enstitü yönetim kurulu tarafından, Senatonun belirlediği esasl",
+    "variant": "paraphrased",
+    "meta": {
+      "original": "Başvuruların değerlendirildikten sonra kabul edilen öğrenci tezli yüksek lisans programına geçiş yaparken, tezsiz yüksek lisans programında aldığı dersler hangi koşullar altında tezli programdaki derslere sayılabilir?",
+      "gold_overlap": 0.3846,
+      "echo": false,
+      "semantic_similarity": 0.7409
+    }
+  },
+  {
+    "question": "Doktora tezi için danışmanım kimseçe verebilirim?",
+    "gold_chunk_ids": [
+      "lisansustu_egitim_ogretim_yonetmeligi::86"
+    ],
+    "answerable": true,
+    "source_doc": "lisansustu_egitim_ogretim_yonetmeligi",
+    "gold_answer": "anılan dersler ilgili anabilim dalı önerisi ve ilgili enstitü yönetim kurulu kararıyla tezsiz yüksek lisans programındaki derslerin yerine sayılır.\n(2) Doğrudan lisans derecesiyle veya Üniversite içinden bir başka anabilim dalından yüksek lisans derecesiyle veya bir başka üniversiteden yüksek lisans derecesi ile doktora programına başlamış öğrencilerden, gerekli ders kredi yükü, proje ve benzeri d",
+    "variant": "paraphrased",
+    "meta": {
+      "original": "Doktora tezi için Danışmanı nasıl görevlendirebilirim?",
+      "gold_overlap": 0.3333,
+      "echo": false,
+      "semantic_similarity": 0.8012
+    }
+  },
+  {
+    "question": "Rektörlüğün yapması gereken yasal işler hangisidir?",
+    "gold_chunk_ids": [
+      "konut_tahsis_yonergesi::24"
+    ],
+    "answerable": true,
+    "source_doc": "konut_tahsis_yonergesi",
+    "gold_answer": "34 üncü maddesi uyarınca gerekli yasal işlemler\nRektörlük tarafından yürütülür.\n\nALTINCI BÖLÜM\nÇeşitli ve Diğer Hükümler\n\nHüküm Bulunmayan Haller\nMadde 17- (1) Bu Yönergede düzenlenmeyen veya uygulamasında tereddüde düşülen\nhallerde Kamu Konutları Kanunu ile Kamu Konutları Yönetmeliği hükümleri uygulanır.\nBuna rağmen tereddüt durumunun devam etmesi halinde Komisyonun kararları geçerlidir.\nUçaksava",
+    "variant": "paraphrased",
+    "meta": {
+      "original": "Rektörlük tarafından yürütülecek gerekli yasal işlemler hangisidir?",
+      "gold_overlap": 0.1667,
+      "echo": false,
+      "semantic_similarity": 0.826
+    }
+  },
+  {
+    "question": "Doktora tezindeki intihal tespitolduğunda, komitenin hangi adımlarını atması gerekmektedir?",
+    "gold_chunk_ids": [
+      "lisansustu_egitim_ogretim_yonetmeligi::99"
+    ],
+    "answerable": true,
+    "source_doc": "lisansustu_egitim_ogretim_yonetmeligi",
+    "gold_answer": "edilir.\n(2) Komite tarafından üst üste iki kez veya aralıklı olarak üç kez başarısız bulunan öğrencinin Üniversite ile ilişiği kesilir.\nTez savunması\nMADDE 44 –\n(1) Doktora programındaki bir öğrenci, elde ettiği sonuçları Senato tarafından kabul edilen yazım kurallarına uygun biçimde yazar ve tezini jüri önünde sözlü olarak savunur.\n(2) Doktora tezinin savunmasından önce ve düzeltme verilen tezler",
+    "variant": "paraphrased",
+    "meta": {
+      "original": "Doktora tezinin intihal yazılım programı raporunda gerçek bir intihal tespit edildiğinde, komitenin hangi adımlarını atması gerekmektedir?",
+      "gold_overlap": 0.2222,
+      "echo": false,
+      "semantic_similarity": 0.7916
+    }
+  },
+  {
+    "question": "Kampüs hizmetleri bölümünden kafeteryalar ve kantinler hakkında ne öğrenebilirim?",
+    "gold_chunk_ids": [
+      "lisans_egitim_ogretim_yonetmeligi::4"
+    ],
+    "answerable": true,
+    "source_doc": "lisans_egitim_ogretim_yonetmeligi",
+    "gold_answer": "& Hizmetler\nUlaşım / Park\nKampüsler\nKampüs Hizmetleri\nKafeterya / Kantinler\nSağlık\nSpor Etkinlikleri\nSanal Tur\nÖğrenci & Sosyal Yaşam\nKampüslerde Engellilik\nFlora / Fauna\nYeşil Kampüs\nSu Verimliliği Seferberliği\nÖğrenci Kulüpleri\nRehberlik Danışmanlık\nKariyer Merkezi\nKültür ve Sanat\nÖğrenci Hak ve Sorumlulukları\nToplumsal Dayanışma\nBoğaziçi\nHIZLI ERİŞİM\nSAYILARLA BOĞAZİÇİ\nBUCAMPUS\nTANITIM\nÜNİVERSİ",
+    "variant": "paraphrased",
+    "meta": {
+      "original": "Kampüs hizmetleri bölümünde kafeterya ve kantinler hakkında ne bilgi veriliyor?",
+      "gold_overlap": 0.5556,
+      "echo": false,
+      "semantic_similarity": 0.9699
+    }
+  },
+  {
+    "question": "Boğaziçi Üniversitesindeki dersleri hangi yarıda verebilirim veya alabilirim?",
+    "gold_chunk_ids": [
+      "lisans_egitim_ogretim_yonetmeligi::15"
+    ],
+    "answerable": true,
+    "source_doc": "lisans_egitim_ogretim_yonetmeligi",
+    "gold_answer": "Değişim programları kapsamında diğer yükseköğretim kurumlarında geçirilen yarıyıllar normal ve azami süreye sayılır.\n\nEğitim-öğretim yılı\nMADDE 9 –\n(1) Bir eğitim-öğretim yılı iki yarıyıldan oluşur. Dersler yarıyıl olarak düzenlenir.\n\n(2) Eğitim-öğretim yılı kapsamında yaz dönemi de açılabilir ve öğrenciler bu dönemde de ders alabilirler. Yaz döneminde eğitim-öğretim, Boğaziçi Üniversitesi Yaz Öğr",
+    "variant": "paraphrased",
+    "meta": {
+      "original": "Üniversitedeki bir dersi Boğaziçi Üniversitesi Yaz Öğretimi Yönergesine göre verebilecek ya da alabileceğimizi hangi yarıylda yapabiliriz?",
+      "gold_overlap": 0.375,
+      "echo": false,
+      "semantic_similarity": 0.8382
+    }
+  },
+  {
+    "question": "Öğretmenlik Uygulaması dersinde, okulu gözlemlemede hangi yönlerden bakmam gerekiyor?",
+    "gold_chunk_ids": [
+      "pedagojik_formasyon::24"
+    ],
+    "answerable": true,
+    "source_doc": "pedagojik_formasyon",
+    "gold_answer": "materyallerinin tasarımı;\ntematik öğretim materyali tasarlama; alana özgü nesne ambarı oluşturma ve öğretim materyali\ndeğerlendirme ölçütleridir.\nÖğretmenlik Uygulaması (1-8-5)\nBu dersin amacı öğretmenlik uygulaması yapılacak okulu ve sınıfı çeşitli yönleriyle\ngözlemleyerek yakından tanınmasını ve gözlem sonuçlarının raporlaştırılmasını sağlamak olup\nbaşlıca konular: Bir eğitim ve öğrenme ortamı o",
+    "variant": "paraphrased",
+    "meta": {
+      "original": "Öğretmenlik Uygulaması dersinde, bir eğitim ve öğrenme ortamı olarak okulu gözlemlemede hangi yönlerden bakılmalıdır?",
+      "gold_overlap": 0.4444,
+      "echo": false,
+      "semantic_similarity": 0.8556
+    }
+  },
+  {
+    "question": "Bir öğrenci sertifika programına başvurabilmek için mezuniyet aşamasında olmalı mı?",
+    "gold_chunk_ids": [
+      "sertifika_programlari_yonergesi::4"
+    ],
+    "answerable": true,
+    "source_doc": "sertifika_programlari_yonergesi",
+    "gold_answer": "yürüten\nbirimin web sitesinde ilan edilir.\n(4) Bir sertifika programı en az 5 ders veya 15 krediden oluşur.\n2\nBaşvuru Koşulları ve Süreci\nMADDE 6 – (1) Sertifika programlarına Üniversitede yer alan diplomalı lisans programlarına kayıtlı\nöğrenciler başvurabilir. Lisansüstü programlara kayıtlı öğrenciler sertifika programlarına başvuramaz.\n(2) Seçtiği sertifika programının tamamlama koşullarını sağl",
+    "variant": "paraphrased",
+    "meta": {
+      "original": "Bir öğrenci sertifika programına başvurmak için ana dal programından mezuniyet aşamasında olmalıdır mi?",
+      "gold_overlap": 0.4,
+      "echo": false,
+      "semantic_similarity": 0.9447
+    }
+  },
+  {
+    "question": "Disiplin cezasını vermek için zamanaşımın başlangıcı ne zaman olur?",
+    "gold_chunk_ids": [
+      "ogrenci_disiplin_yonetmeligi::18"
+    ],
+    "answerable": true,
+    "source_doc": "ogrenci_disiplin_yonetmeligi",
+    "gold_answer": "bir ay içinde,\nb) Yükseköğretim kurumundan bir veya iki yarıyıl için uzaklaştırma ile yükseköğretim kurumundan çıkarma cezalarında üç ay içinde,\ndisiplin soruşturmasına başlanmadığı takdirde, disiplin cezası verme yetkisi zaman aşımına uğrar.\n(3) Disiplin cezasını gerektiren eylemlerin işlendiği tarihten itibaren, en geç iki yıl içinde disiplin cezası verilmediği takdirde, disiplin cezası verme\nye",
+    "variant": "paraphrased",
+    "meta": {
+      "original": "Bir adli yargının kesinleşmesine kadar disiplin cezası verme yetkisinin zamanaşımı ne zaman başlar?",
+      "gold_overlap": 0.4444,
+      "echo": false,
+      "semantic_similarity": 0.7582
+    }
+  },
+  {
+    "question": "E-kayıt yapmadım ve kaydı da istemiyorum. İlan edilen tarihlerde üniversitede kayıtlarımı yaptırabilirim mi?",
+    "gold_chunk_ids": [
+      "kayit_yonergesi::7"
+    ],
+    "answerable": true,
+    "source_doc": "kayit_yonergesi",
+    "gold_answer": "içinde, Üniversiteye e-kayıt veya şahsen kayıt yaptırmayan\nöğrenciler, kayıt hakkından vazgeçmiş sayılır ve herhangi bir hak iddia edemezler.\n(5) E- kayıt ve şahsen kayıt tarihi sona erdikten sonra, ek kontenjanların tespit edilmesi\niçin programlar bazında kayıt olan öğrenci sayıları ÖSYM’ye bildirilir.\n(6) ÖSYM tarafından boş kalan kontenjanlar belirlenir ve ilan edilir. Boş kalan\nkontenjanlara e",
+    "variant": "paraphrased",
+    "meta": {
+      "original": "E-kayıt veya şahsen kayıt yapılmamış ve kayıt hakkından vazgeçmiş bir öğrenci, ilan edilen tarihlerde Üniversiteye kayıtlarını yaptırabilir mi?",
+      "gold_overlap": 0.4286,
+      "echo": false,
+      "semantic_similarity": 0.8536
+    }
+  },
+  {
+    "question": "Neden sadece dil hazırlık sınıflarında değil diğer akademik yarıyıl kayıtları da çevrimiçi olarak yapılır?",
+    "gold_chunk_ids": [
+      "kayit_yonergesi::15"
+    ],
+    "answerable": true,
+    "source_doc": "kayit_yonergesi",
+    "gold_answer": "yapılır. Bu öğrencilerin çevrim içi kayıt yapmalarına gerek yoktur.\n\nÜÇÜNCÜ BÖLÜM\nAkademik Yarıyıl Kayıt Dönemi\n\nAkademik Yarıyıl Kayıtları\nMADDE 10- (1) Üniversite bünyesinde kayıt hakkı olan tüm öğrenciler, ilgili yarıyılda ve\ndevam eden her yarıyılda , akademik takvimde ilan edilen tarihlerde akademik yarıyıl\nkayıtlarını bizzat yenilemekle yükümlüdürler.\n\n(2) Akademik yarıyıl kayıtları, dil haz",
+    "variant": "paraphrased",
+    "meta": {
+      "original": "Neden dil hazırlık sınıfı hariç akademik yarıyıl kayıtları çevrimiçi olarak yapılır?",
+      "gold_overlap": 0.3571,
+      "echo": false,
+      "semantic_similarity": 0.9176
+    }
+  },
+  {
+    "question": "Bir tezli yüksek lisans'tan aldığım dersler doktora programına nasıl sayılır?",
+    "gold_chunk_ids": [
+      "lisansustu_egitim_ogretim_yonetmeligi::79"
+    ],
+    "answerable": true,
+    "source_doc": "lisansustu_egitim_ogretim_yonetmeligi",
+    "gold_answer": "kurulu kararıyla tezli yüksek lisans programındaki derslerin yerine sayılır.\nALTINCI BÖLÜM\nDoktora Programlarına İlişkin Esaslar\nDoktora programı\nMADDE 35 –\n(1) Bir doktora programının yürütülmesine ilişkin esaslar ilgili anabilim dalının önerisi, ilgili enstitü yönetim kurulu kararı ve Senatonun onayı ile belirlenir.\n\nDoktora programında ders yükü",
+    "variant": "paraphrased",
+    "meta": {
+      "original": "Bir tezli yüksek lisans programından alinan derslerin doktora programına ne şekilde yerine sayılacağı?",
+      "gold_overlap": 0.7273,
+      "echo": false,
+      "semantic_similarity": 0.9005
+    }
+  },
+  {
+    "question": "15 gün içinde konut taşınmazları yapmazsa, konut tahsis başvurusunda hakkını kaybetmiş ve tahsis edilen konotta ki diğer haklarını da kaybedebilecekler mi?",
+    "gold_chunk_ids": [
+      "konut_tahsis_yonergesi::10"
+    ],
+    "answerable": true,
+    "source_doc": "konut_tahsis_yonergesi",
+    "gold_answer": "15 gün içinde konuta taşınmadıkları takdirde, konut tahsis başvuru hakkı da\ndahil olmak üzere, tahsis edilen konut üzerindeki haklarını kaybederler.\n2) Diğer Akademik Personel sıra tahsisli konutların tahsisi usulü:\n A bendinde tanımlanan; kadro tahsisi yapıldıktan sonra 3 yıl içinde başvurmuş olma\nşartını ilgili sürenin geçmiş olması nedeniyle karşılamayan akademik personel için aşağıdaki\nusulle",
+    "variant": "paraphrased",
+    "meta": {
+      "original": "15 gün içinde konut taşınmazlarsa, konut tahsis başvuru haklarının yanı sıra tahsis edilen konut üzerindeki diğer hakları da kaybedebilecekler mi?",
+      "gold_overlap": 0.5263,
+      "echo": false,
+      "semantic_similarity": 0.9576
+    }
+  },
+  {
+    "question": "Bilimsel hazırlık programında bir dersi tekrar alabilmem için ne yapmalıyım?",
+    "gold_chunk_ids": [
+      "lisansustu_egitim_ogretim_yonetmeligi::33"
+    ],
+    "answerable": true,
+    "source_doc": "lisansustu_egitim_ogretim_yonetmeligi",
+    "gold_answer": "ilgili lisansüstü programını tamamlamak için gerekli olan derslerden oluşamaz. Özel durumlarda Üniversite Yönetim Kurulu karar almaya yetkilidir.\n(5) Bilimsel hazırlık dersleri kredili olarak alınır. Bu derslerin lisans seviyesinde olması durumunda 11/6/2016 tarihli ve 29739 sayılı Resmî Gazete’de yayımlanan Boğaziçi Üniversitesi Lisans Eğitim-Öğretim Yönetmeliğinde belirtilen not sistemi geçerlid",
+    "variant": "paraphrased",
+    "meta": {
+      "original": "Bilimsel hazırlık programında başarısız olunan bir dersi nasıl tekrar alabilirim?",
+      "gold_overlap": 0.5,
+      "echo": false,
+      "semantic_similarity": 0.8529
+    }
+  },
+  {
+    "question": "Tezli yüksek lisansta P notu alabilmek için hangi dersleri ve en az kaç GNO puanı elde etmem gerekmektedir?",
+    "gold_chunk_ids": [
+      "lisansustu_egitim_ogretim_yonetmeligi::66"
+    ],
+    "answerable": true,
+    "source_doc": "lisansustu_egitim_ogretim_yonetmeligi",
+    "gold_answer": "tarafından transferinin onaylanması durumunda bu dersler öğrencinin kaydına P notu olarak geçer.\nTezli yüksek lisans programında süre ve başarı\nMADDE 29 –\n(1) Tezli yüksek lisans programının süresi bilimsel hazırlıkta geçen süre hariç, kayıt olduğu programa ilişkin derslerin verildiği dönemden başlamak üzere, her dönem için kayıt yaptırıp yaptırmadığına bakılmaksızın dört yarıyıl olup, program en ",
+    "variant": "paraphrased",
+    "meta": {
+      "original": "Tezli yüksek lisans programında P notu almak için hangi dersleri ve minimum GNO puanını nasıl karşılamam gerekmektedir?",
+      "gold_overlap": 0.5,
+      "echo": false,
+      "semantic_similarity": 0.9319
+    }
+  },
+  {
+    "question": "Resmî Gazeteden hangi tarihli sayfalarda yapılan değişikliklerin bildirildiği bilgileri bulabilirim?",
+    "gold_chunk_ids": [
+      "ogrenci_disiplin_yonetmeligi::39"
+    ],
+    "answerable": true,
+    "source_doc": "ogrenci_disiplin_yonetmeligi",
+    "gold_answer": "sonra Danıştay İdari Dava Daireleri Kurulunun 3/11/2014 tarihli ve YD İtiraz No: 2014/843 sayılı Kararı ile bu\nKarara yapılan itiraz ret edilmiştir.\nYönetmeliğin Yayımlandığı Resmî\nGazete’nin\nTarihi\nSayısı\n18/8/2012\n28388\nYönetmelikte Değişiklik Yapan\nYönetmeliklerin Yayımlandığı Resmî\nGazetelerin\nTarihi\nSayısı\n1.\n7/11/2013\n28814\n2.\n23/12/2016\n29927\n3.",
+    "variant": "paraphrased",
+    "meta": {
+      "original": "Resmî Gazeteden hangi tarihli sayılarda yapılan değişikliklerin bildirildiği bilgileri içermektedir?",
+      "gold_overlap": 0.5,
+      "echo": false,
+      "semantic_similarity": 0.9731
+    }
+  },
+  {
+    "question": "Yürütülmemiş kurumların adlarını bilirim mi?",
+    "gold_chunk_ids": [
+      "ogrenci_disiplin_yonetmeligi::38"
+    ],
+    "answerable": true,
+    "source_doc": "ogrenci_disiplin_yonetmeligi",
+    "gold_answer": "Kurumları Öğrenci Disiplin Yönetmeliği\nyürürlükten kaldırılmıştır.\nYürürlük\nMADDE 31 –\n(1) Bu Yönetmelik yayımı tarihinde yürürlüğe girer.\nYürütme\nMADDE 32 –\n(1) Bu Yönetmelik hükümlerini Yükseköğretim Kurulu Başkanı yürütür.\n___________________\n1\nDanıştay İdari Dava Daireleri Kurulunun 3/11/2014 tarihli ve YD İtiraz No: 2014/843 sayılı Kararı ile 8 inci maddesinin birinci\nfıkrasının (c) bendinde ",
+    "variant": "paraphrased",
+    "meta": {
+      "original": "Yürürlükten kaldırılan kurumların listesini verebilir misiniz?",
+      "gold_overlap": 0.2,
+      "echo": false,
+      "semantic_similarity": 0.7044
+    }
+  },
+  {
+    "question": "Soruşturma raporunda hangi kısımlarda daha detaylı açıklama yapılması gerekiyor?",
+    "gold_chunk_ids": [
+      "ogrenci_disiplin_yonetmeligi::24"
+    ],
+    "answerable": true,
+    "source_doc": "ogrenci_disiplin_yonetmeligi",
+    "gold_answer": "olarak gönderebilecekleri bildirilir.\n(5) Soruşturma öğrencinin kendini gereği gibi savunmasına imkân verecek şekilde yürütülür.\nSoruşturma raporu\nMADDE 16 –\n(1) Soruşturma sonuçlandığında bir rapor düzenlenir. Raporda soruşturma onayı, soruşturmaya başlama tarihi, soruşturulanın\nkimliği, isnat edilen suç konuları, soruşturmanın safhaları, deliller ve alınan savunma özetlenir. İsnat edilen suçun s",
+    "variant": "paraphrased",
+    "meta": {
+      "original": "Soruşturma raporunda hangi noktalarda detaylı olarak açıklanması gerektiği?",
+      "gold_overlap": 0.2222,
+      "echo": false,
+      "semantic_similarity": 0.8796
+    }
+  },
+  {
+    "question": "Bir öğrenci, hangi yıllardan sonra yarıyıl eğitiminin sayılacağından, hangi yıllardan sonra sayılmayacağından bilmiyor?",
+    "gold_chunk_ids": [
+      "lisansustu_egitim_ogretim_yonetmeligi::16"
+    ],
+    "answerable": true,
+    "source_doc": "lisansustu_egitim_ogretim_yonetmeligi",
+    "gold_answer": "hariç, kayıtlı olduğu veya kayıt yenilememe nedeni ile kayıtsız olarak geçirdiği tüm yarıyıllar normal ve azami eğitim ve öğretim süresine dâhildir.\n(4) Yabancı dil ve bilimsel hazırlık programlarında geçirilen süreler lisansüstü programın normal ve azami süresine dâhil değildir.\n(5) Değişim programları ile uluslararası ortak programlar kapsamında yurt içi veya yurt dışı yükseköğretim kurumlarında",
+    "variant": "paraphrased",
+    "meta": {
+      "original": "Bir öğrenci, hangi yıllardan sonra half a year (yarıyıllık) eğitim sayılır ve hangileri sayılmaz?",
+      "gold_overlap": 0.1,
+      "echo": false,
+      "semantic_similarity": 0.814
+    }
+  },
+  {
+    "question": "Öğretim planlarında en önemli faktörler hakkında ne düşünürler?",
+    "gold_chunk_ids": [
+      "pedagojik_formasyon::17"
+    ],
+    "answerable": true,
+    "source_doc": "pedagojik_formasyon",
+    "gold_answer": "öğretmenlik ve\nöğretmenlik meslek etiği; öğretmen yetiştirmede güncel gelişmeler; yirmi birinci yüzyılda okul\nve eğitimle ilgili temel yönelimlerdir.\nÖğretim İlke ve Yöntemleri (3-0-3)\nBu dersin amacı öğretim ve öğrenm eyle ilgili temel kavram, kuram, strateji, yaklaşım ve\nmodelleri tanıtmak olup başlıca konular: Öğretim ilke ve yöntemleriyle ilgili temel kavramlar;\nöğretim ve öğrenme ilkeleri, mo",
+    "variant": "paraphrased",
+    "meta": {
+      "original": "Öğretim planlarında hangi faktörlerin en önemlisi olduğuna dair görüşler nelerdir?",
+      "gold_overlap": 0.125,
+      "echo": false,
+      "semantic_similarity": 0.9331
+    }
+  },
+  {
+    "question": "Enstitü yönetim kurulu onayını almadan tez danışmanımın adını nasıl değiştirebilirim?",
+    "gold_chunk_ids": [
+      "lisansustu_egitim_ogretim_yonetmeligi::68"
+    ],
+    "answerable": true,
+    "source_doc": "lisansustu_egitim_ogretim_yonetmeligi",
+    "gold_answer": "en geç ikinci yarıyılın sonuna kadar enstitüye önerir. Tez danışmanı ve tez konusu enstitü yönetim kurulu onayı ile kesinleşir.\n\nYüksek lisans tezi\nMADDE 31 –\n(1) Öğrenci en geç tez danışmanının atanmasını izleyen yarıyıldan itibaren her yarıyıl tez dersine kayıt yaptırmak zorundadır.\n(2) Jüri, biri öğrencinin tez danışmanı, en az biri de başka bir yükseköğretim kurumundan olmak üzere üç veya beş ",
+    "variant": "paraphrased",
+    "meta": {
+      "original": "Enstitü yönetim kurulu onayı olmadan tez danışmanınızı nasıl değiştirebilirim?",
+      "gold_overlap": 0.6,
+      "echo": false,
+      "semantic_similarity": 0.8889
+    }
+  },
+  {
+    "question": "Bir adayın tezi reddedildiğinde üniversite hangi adımları atmalı?",
+    "gold_chunk_ids": [
+      "lisansustu_egitim_ogretim_yonetmeligi::101"
+    ],
+    "answerable": true,
+    "source_doc": "lisansustu_egitim_ogretim_yonetmeligi",
+    "gold_answer": "bir bilimsel yöntem geliştirmesi,\nc) Bilinen bir yöntemi yeni bir alana uygulaması,\nkoşullarından en az birini yerine getirmiş olması zorunludur.\n(6) Aday, jüri önünde tezini savunur. Tez savunmasının tarihi en geç on beş gün öncesinde ilgili enstitü tarafından ilan edilir. Tez savunma toplantıları öğretim elemanları, lisansüstü öğrenciler ve alanın uzmanlarından oluşan dinleyicilerin katılımına a",
+    "variant": "paraphrased",
+    "meta": {
+      "original": "Bir adayın doktora tezinin reddedildiğinde üniversitenin hangi adımlarını atması gerekmektedir?",
+      "gold_overlap": 0.25,
+      "echo": false,
+      "semantic_similarity": 0.8363
+    }
+  },
+  {
+    "question": "Yarıyıl boyunca alabilirimizin en fazla kaç dersi öğrenci neye göre hesaplıyor?",
+    "gold_chunk_ids": [
+      "lisans_egitim_ogretim_yonetmeligi::23"
+    ],
+    "answerable": true,
+    "source_doc": "lisans_egitim_ogretim_yonetmeligi",
+    "gold_answer": "kredisi, toplam mezuniyet kredisinin programın normal süresine karşılık gelen yarıyıl sayısına bölünerek ve en yakın tam sayıya tamamlanarak bulunur.\n(5) Öğrenciler bir yarıyılda fazla kredi yükü olarak, kredisiz alınan dersler hariç, ortalama yarıyıl kredisi üzerine en fazla toplam sekiz kredi değerinde ders alabilir. Fazla ders yükü ile ilgili uygulama esasları ve özel durumlar ilgili yönetim ku",
+    "variant": "paraphrased",
+    "meta": {
+      "original": "Öğrencinin bir yarıyılda fazla kredi alabileceği maksimum ders sayısını neye göre hesaplar?",
+      "gold_overlap": 0.5455,
+      "echo": false,
+      "semantic_similarity": 0.6783
+    }
+  },
+  {
+    "question": "Hangi durumda disiplin kurulundan soruşturma yaptırabilirsiniz?",
+    "gold_chunk_ids": [
+      "ogrenci_disiplin_yonetmeligi::28"
+    ],
+    "answerable": true,
+    "source_doc": "ogrenci_disiplin_yonetmeligi",
+    "gold_answer": "soruşturma işlemlerinin tamamlanmasını aynı\nsoruşturmacıdan veya disiplin kurulunun bir üyesinden isteyebilir.\nDisiplin kurulunun çalışma usulü\nMADDE 19 –\n(1) Disiplin kurulu, başkanın çağrısı üzerine belirlenecek yer, gün ve saatte toplanır.\n(2) Toplantı gündeminin hazırlanması, ilgililere duyurulması, kurul çalışmalarının düzenli yürütülmesi, başkan tarafından sağlanır.\n(3) Disiplin kurulu olara",
+    "variant": "paraphrased",
+    "meta": {
+      "original": "Hangi durumda disiplin kurulunun bir üyesinden soruşturma işlemlerinin tamamlanmasını isteyebileceksiniz?",
+      "gold_overlap": 0.5,
+      "echo": false,
+      "semantic_similarity": 0.8894
+    }
+  },
+  {
+    "question": "Doktora programında lisans derecesi ile kabul edilen öğrencilerin en fazla kaç kredi alabilirler?",
+    "gold_chunk_ids": [
+      "lisansustu_egitim_ogretim_yonetmeligi::80"
+    ],
+    "answerable": true,
+    "source_doc": "lisansustu_egitim_ogretim_yonetmeligi",
+    "gold_answer": "esaslar ilgili anabilim dalının önerisi, ilgili enstitü yönetim kurulu kararı ve Senatonun onayı ile belirlenir.\n\nDoktora programında ders yükü\nMADDE 36 –\n(1) Yüksek lisans derecesi olan öğrenciler için doktora programı, toplam 21 krediden ve bir eğitim-öğretim yılı 60 AKTS’den az olmamak koşuluyla en az yedi adet kredili lisansüstü ders, seminer, yeterlik sınavı, tez önerisi ve tez çalışması olma",
+    "variant": "paraphrased",
+    "meta": {
+      "original": "Doktora programında lisans derecesi ile kabul edilen öğrencilerin maksimum kaç kredi alabilirler?",
+      "gold_overlap": 0.6154,
+      "echo": false,
+      "semantic_similarity": 0.9872
+    }
+  },
+  {
+    "question": "Yedek listedeki öğrenciler, eksik belgelerini tamamladıktan sonra ders ekleme-bırakma dönemi içinde ilk kayıtlımı nasıl yaptırabilirim?",
+    "gold_chunk_ids": [
+      "kayit_yonergesi::11"
+    ],
+    "answerable": true,
+    "source_doc": "kayit_yonergesi",
+    "gold_answer": "yedek listedeki\nöğrenciler, ilan edilen tarihlerde yedek sırasına göre , asıl listeden kayıt yaptırmayan\nöğrencilerin yerine kayıt yaptırabilirler.\n(4) Asıl listeden kabul edilen ancak eksik belgesi olduğu için ilan edilen kayıt süresi içinde\nkayıt yaptıramayan lisansüstü öğrenciler;\na) Başvurdukları programa yedek listeden kabul edilen öğrenciler olmaması halinde,\nders ekleme -bırakma dönemi başl",
+    "variant": "paraphrased",
+    "meta": {
+      "original": "Yedek listedeki öğrenciler, ders ekleme-bırakma dönemi başlangıç tarihine kadar eksik belgelerini tamamladıkları takdirde, ilk kayıtlarını nasıl yaptırabilirler?",
+      "gold_overlap": 0.625,
+      "echo": false,
+      "semantic_similarity": 0.9561
+    }
+  },
+  {
+    "question": "Bölüm programında teoride sadece okuyacağım ve pratiğine şimdilik değilmeyen ders hangisidir?",
+    "gold_chunk_ids": [
+      "pedagojik_formasyon::1"
+    ],
+    "answerable": true,
+    "source_doc": "pedagojik_formasyon",
+    "gold_answer": "programs beginning\nfrom the third semester,\nSpecified by YÖK\nCorresponding Courses in Boğaziçi University\nNew Courses with PF code\nTerm COURSE T P(U) L Cr. ECTS\n3 Introduction to Education 3 0 3 4\nED 101 Introduction to Education (3+0+0) 3 ECTS 6 3 0 0 3 6\nPF 201 Introduction to Education (3+0+0) 3 ECTS 6 3 0 0 3 6\n3 Educational Psychology 3 0 3 4\nED 211 Educational Psychology (3+0+0) 3 ECTS 5 3 0",
+    "variant": "paraphrased",
+    "meta": {
+      "original": "Bölümde bahsedilen derslerden hangisinin sadece teorik konularda eğitim alacak ve praktik uygulamaları olmayan ders olduğunu sorabilir?",
+      "gold_overlap": 0.0,
+      "echo": false,
+      "semantic_similarity": 0.8171
+    }
+  },
+  {
+    "question": "Yurt dışına giden öğrencilerin iznine hangi koşulları uymaları gerekiyor?",
+    "gold_chunk_ids": [
+      "burs_yonergesi::13"
+    ],
+    "answerable": true,
+    "source_doc": "burs_yonergesi",
+    "gold_answer": "diğer vakıf, kişi, kurum ve kuruluşlardan nakdi burs alan\nöğrencilerin durumları bu kurumların belirlediği kriterlere uymadığında bursları kesilir.\nç) Yurtlarda kalan öğrenciler, herhangi bir nedenle süreye sayılan ya da sa yılmayan izin\naldıklarında (Boğaziçi Üniversitesi Değişim Programları çerçevesinde başka üniversitelere\ngiden öğrenciler hariç) bursları kesilir.\nİzinli Olma",
+    "variant": "paraphrased",
+    "meta": {
+      "original": "Yurt dışına giden öğrencilerin izinli olma şartlarını nasıl karşılaması gerekmektedir?",
+      "gold_overlap": 0.3333,
+      "echo": false,
+      "semantic_similarity": 0.9192
+    }
+  },
+  {
+    "question": "Başarısız olanlar en fazla kaç kredi alabilir ve bu krediler hangi notlardan olabilir?",
+    "gold_chunk_ids": [
+      "lisans_egitim_ogretim_yonetmeligi::44"
+    ],
+    "answerable": true,
+    "source_doc": "lisans_egitim_ogretim_yonetmeligi",
+    "gold_answer": "devam edebilmeleri için GNO'larını 2.00 veya üzerine çıkarmaları gerekir.\n(4) Sınamalı öğrenciler ortalama yarıyıl kredisi üzerinde ders yükü alamaz.\n(5) Başarısız öğrenciler; ortalama yarıyıl kredisi üzerinde ders yükü alamaz, F tekrarının yanı sıra ortalama yarıyıl kredisini aşmayacak şekilde DD, DC notu aldıkları dersleri tekrarlayabilir ve/veya en çok iki yeni ders alabilirler. Tekrar edebilec",
+    "variant": "paraphrased",
+    "meta": {
+      "original": "Başarısız öğrencilerin en çok kaç kredi alabilirler ve bu krediler hangi notlarla elde edilebilir?",
+      "gold_overlap": 0.4167,
+      "echo": false,
+      "semantic_similarity": 0.8902
+    }
+  },
+  {
+    "question": "Yeni başvuruların sadece yıllık olarak yapılması nedendir?",
+    "gold_chunk_ids": [
+      "konut_tahsis_yonergesi::19"
+    ],
+    "answerable": true,
+    "source_doc": "konut_tahsis_yonergesi",
+    "gold_answer": "tahsil edilir. Konutun kullanımı sırasında oluşacak her\ntürlü masraf, elektrik, su, ısınma giderleri dahil olmak üzere kişinin ödemesi altındadır.\n(6) Sıra tahsisli konutlara başvurular yılda bir kez Rektörlük Makamı tarafından\nbelirlenen tarihler arasında gerçekleştirilir. Konut başvuruları 1 (bir) yıl süreyle geçerli olup,\nharicinde yapılan başvurular ise dikkate alın maz. Üniversite Akademik ve",
+    "variant": "paraphrased",
+    "meta": {
+      "original": "Başvuruların sadece yıllık olarak gerçekleştirilmesi nedenidir?",
+      "gold_overlap": 0.1429,
+      "echo": false,
+      "semantic_similarity": 0.6839
+    }
+  },
+  {
+    "question": "Çerez politikasını nereden görebilirim?",
+    "gold_chunk_ids": [
+      "lisans_egitim_ogretim_yonetmeligi::60"
+    ],
+    "answerable": true,
+    "source_doc": "lisans_egitim_ogretim_yonetmeligi",
+    "gold_answer": "Merkezi\nKültür ve Sanat\nÖğrenci Hak ve Sorumlulukları\nToplumsal Dayanışma\nDİL SEÇENEKLERİ\nTR\nEN\nBOĞAZİÇİ'NİN\nGÜNLÜK RİTMİNİ YAKALA\nTÜM ETKİNLİKLER\nBu web sitesi deneyiminizi geliştirmek için çerezleri kullanır. Devam ederek çerez kullanımımızı kabul etmiş olursunuz.\nÇerez Politikamızı İncelemek İçin Tıklayınız.\nKabul Et\nReddet",
+    "variant": "paraphrased",
+    "meta": {
+      "original": "Çerez politikası hakkında bilgi almak için nereden tıklayacağım?",
+      "gold_overlap": 0.25,
+      "echo": false,
+      "semantic_similarity": 0.8603
+    }
+  },
+  {
+    "question": "Rektör Yardımcısı olmadığında, kimin Komisyon başkanlığını yapar?",
+    "gold_chunk_ids": [
+      "konut_tahsis_yonergesi::14"
+    ],
+    "answerable": true,
+    "source_doc": "konut_tahsis_yonergesi",
+    "gold_answer": "de eşit ise, Komisyonca ad çekme yoluyla, konut tahsis edilir.\n\nDÖRDÜNCÜ BÖLÜM\nKonut Tahsis Komisyonu ve Çalışma Esasları\n\nKonut Tahsis Komisyonu\nMADDE 11- (1) Konut Tahsis Komisyonu Rektör tarafından belirlenen R ektör\nYardımcısı, Genel Sekreter ve Sağlık, Kültür ve Spor Daire Başkanı olmak üzere 3 asil,\nPersonel Daire Başkanı ve Yapı İşleri ve Teknik Daire Başkanı olmak üzere 2 yede k üyeden\nolu",
+    "variant": "paraphrased",
+    "meta": {
+      "original": "Rektör Yardımcısı olmadığında, kimin Komisyon başkanlığını yapar?",
+      "gold_overlap": 0.4286,
+      "echo": true,
+      "semantic_similarity": 1.0
+    }
+  },
+  {
+    "question": "Hangi durumlarda öğrenciye tez sunma zamanı verilir?",
+    "gold_chunk_ids": [
+      "ogrenci_disiplin_yonetmeligi::23"
+    ],
+    "answerable": true,
+    "source_doc": "ogrenci_disiplin_yonetmeligi",
+    "gold_answer": "Geçerli bir özür bildiren veya mücbir sebep dolayısıyla davete uymadığı anlaşılan öğrenciye uygun bir süre verilir. Tutuklu öğrencilere\nsavunmalarını yazılı olarak gönderebilecekleri bildirilir.\n(5) Soruşturma öğrencinin kendini gereği gibi savunmasına imkân verecek şekilde yürütülür.\nSoruşturma raporu",
+    "variant": "paraphrased",
+    "meta": {
+      "original": "Hangi durumlarda öğrenciye savunma süresi verilir?",
+      "gold_overlap": 0.2857,
+      "echo": false,
+      "semantic_similarity": 0.7142
+    }
+  },
+  {
+    "question": "Motivasyonumu artırmak için farklı öğretim teknolojileri nerede kullanabiliyoruz?",
+    "gold_chunk_ids": [
+      "pedagojik_formasyon::23"
+    ],
+    "answerable": true,
+    "source_doc": "pedagojik_formasyon",
+    "gold_answer": "ilgili temel kavramlar; öğrenmeyi etkileyen faktörler; eğitim ve öğrenme\nsüreçleri çerçevesinde öğrenme kuramları ve öğrenme sürecinde motivasyondur.\nÖğretim Teknolojileri (2-0-2)\nBu dersin amacı bilişim ve bilgi teknolojilerinin eğitim ve öğrenme sürecindeki etkilerini\ntanımak ve bunlardan yararlanabilmeyi sağlamak olup başlıca konular: Eğitimde bilgi\nteknolojileri; öğretim süreci ve öğretim tekn",
+    "variant": "paraphrased",
+    "meta": {
+      "original": "Öğrenme sürecinde motivasyonun nasıl etkilendiği ve farklı öğretim teknolojilerinin bu motivasyona nasıl katkıda bulunabileceğini anlamak için ne tür bir yaklaşım kullanılır?",
+      "gold_overlap": 0.25,
+      "echo": false,
+      "semantic_similarity": 0.8003
+    }
+  },
+  {
+    "question": "Sertifikayı almak istiyorum ama hangi dersleri seçmem gerektiğini ana danışmanımdan önce bilmesi gerekecek mi?",
+    "gold_chunk_ids": [
+      "sertifika_programlari_yonergesi::8"
+    ],
+    "answerable": true,
+    "source_doc": "sertifika_programlari_yonergesi",
+    "gold_answer": "müdürünü/bölüm başkanını bilgilendirmekle yükümlüdür.\n\nSertifika Programı Derslerine Devam, Ders Yükü, Başarı Şartı ve Süre\nMADDE 8 – (1) Sertifika programını tamamlamayı hedefleyen öğrenci sertifika programına sayılan\nderslerin önkoşullarını sağlamakla yükümlüdür.\n3\n(2) Sertifika programını tamamlamayı hedefleyen öğrenci, ana dal danışmanını bu hedefi hakkında\nönceden bilgilendirmelidir. Öğrencin",
+    "variant": "paraphrased",
+    "meta": {
+      "original": "Sertifika programını tamamlamak isteyen öğrenci ana dal danışmanına hangi dersleri seçeceğinden önceden bilgilendirmesi gerekmektedir?",
+      "gold_overlap": 0.2857,
+      "echo": false,
+      "semantic_similarity": 0.7618
+    }
+  },
+  {
+    "question": "Hangi belirli kitapları ve makaleleri inceleyeceğiz ve değerlendirebileceğiz?",
+    "gold_chunk_ids": [
+      "pedagojik_formasyon::13"
+    ],
+    "answerable": true,
+    "source_doc": "pedagojik_formasyon",
+    "gold_answer": "materials;\ndesigning thematic teaching materials; creating field -specific learning object repository,\nevaluation criteria for teaching materials.\nTeaching Practicum (1-8-5)\nThe aim of this course is to ensure that the school and the classroom where the teaching practice\nwill be carried out are observed closely, and the results of the observations are reported. The\nmain topics to be covered are: O",
+    "variant": "paraphrased",
+    "meta": {
+      "original": "Neler gözlemlemek ve raporlamak istediğinize dair daha fazla bilgi verebileceğimiz bir sınıf programı kapsamında hangi belirli öğretim materyallerini değerlendireceğiz?",
+      "gold_overlap": 0.0,
+      "echo": false,
+      "semantic_similarity": 0.5837
+    }
+  },
+  {
+    "question": "Onur derecesini alabilmek için en az kaç GNO puanı gerekiyor?",
+    "gold_chunk_ids": [
+      "lisans_egitim_ogretim_yonetmeligi::51"
+    ],
+    "answerable": true,
+    "source_doc": "lisans_egitim_ogretim_yonetmeligi",
+    "gold_answer": "olup lisans öğrenimlerini tamamlamadan Üniversiteden ayrılan öğrencilere, başvurmaları halinde ön lisans diploması verilir.\nOnur-yüksek onur, derece\nMADDE 34 –\n(1) Öğrenimlerini Üniversite tarafından onaylanan bir değişim programında geçirilen süreler hariç normal öğrenim süresi içinde tamamlayan ve öğrenim süresince disiplin cezası almamış öğrencilerden GNO’ları 3.50 ve üzeri olanlar yüksek onur,",
+    "variant": "paraphrased",
+    "meta": {
+      "original": "Onur derecesini kazanmak için minimum GNO değeri nedir?",
+      "gold_overlap": 0.3,
+      "echo": false,
+      "semantic_similarity": 0.9222
+    }
+  },
+  {
+    "question": "Nerede itiraz hakkı var ki disiplin cezasından kaçınabilirim?",
+    "gold_chunk_ids": [
+      "ogrenci_disiplin_yonetmeligi::33"
+    ],
+    "answerable": true,
+    "source_doc": "ogrenci_disiplin_yonetmeligi",
+    "gold_answer": "uygulanacağı belirtilmediği takdirde,\ndisiplin cezaları verildikleri tarihten itibaren uygulanırlar.\nDisiplin cezalarına karşı başvuru yolları\nMADDE 26 –\n(1) Disiplin amirleri ve kurullarınca verilen disiplin cezalarına karşı onbeş gün içinde üniversite yönetim kuruluna itiraz edilebilir.\n(2) İtiraz halinde, itiraz mercii olan üniversite yönetim kurulu, itirazı onbeş gün içinde kesin olarak karara",
+    "variant": "paraphrased",
+    "meta": {
+      "original": "Nerede itiraz hakkımı kullanarak disiplin cezasından kaçınılabilir?",
+      "gold_overlap": 0.375,
+      "echo": false,
+      "semantic_similarity": 0.8951
+    }
+  },
+  {
+    "question": "Ders ekleme-bırkaema işlemlerimin eksik kalabileceğinde hangi aşamada bildirilir?",
+    "gold_chunk_ids": [
+      "kayit_yonergesi::28"
+    ],
+    "answerable": true,
+    "source_doc": "kayit_yonergesi",
+    "gold_answer": "geçerli görülenler, ders ekleme-bırakma\nsüresinin bitimine kadar akademik kayıtlarını tamamlayabilirler.\nDers Ekleme-Bırakma Dönemi Sonu Verileri\nMADDE 18- (1) Ders ekleme-bırakma döneminde öğrenciler tarafından çevrim içi yapılan\nişlemler, ders ekleme -bırakma dönemi bittikten sonra kayıt sistemi üzerinden\nöğrencilerin ilgili yarıyıl kayıtlarına aktarılır.\n\n(2) Kayıt İşleri Şube Müdürlüğü tarafın",
+    "variant": "paraphrased",
+    "meta": {
+      "original": "Hangi aşamada ders ekleme-bırkaema işlemleriniz eksik kalabilir ve nasıl bildirilecektir?",
+      "gold_overlap": 0.2222,
+      "echo": false,
+      "semantic_similarity": 0.9343
+    }
+  },
+  {
+    "question": "Bir öğrenci tez savunmasında reddetmeseydi üniversiteden nasıl ayrılabilir?",
+    "gold_chunk_ids": [
+      "lisansustu_egitim_ogretim_yonetmeligi::97"
+    ],
+    "answerable": true,
+    "source_doc": "lisansustu_egitim_ogretim_yonetmeligi",
+    "gold_answer": "önerisi bu savunmada da reddedilen veya verilen süre içinde tez önerisini savunmamış öğrencinin Üniversite ile ilişiği kesilir.\nDoktora tezi\nMADDE 43 –\n(1) Tez önerisi kabul edilen öğrenci için tez izleme komitesi, her yarıyılda bir kez olmak üzere en az iki kez toplanır. Öğrenci, toplantı tarihinden en az bir ay önce komite üyelerine yazılı bir rapor sunar. Bu raporda o ana kadar yapılan çalışmal",
+    "variant": "paraphrased",
+    "meta": {
+      "original": "Bir öğrenci tez önerisini savunmada reddedildiyse, Üniversite ile hangi ilişkiyi keser? TP işareti almadan önce.",
+      "gold_overlap": 0.375,
+      "echo": false,
+      "semantic_similarity": 0.7038
+    }
+  },
+  {
+    "question": "İzin verilen öğrenci, birinci yarıyıldan sonra üniversitede dönmek istemiyorsa ne yapmalıdır?",
+    "gold_chunk_ids": [
+      "lisans_egitim_ogretim_yonetmeligi::30"
+    ],
+    "answerable": true,
+    "source_doc": "lisans_egitim_ogretim_yonetmeligi",
+    "gold_answer": "akademik takvimde belirtilen süreler içinde yapılır. İzin süresi zorunlu hallerde, izni veren ilgili yönetim kurulu tarafından uzatılabilir.\n(5) Öğrenciler, izin süreleri sonunda yarıyıl kayıtlarını yaptırmak suretiyle öğrenimlerine devam ederler. İki yarıyıl izin verilmiş öğrencilerden birinci yarıyıl sonunda Üniversiteye dönmek isteyenlerin, bir dilekçe ile ilgili yönetim kuruluna başvurmaları g",
+    "variant": "paraphrased",
+    "meta": {
+      "original": "İzin verilen öğrenci, birinci yarıyıldan sonra üniversitede dönmek istemiyorsa ne yapmalıdır?",
+      "gold_overlap": 0.5455,
+      "echo": true,
+      "semantic_similarity": 1.0
+    }
+  },
+  {
+    "question": "Bir yüksek lisans dersinde en az bir konu hangisini içermesi gerekmektedir?",
+    "gold_chunk_ids": [
+      "lisansustu_egitim_ogretim_yonetmeligi::13"
+    ],
+    "answerable": true,
+    "source_doc": "lisansustu_egitim_ogretim_yonetmeligi",
+    "gold_answer": "Diller Yüksekokulu: Boğaziçi Üniversitesi Yabancı Diller Yüksekokulunu,\nifade eder.\nİKİNCİ BÖLÜM\nEğitim ve Öğretime İlişkin Esaslar\nLisansüstü eğitim\nMADDE 5 –\n(1) Lisansüstü eğitim, tezli ve tezsiz yüksek lisans, doktora ve lisans sonrası doktora programlarını kapsar.\n(2) İzlenecek eğitim ve öğretim programları ve mezuniyet için gerekli koşullar, ilgili anabilim dalı tarafından hazırlanır, ilgili",
+    "variant": "paraphrased",
+    "meta": {
+      "original": "Bir lisansüstü programının müfredatında en az bir dersin hangi konuları içermesi gerekmektedir?",
+      "gold_overlap": 0.2,
+      "echo": false,
+      "semantic_similarity": 0.8318
+    }
+  },
+  {
+    "question": "Lisans öğrenimini bitirmeden de yüksek lisans programına başvurabilirim mi?",
+    "gold_chunk_ids": [
+      "lisansustu_egitim_ogretim_yonetmeligi::22"
+    ],
+    "answerable": true,
+    "source_doc": "lisansustu_egitim_ogretim_yonetmeligi",
+    "gold_answer": "içinde Öğrenci İşleri Daire Başkanlığına bildirilir. Enstitülerin kararları Üniversite Yönetim Kurulunun onayıyla Üniversite tarafından ilan edilir.\n(2) Üniversitede lisansüstü eğitim ve öğretime giriş başvuruları, akademik takvimde belirtilen süreler içinde ilgili enstitünün öğrenci işleri ofisine yapılır. Başvuru için istenen belgeleri belirtilen süre içinde eksik veren adayların başvuruları işl",
+    "variant": "paraphrased",
+    "meta": {
+      "original": "Lisans öğrenimini tamamlamayan başvuranların da lisansüstü programlarına başvurabilir mi?",
+      "gold_overlap": 0.0,
+      "echo": false,
+      "semantic_similarity": 0.8556
+    }
+  },
+  {
+    "question": "Bir öğrencinin dersden çıkma kararı verebileceği en son tarih nedir?",
+    "gold_chunk_ids": [
+      "lisansustu_egitim_ogretim_yonetmeligi::46"
+    ],
+    "answerable": true,
+    "source_doc": "lisansustu_egitim_ogretim_yonetmeligi",
+    "gold_answer": "kurulunun önerisi ve Üniversite Yönetim Kurulunun kararı ile en geç dersten çekilme tarihinin son gününe kadar değiştirilebilir.\nNotlar ve işaretler\nMADDE 22 –\n(1) Öğrencilere lisansüstü programı çerçevesinde bilimsel hazırlık dersleri dışında aldıkları lisansüstü dersler için aşağıdaki not veya işaretlerden birisi verilir:\nNot\nAçıklama\nAğırlık\nAA Pekiyi 4,00\nBA Çok iyi 3,50\nBB İyi 3,00\nCB Yeterli",
+    "variant": "paraphrased",
+    "meta": {
+      "original": "Bir öğrencinin dersinden çekilmek isteyebilir ve bu kararı verebileceği en son tarih nedir?",
+      "gold_overlap": 0.6,
+      "echo": false,
+      "semantic_similarity": 0.9183
+    }
+  },
+  {
+    "question": "Burs Komisyonu'nun her yıl belirlediği limitin üzerinde nakit burs aldığı öğrenciye başka nakit burs verilemeyeceğinden emin olmak için neden emin olabilirim?",
+    "gold_chunk_ids": [
+      "burs_yonergesi::10"
+    ],
+    "answerable": true,
+    "source_doc": "burs_yonergesi",
+    "gold_answer": "gözetiminde fakülte/yüksekokulların kurduğu geçici komisyonlar tarafından yürütülür.\nMülakat sonuçları Burs Komisyonu tarafından karara bağlanır.\n(4) Bir öğrenciye gereksinimine göre birden fazla burs bağlanabilir. Ancak Burs Kom isyonu\ntarafından her yıl belirlenen miktarın üzerinde nakdi burs alan öğrencilere birden fazla nakdi\nburs verilemez. KYK Öğrenim Kredisi bu kapsamda değildir. İstisnalar",
+    "variant": "paraphrased",
+    "meta": {
+      "original": "Burs Komisyonu'nun her yıl belirlediği miktarın üzerinde nakdi burs alan öğrencilere birden fazla nakdi burs verilemeyeceğinden neden emin olabilirim?",
+      "gold_overlap": 0.3333,
+      "echo": false,
+      "semantic_similarity": 0.917
+    }
+  },
+  {
+    "question": "GNO puanları 3.50 ve üzeri olan öğrencilerin yüksek onur listesine alınabilmesi için hangi şartların sağlanmış belirtilmiştir?",
+    "gold_chunk_ids": [
+      "lisans_egitim_ogretim_yonetmeligi::52"
+    ],
+    "answerable": true,
+    "source_doc": "lisans_egitim_ogretim_yonetmeligi",
+    "gold_answer": "koşulunu yerine getiren öğrencilerden, GNO’ları 3.50 ve üzeri olanlar yüksek onur, GNO’ları 3.00 ile 3.49 arasında olanlar onur listesine alınırlar.\n(3) Fakülte/Yüksekokul, bölüm sıralamasında ilk üçe girenler, öğrenimlerini, Üniversite tarafından onaylanan bir değişim programında geçirilen süreler hariç normal süresinde tamamlayan ve disiplin cezası almamış öğrenciler arasından belirlenir. Bu sür",
+    "variant": "paraphrased",
+    "meta": {
+      "original": "GNO'ları 3.50 ve üzerinde olan öğrencilerin, yüksek onur listesine alınması için hangi koşulların sağlandığı belirtilmiştir?",
+      "gold_overlap": 0.5882,
+      "echo": false,
+      "semantic_similarity": 0.9358
+    }
+  },
+  {
+    "question": "Yemekhanede bugün ne var",
+    "gold_chunk_ids": [],
+    "answerable": false,
+    "source_doc": "",
+    "gold_answer": "",
+    "variant": "unanswerable",
+    "meta": {}
+  },
+  {
+    "question": "Kampüs wifi şifresi nedir",
+    "gold_chunk_ids": [],
+    "answerable": false,
+    "source_doc": "",
+    "gold_answer": "",
+    "variant": "unanswerable",
+    "meta": {}
+  },
+  {
+    "question": "Otopark ücreti aylık kaç lira",
+    "gold_chunk_ids": [],
+    "answerable": false,
+    "source_doc": "",
+    "gold_answer": "",
+    "variant": "unanswerable",
+    "meta": {}
+  },
+  {
+    "question": "Spor salonu hafta sonu kaça kadar açık",
+    "gold_chunk_ids": [],
+    "answerable": false,
+    "source_doc": "",
+    "gold_answer": "",
+    "variant": "unanswerable",
+    "meta": {}
+  },
+  {
+    "question": "Mezuniyet töreninde ne giymeliyim",
+    "gold_chunk_ids": [],
+    "answerable": false,
+    "source_doc": "",
+    "gold_answer": "",
+    "variant": "unanswerable",
+    "meta": {}
+  },
+  {
+    "question": "Staj bulmak için hangi siteye bakmalıyım",
+    "gold_chunk_ids": [],
+    "answerable": false,
+    "source_doc": "",
+    "gold_answer": "",
+    "variant": "unanswerable",
+    "meta": {}
+  },
+  {
+    "question": "Kütüphanede kaç kişilik çalışma odası var",
+    "gold_chunk_ids": [],
+    "answerable": false,
+    "source_doc": "",
+    "gold_answer": "",
+    "variant": "unanswerable",
+    "meta": {}
+  },
+  {
+    "question": "Servis otobüsü saatleri nedir",
+    "gold_chunk_ids": [],
+    "answerable": false,
+    "source_doc": "",
+    "gold_answer": "",
+    "variant": "unanswerable",
+    "meta": {}
+  },
+  {
+    "question": "Mars'ta yaşam var mı",
+    "gold_chunk_ids": [],
+    "answerable": false,
+    "source_doc": "",
+    "gold_answer": "",
+    "variant": "unanswerable",
+    "meta": {}
+  },
+  {
+    "question": "Python'da liste nasıl sıralanır",
+    "gold_chunk_ids": [],
+    "answerable": false,
+    "source_doc": "",
+    "gold_answer": "",
+    "variant": "unanswerable",
+    "meta": {}
+  },
+  {
+    "question": "Öğrenci kulüplerine nasıl üye olurum",
+    "gold_chunk_ids": [],
+    "answerable": false,
+    "source_doc": "",
+    "gold_answer": "",
+    "variant": "unanswerable",
+    "meta": {}
+  },
+  {
+    "question": "Yurtta internet hızı ne kadar",
+    "gold_chunk_ids": [],
+    "answerable": false,
+    "source_doc": "",
+    "gold_answer": "",
+    "variant": "unanswerable",
+    "meta": {}
+  },
+  {
+    "question": "Kampüste kedi beslemek serbest mi",
+    "gold_chunk_ids": [],
+    "answerable": false,
+    "source_doc": "",
+    "gold_answer": "",
+    "variant": "unanswerable",
+    "meta": {}
+  },
+  {
+    "question": "Öğrenci kartımı kaybedersem nereye başvurmalıyım",
+    "gold_chunk_ids": [],
+    "answerable": false,
+    "source_doc": "",
+    "gold_answer": "",
+    "variant": "unanswerable",
+    "meta": {}
+  },
+  {
+    "question": "Fotokopi merkezi hangi saatlerde açık",
+    "gold_chunk_ids": [],
+    "answerable": false,
+    "source_doc": "",
+    "gold_answer": "",
+    "variant": "unanswerable",
+    "meta": {}
+  },
+  {
+    "question": "Kampüse bisikletle girebilir miyim",
+    "gold_chunk_ids": [],
+    "answerable": false,
+    "source_doc": "",
+    "gold_answer": "",
+    "variant": "unanswerable",
+    "meta": {}
+  },
+  {
+    "question": "Öğrencinin ders notunu beğenmezse hangi maddeye göre dersi sildirebilir",
+    "gold_chunk_ids": [],
+    "answerable": false,
+    "source_doc": "",
+    "gold_answer": "",
+    "variant": "unanswerable",
+    "meta": {}
+  },
+  {
+    "question": "Yaz okulunda alınan derslerin not ortalamasına katkısı hangi maddede yasaklanmıştır",
+    "gold_chunk_ids": [],
+    "answerable": false,
+    "source_doc": "",
+    "gold_answer": "",
+    "variant": "unanswerable",
+    "meta": {}
+  },
+  {
+    "question": "Öğrencinin kayıt yenileme ücretini üç taksitle ödemesi hangi yönergeye tabidir",
+    "gold_chunk_ids": [],
+    "answerable": false,
+    "source_doc": "",
+    "gold_answer": "",
+    "variant": "unanswerable",
+    "meta": {}
+  },
+  {
+    "question": "Lisans öğrencisinin danışmanını değiştirme talebi kaç iş gününde sonuçlandırılır",
+    "gold_chunk_ids": [],
+    "answerable": false,
+    "source_doc": "",
+    "gold_answer": "",
+    "variant": "unanswerable",
+    "meta": {}
+  },
+  {
+    "question": "Disiplin cezası alan öğrencinin bursunun kaç katı tazminat ödemesi gerekir",
+    "gold_chunk_ids": [],
+    "answerable": false,
+    "source_doc": "",
+    "gold_answer": "",
+    "variant": "unanswerable",
+    "meta": {}
+  },
+  {
+    "question": "Öğrencinin yurt dışı değişim programındaki notlarının hangi katsayıyla çarpılacağı",
+    "gold_chunk_ids": [],
+    "answerable": false,
+    "source_doc": "",
+    "gold_answer": "",
+    "variant": "unanswerable",
+    "meta": {}
+  },
+  {
+    "question": "Tez savunmasında jüri üyelerine ödenecek huzur hakkı tutarı nedir",
+    "gold_chunk_ids": [],
+    "answerable": false,
+    "source_doc": "",
+    "gold_answer": "",
+    "variant": "unanswerable",
+    "meta": {}
+  },
+  {
+    "question": "Öğretim üyesinin derse geç kalması durumunda öğrencinin bekleme süresi kaç dakikadır",
+    "gold_chunk_ids": [],
+    "answerable": false,
+    "source_doc": "",
+    "gold_answer": "",
+    "variant": "unanswerable",
+    "meta": {}
+  },
+  {
+    "question": "Fakülte kurulunun toplantı yeri hangi maddede belirtilmiştir",
+    "gold_chunk_ids": [],
+    "answerable": false,
+    "source_doc": "",
+    "gold_answer": "",
+    "variant": "unanswerable",
+    "meta": {}
+  },
+  {
+    "question": "Öğrencinin sınav kağıdını fotoğraflama hakkı hangi yönergede düzenlenmiştir",
+    "gold_chunk_ids": [],
+    "answerable": false,
+    "source_doc": "",
+    "gold_answer": "",
+    "variant": "unanswerable",
     "meta": {}
   },
   {
@@ -247,6 +2056,150 @@
   },
   {
     "question": "Python'da liste nasıl sıralanır",
+    "gold_chunk_ids": [],
+    "answerable": false,
+    "source_doc": "",
+    "gold_answer": "",
+    "variant": "unanswerable",
+    "meta": {}
+  },
+  {
+    "question": "Öğrenci kulüplerine nasıl üye olurum",
+    "gold_chunk_ids": [],
+    "answerable": false,
+    "source_doc": "",
+    "gold_answer": "",
+    "variant": "unanswerable",
+    "meta": {}
+  },
+  {
+    "question": "Yurtta internet hızı ne kadar",
+    "gold_chunk_ids": [],
+    "answerable": false,
+    "source_doc": "",
+    "gold_answer": "",
+    "variant": "unanswerable",
+    "meta": {}
+  },
+  {
+    "question": "Kampüste kedi beslemek serbest mi",
+    "gold_chunk_ids": [],
+    "answerable": false,
+    "source_doc": "",
+    "gold_answer": "",
+    "variant": "unanswerable",
+    "meta": {}
+  },
+  {
+    "question": "Öğrenci kartımı kaybedersem nereye başvurmalıyım",
+    "gold_chunk_ids": [],
+    "answerable": false,
+    "source_doc": "",
+    "gold_answer": "",
+    "variant": "unanswerable",
+    "meta": {}
+  },
+  {
+    "question": "Fotokopi merkezi hangi saatlerde açık",
+    "gold_chunk_ids": [],
+    "answerable": false,
+    "source_doc": "",
+    "gold_answer": "",
+    "variant": "unanswerable",
+    "meta": {}
+  },
+  {
+    "question": "Kampüse bisikletle girebilir miyim",
+    "gold_chunk_ids": [],
+    "answerable": false,
+    "source_doc": "",
+    "gold_answer": "",
+    "variant": "unanswerable",
+    "meta": {}
+  },
+  {
+    "question": "Öğrencinin ders notunu beğenmezse hangi maddeye göre dersi sildirebilir",
+    "gold_chunk_ids": [],
+    "answerable": false,
+    "source_doc": "",
+    "gold_answer": "",
+    "variant": "unanswerable",
+    "meta": {}
+  },
+  {
+    "question": "Yaz okulunda alınan derslerin not ortalamasına katkısı hangi maddede yasaklanmıştır",
+    "gold_chunk_ids": [],
+    "answerable": false,
+    "source_doc": "",
+    "gold_answer": "",
+    "variant": "unanswerable",
+    "meta": {}
+  },
+  {
+    "question": "Öğrencinin kayıt yenileme ücretini üç taksitle ödemesi hangi yönergeye tabidir",
+    "gold_chunk_ids": [],
+    "answerable": false,
+    "source_doc": "",
+    "gold_answer": "",
+    "variant": "unanswerable",
+    "meta": {}
+  },
+  {
+    "question": "Lisans öğrencisinin danışmanını değiştirme talebi kaç iş gününde sonuçlandırılır",
+    "gold_chunk_ids": [],
+    "answerable": false,
+    "source_doc": "",
+    "gold_answer": "",
+    "variant": "unanswerable",
+    "meta": {}
+  },
+  {
+    "question": "Disiplin cezası alan öğrencinin bursunun kaç katı tazminat ödemesi gerekir",
+    "gold_chunk_ids": [],
+    "answerable": false,
+    "source_doc": "",
+    "gold_answer": "",
+    "variant": "unanswerable",
+    "meta": {}
+  },
+  {
+    "question": "Öğrencinin yurt dışı değişim programındaki notlarının hangi katsayıyla çarpılacağı",
+    "gold_chunk_ids": [],
+    "answerable": false,
+    "source_doc": "",
+    "gold_answer": "",
+    "variant": "unanswerable",
+    "meta": {}
+  },
+  {
+    "question": "Tez savunmasında jüri üyelerine ödenecek huzur hakkı tutarı nedir",
+    "gold_chunk_ids": [],
+    "answerable": false,
+    "source_doc": "",
+    "gold_answer": "",
+    "variant": "unanswerable",
+    "meta": {}
+  },
+  {
+    "question": "Öğretim üyesinin derse geç kalması durumunda öğrencinin bekleme süresi kaç dakikadır",
+    "gold_chunk_ids": [],
+    "answerable": false,
+    "source_doc": "",
+    "gold_answer": "",
+    "variant": "unanswerable",
+    "meta": {}
+  },
+  {
+    "question": "Fakülte kurulunun toplantı yeri hangi maddede belirtilmiştir",
+    "gold_chunk_ids": [],
+    "answerable": false,
+    "source_doc": "",
+    "gold_answer": "",
+    "variant": "unanswerable",
+    "meta": {}
+  },
+  {
+    "question": "Öğrencinin sınav kağıdını fotoğraflama hakkı hangi yönergede düzenlenmiştir",
     "gold_chunk_ids": [],
     "answerable": false,
     "source_doc": "",

@@ -191,12 +191,37 @@ class Answerer:
         # back to it rather than silently switching the user's language.
         return "en" if detected == "en" else "tr"
 
+    def abstention_score(self, result: RetrievalResult) -> float:
+        """The score the refusal decision is made on.
+
+        Not always the fused score. The fused score is min-max normalised
+        within each query's candidate set, so its top value is ~1.0 regardless
+        of retrieval quality and it cannot express "nothing here" - measured at
+        AUC 0.727 against 0.843 for the raw BM25 score. The raw arm scores are
+        carried unnormalised on the hits, so they are comparable across queries,
+        which is exactly the property a threshold needs.
+
+        Falls back to the fused score when the configured arm returned nothing
+        for this query: a missing arm is not evidence of a missing answer, and
+        defaulting to 0.0 would turn it into an automatic refusal.
+        """
+        signal = getattr(self.cfg, "abstention_signal", "fused")
+        if signal == "fused":
+            return result.top_score
+
+        attribute = "dense_score" if signal == "dense_raw" else "lexical_score"
+        values = [
+            getattr(h, attribute) for h in result.hits
+            if getattr(h, attribute, None) is not None
+        ]
+        return max(values) if values else result.top_score
+
     def _should_abstain(self, result: RetrievalResult) -> bool:
         if not self.cfg.enable_abstention:
             return False
         if not result.hits:
             return True
-        return result.top_score < self.cfg.abstention_threshold
+        return self.abstention_score(result) < self.cfg.abstention_threshold
 
     def _messages(self, query: str, result: RetrievalResult, language: str):
         context = _build_context(result, self.max_context_chars)
@@ -217,8 +242,9 @@ class Answerer:
 
         if self._should_abstain(result):
             logger.debug(
-                "Abstaining: top_score=%.4f < threshold=%.4f",
-                result.top_score, self.cfg.abstention_threshold,
+                "Abstaining: %s=%.4f < threshold=%.4f",
+                getattr(self.cfg, "abstention_signal", "fused"),
+                self.abstention_score(result), self.cfg.abstention_threshold,
             )
             return Answer(
                 text=refusal, abstained=True, retrieval=result, language=language,

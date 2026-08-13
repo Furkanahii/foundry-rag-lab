@@ -341,9 +341,58 @@ birinin bulmasından çok daha iyi.
 
 ---
 
-## 8. Yeni benchmark sonuçları
+## 8. Yeni benchmark sonuçları (2 dakika) — ekranda: README'deki sonuç tablosu
 
-> Bu bölüm ölçüm bittiğinde doldurulacak.
+Bu bölümü §6'nın hemen ardına ekle; dürüstlük anlatısının ödülü bu.
+
+> "Geçerli ölçüm şunu söyledi. Üç bulgu var.
+>
+> **Bir: en büyük etki Türkçe gövdeleme.** BM25 koluna Türkçe ek soyma eklemek
+> nDCG'yi 0,21 artırıyor, p = 0,0014. Ve bu, parafrazlanmış sette de aynı
+> kalıyor: 0,22, p = 0,0004. İki bağımsız yazımda tekrarlanan tek etki bu.
+>
+> **İki: füzyon işe yarıyor ama beklediğim biçimde değil.** RRF literatürün
+> önerdiği yöntem ve benim varsayılanımdı. Düzeltmeden sonra ayakta kalmıyor.
+> Ayakta kalan, ağırlıklı füzyon: temel sisteme göre +0,157, p = 0,0006 — ve
+> parafrazlı sette +0,114, p = 0,0002. Ölçüm sonucunda projenin varsayılanını
+> değiştirdim.
+>
+> **Üç: ilk koşumdaki en çarpıcı bulgu yanlıştı.** Hatırlayın, sözlüksel arama
+> 0,86 ile anlamsal aramanın 0,58'ini eziyordu. Şimdi: üretilmiş sette avantaj
+> 0,124 ve p = 0,065, yani anlamsız. Parafrazlanmış sette 0,042 ve p = 0,47,
+> yani tamamen yok.
+>
+> Ve bunu görebilmemin tek nedeni, iki seti ayrı ölçmüş olmam."
+
+Sonra kelime duyarlılığı tablosunu göster:
+
+| konfigürasyon | düşüş | p | |
+|---|---|---|---|
+| lexical-nostem | −0,155 | 0,0014 | anlamlı |
+| lexical-only | −0,146 | 0,0020 | anlamlı |
+| rrf | −0,069 | 0,0735 | anlamsız |
+| baseline-dense | −0,064 | 0,1121 | anlamsız |
+
+> "Soruyu yeniden yazdığımda **sadece BM25 kolları çöküyor.** Hibrit ve anlamsal
+> kollar dayanıyor. Bu, hibrit mimarinin varlık nedeninin ölçülmüş hâli."
+
+### Çekimserlik bulgusu — bunu mutlaka anlat
+
+> "Son olarak, en sevdiğim bulgu. Sistemin cevabı bilmediğinde susması için bir
+> eşik lazım. Doğal aday, pipeline'ın ürettiği füzyon skoru. Ölçtüm ve
+> **çalışmıyor**: AUC 0,73, ve cevaplanamaz bir soru mümkün olan **en yüksek
+> skoru**, 1,000'i almış.
+>
+> Sebebini kodda buldum. Füzyon, iki kolun skorlarını normalize ediyor — ama
+> korpus genelinde değil, o sorgu için getirilen adaylar içinde. Yani en iyi
+> aday her zaman 1,0 alıyor. İyi olduğu için değil, **en iyisi olduğu için.**
+> Bu skor 'bulduğumun en iyisi bu' diyor, 'bulduğum şey işe yarar' demiyor.
+>
+> Ham BM25 skoru normalize edilmiyor ve AUC 0,84 veriyor. Sinyali değiştirdim,
+> eşiği ondan kalibre ettim: 6,866, duyarlılığı %90'da tutan en katı nokta."
+
+Neden bu anı sona sakla: bir sayının kötü çıkması, kodu okuyup nedenini bulman,
+ve düzeltmen — bir sunumda gösterilebilecek en iyi üç adımlık hikâye bu.
 
 ---
 
@@ -391,10 +440,28 @@ birinin bulmasından çok daha iyi.
 > işlerde 7b kullanıyorum, çünkü orada gecikme önemsiz.
 
 **"Sonuçların istatistiksel olarak anlamlı mı?"**
-> Bir kısmı. Hangi kısmı olduğunu tam olarak söyleyebiliyorum, çünkü
-> Holm-Bonferroni düzeltmesinden sonra hangi karşılaştırmaların ayakta kaldığını
-> raporluyorum. Ayakta kalmayanlar için de "fark yok" demiyorum, "bu set
-> ayıramadı" diyorum.
+> Bir kısmı. On karşılaştırmadan ikisi Holm düzeltmesinden sonra ayakta kaldı:
+> weighted-0.5 ve weighted-0.7, üstelik iki kelime varyantında da. Ayakta
+> kalmayanlar için "fark yok" demiyorum, "bu set ayıramadı" diyorum — n=60 ile
+> orta büyüklükte etkileri görebiliyorum, küçük etkiler için 197 soru gerekir.
+
+**"Neden varsayılanı RRF'ten weighted'a değiştirdin? Literatür RRF diyor."**
+> Tam da bu yüzden ölçtüm. RRF benim de varsayılanımdı ve düzeltmeden sonra
+> ayakta kalmadı; weighted her iki kelime varyantında da kaldı. Aradaki fark
+> büyük değil — ama düzeltmeden sonra hayatta kalan ve iki bağımsız yazımda
+> tekrarlanan tek erişim sonucu bu. Literatürün RRF'i tercih etme sebebi de
+> geçerli ve ben de onu koruyorum: weighted, aday derinliğine bağlı normalize
+> ettiği için `dense_top_k` değişince alpha'nın yeniden ayarlanması gerekiyor.
+> RRF'te böyle bir bağ yok. Yani bu, bu korpusta ölçülmüş bir seçim, evrensel
+> bir sonuç değil.
+
+**"Sistem cevabı bilmediğini nereden biliyor?"**
+> Erişim skoru bir eşiğin altındaysa modeli hiç çağırmıyor. Ama hangi skor
+> olduğu önemli — ilk denediğim füzyon skoru işe yaramadı, çünkü sorgu içinde
+> normalize ediliyor ve her zaman en iyisini 1,0 yapıyor. Ham BM25 skoruna
+> geçince AUC 0,73'ten 0,84'e çıktı. Hâlâ kusursuz değil: cevaplanamaz
+> soruların %38'ini kaçırıyor, o yüzden ikinci bir savunma hattı var — sistem
+> mesajındaki "bilmiyorsan bilmiyorum de" kuralı.
 
 **"Halüsinasyonu nasıl engelliyorsun?"**
 > Tam olarak engelleyemiyorum, azaltıyorum ve ölçüyorum. Üç mekanizma: model

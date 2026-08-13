@@ -1,0 +1,1769 @@
+{
+  "config_name": "rrf-truncate6",
+  "fingerprint": "6ef60ab2c45d",
+  "n_queries": 60,
+  "retrieval_metrics": {
+    "recall@k": 0.8,
+    "precision@k": 0.16000000000000003,
+    "mrr": 0.5505555555555556,
+    "ndcg@k": 0.6130034948564912,
+    "hit_rate": 0.8,
+    "n_queries": 60.0
+  },
+  "answer_metrics": {},
+  "latency": {
+    "p50_ms": 102.33620799772325,
+    "p95_ms": 165.98000000158208,
+    "max_ms": 178.56741699870327,
+    "mean_ms": 109.49245281669089
+  },
+  "intervals": {
+    "recall@k": {
+      "estimate": 0.8,
+      "lower": 0.7,
+      "upper": 0.9,
+      "n": 60
+    },
+    "mrr": {
+      "estimate": 0.5505555555555556,
+      "lower": 0.44916666666666666,
+      "upper": 0.6514027777777777,
+      "n": 60
+    },
+    "ndcg@k": {
+      "estimate": 0.6130034948564913,
+      "lower": 0.5166668110940703,
+      "upper": 0.705407966770808,
+      "n": 60
+    }
+  },
+  "config": {
+    "name": "rrf-truncate6",
+    "runtime": {
+      "app_name": "foundry_rag_lab",
+      "chat_model": "phi-3.5-mini",
+      "embedding_model": "qwen3-embedding-0.6b",
+      "device": null,
+      "request_timeout": 180.0,
+      "max_retries": 3,
+      "embed_batch_size": 16,
+      "use_web_service": true,
+      "register_execution_providers": true
+    },
+    "chunking": {
+      "strategy": "recursive",
+      "chunk_size": 900,
+      "overlap": 150,
+      "window_size": 2,
+      "breakpoint_percentile": 90.0,
+      "min_chunk_chars": 120
+    },
+    "retrieval": {
+      "dense_top_k": 30,
+      "lexical_top_k": 30,
+      "fusion": "rrf",
+      "rrf_k": 60,
+      "alpha": 0.5,
+      "rerank": "none",
+      "rerank_candidates": 12,
+      "use_mmr": false,
+      "mmr_lambda": 0.7,
+      "top_k": 5,
+      "query_instruction": false,
+      "lexical_stem": true,
+      "lexical_truncate": 6
+    },
+    "generation": {
+      "temperature": 0.1,
+      "max_tokens": 700,
+      "require_citations": true,
+      "abstention_threshold": 0.0,
+      "enable_abstention": true,
+      "language": "auto"
+    },
+    "seed": 20260801
+  },
+  "elapsed_s": 6.592191542000364,
+  "records": [
+    {
+      "question": "Hangi dersleri en fazla iki adet kredi olarak seçebilirim?",
+      "answerable": true,
+      "retrieved_ids": [
+        "lisans_egitim_ogretim_yonetmeligi::23",
+        "lisansustu_egitim_ogretim_yonetmeligi::63",
+        "lisans_egitim_ogretim_yonetmeligi::44",
+        "lisansustu_egitim_ogretim_yonetmeligi::74",
+        "lisans_egitim_ogretim_yonetmeligi::21"
+      ],
+      "metrics": {
+        "recall@k": 1.0,
+        "precision@k": 0.2,
+        "mrr": 0.5,
+        "ndcg@k": 0.6309297535714575
+      },
+      "latency_ms": 97.97841699764831,
+      "top_score": 0.03177805800756621,
+      "gold_chunk_ids": [
+        "lisansustu_egitim_ogretim_yonetmeligi::63"
+      ],
+      "variant": "paraphrased",
+      "answer_text": "",
+      "abstained": false,
+      "citations": [],
+      "invalid_citations": [],
+      "generation_ms": 0.0
+    },
+    {
+      "question": "Nedense bir öğrenci birden fazla yüksek lisans programında aynı anda okuyamaz mı?",
+      "answerable": true,
+      "retrieved_ids": [
+        "sertifika_programlari_yonergesi::6",
+        "lisansustu_egitim_ogretim_yonetmeligi::37",
+        "lisansustu_egitim_ogretim_yonetmeligi::77",
+        "lisansustu_egitim_ogretim_yonetmeligi::85",
+        "burs_yonergesi::8"
+      ],
+      "metrics": {
+        "recall@k": 0.0,
+        "precision@k": 0.0,
+        "mrr": 0.0,
+        "ndcg@k": 0.0
+      },
+      "latency_ms": 98.30637499908335,
+      "top_score": 0.0315136476426799,
+      "gold_chunk_ids": [
+        "lisansustu_egitim_ogretim_yonetmeligi::38"
+      ],
+      "variant": "paraphrased",
+      "answer_text": "",
+      "abstained": false,
+      "citations": [],
+      "invalid_citations": [],
+      "generation_ms": 0.0
+    },
+    {
+      "question": "Hangi sınıfın öğrencilerinin yarıyıl notlarını vermediği var mı?",
+      "answerable": true,
+      "retrieved_ids": [
+        "lisans_egitim_ogretim_yonetmeligi::37",
+        "lisansustu_egitim_ogretim_yonetmeligi::56",
+        "kayit_yonergesi::20",
+        "kayit_yonergesi::19",
+        "lisansustu_egitim_ogretim_yonetmeligi::55"
+      ],
+      "metrics": {
+        "recall@k": 0.0,
+        "precision@k": 0.0,
+        "mrr": 0.0,
+        "ndcg@k": 0.0
+      },
+      "latency_ms": 100.99350000018603,
+      "top_score": 0.031544957774465976,
+      "gold_chunk_ids": [
+        "kayit_yonergesi::18"
+      ],
+      "variant": "paraphrased",
+      "answer_text": "",
+      "abstained": false,
+      "citations": [],
+      "invalid_citations": [],
+      "generation_ms": 0.0
+    },
+    {
+      "question": "Düzeltme kararı aldığımda tezi ne zaman yeniden savunabilirim?",
+      "answerable": true,
+      "retrieved_ids": [
+        "lisansustu_egitim_ogretim_yonetmeligi::71",
+        "lisansustu_egitim_ogretim_yonetmeligi::101",
+        "lisansustu_egitim_ogretim_yonetmeligi::94",
+        "lisansustu_egitim_ogretim_yonetmeligi::102",
+        "lisansustu_egitim_ogretim_yonetmeligi::99"
+      ],
+      "metrics": {
+        "recall@k": 1.0,
+        "precision@k": 0.2,
+        "mrr": 1.0,
+        "ndcg@k": 1.0
+      },
+      "latency_ms": 104.63595900000655,
+      "top_score": 0.032266458495966696,
+      "gold_chunk_ids": [
+        "lisansustu_egitim_ogretim_yonetmeligi::71"
+      ],
+      "variant": "paraphrased",
+      "answer_text": "",
+      "abstained": false,
+      "citations": [],
+      "invalid_citations": [],
+      "generation_ms": 0.0
+    },
+    {
+      "question": "Yeni bir öğretmen unvanına başvuran akademisyenin konut tahsisine nasıl başvurmalı?",
+      "answerable": true,
+      "retrieved_ids": [
+        "konut_tahsis_yonergesi::25",
+        "konut_tahsis_yonergesi::8",
+        "konut_tahsis_yonergesi::7",
+        "konut_tahsis_yonergesi::26",
+        "konut_tahsis_yonergesi::5"
+      ],
+      "metrics": {
+        "recall@k": 1.0,
+        "precision@k": 0.2,
+        "mrr": 0.5,
+        "ndcg@k": 0.6309297535714575
+      },
+      "latency_ms": 108.37229100070545,
+      "top_score": 0.031746031746031744,
+      "gold_chunk_ids": [
+        "konut_tahsis_yonergesi::8"
+      ],
+      "variant": "paraphrased",
+      "answer_text": "",
+      "abstained": false,
+      "citations": [],
+      "invalid_citations": [],
+      "generation_ms": 0.0
+    },
+    {
+      "question": "Kayıtsız olmamış bir öğrenci nasıl dersden ayrılabilir?",
+      "answerable": true,
+      "retrieved_ids": [
+        "kayit_yonergesi::22",
+        "kayit_yonergesi::23",
+        "lisansustu_egitim_ogretim_yonetmeligi::40",
+        "lisans_egitim_ogretim_yonetmeligi::19",
+        "kayit_yonergesi::18"
+      ],
+      "metrics": {
+        "recall@k": 1.0,
+        "precision@k": 0.2,
+        "mrr": 0.3333333333333333,
+        "ndcg@k": 0.5
+      },
+      "latency_ms": 102.43883400107734,
+      "top_score": 0.03252247488101534,
+      "gold_chunk_ids": [
+        "lisansustu_egitim_ogretim_yonetmeligi::40"
+      ],
+      "variant": "paraphrased",
+      "answer_text": "",
+      "abstained": false,
+      "citations": [],
+      "invalid_citations": [],
+      "generation_ms": 0.0
+    },
+    {
+      "question": "Tezli yüksek lisans programına geçebilirim mi?",
+      "answerable": true,
+      "retrieved_ids": [
+        "lisansustu_egitim_ogretim_yonetmeligi::77",
+        "lisansustu_egitim_ogretim_yonetmeligi::62",
+        "lisansustu_egitim_ogretim_yonetmeligi::63",
+        "lisansustu_egitim_ogretim_yonetmeligi::66",
+        "lisansustu_egitim_ogretim_yonetmeligi::105"
+      ],
+      "metrics": {
+        "recall@k": 0.0,
+        "precision@k": 0.0,
+        "mrr": 0.0,
+        "ndcg@k": 0.0
+      },
+      "latency_ms": 74.27804200051469,
+      "top_score": 0.032266458495966696,
+      "gold_chunk_ids": [
+        "lisansustu_egitim_ogretim_yonetmeligi::76"
+      ],
+      "variant": "paraphrased",
+      "answer_text": "",
+      "abstained": false,
+      "citations": [],
+      "invalid_citations": [],
+      "generation_ms": 0.0
+    },
+    {
+      "question": "Yedek listedeki öğrenci, asıl listede kaydırmamış olan öğrencilerin yerine kaydırama şansı var mı?",
+      "answerable": true,
+      "retrieved_ids": [
+        "kayit_yonergesi::9",
+        "kayit_yonergesi::11",
+        "kayit_yonergesi::10",
+        "kayit_yonergesi::13",
+        "kayit_yonergesi::12"
+      ],
+      "metrics": {
+        "recall@k": 1.0,
+        "precision@k": 0.2,
+        "mrr": 0.3333333333333333,
+        "ndcg@k": 0.5
+      },
+      "latency_ms": 101.32229200098664,
+      "top_score": 0.03252247488101534,
+      "gold_chunk_ids": [
+        "kayit_yonergesi::10"
+      ],
+      "variant": "paraphrased",
+      "answer_text": "",
+      "abstained": false,
+      "citations": [],
+      "invalid_citations": [],
+      "generation_ms": 0.0
+    },
+    {
+      "question": "TP işareti ne demek ve hangi durumlarda alırım?",
+      "answerable": true,
+      "retrieved_ids": [
+        "lisansustu_egitim_ogretim_yonetmeligi::54",
+        "lisansustu_egitim_ogretim_yonetmeligi::53",
+        "lisans_egitim_ogretim_yonetmeligi::34",
+        "lisans_egitim_ogretim_yonetmeligi::36",
+        "lisansustu_egitim_ogretim_yonetmeligi::52"
+      ],
+      "metrics": {
+        "recall@k": 1.0,
+        "precision@k": 0.2,
+        "mrr": 1.0,
+        "ndcg@k": 1.0
+      },
+      "latency_ms": 105.65991700059385,
+      "top_score": 0.03252247488101534,
+      "gold_chunk_ids": [
+        "lisansustu_egitim_ogretim_yonetmeligi::54"
+      ],
+      "variant": "paraphrased",
+      "answer_text": "",
+      "abstained": false,
+      "citations": [],
+      "invalid_citations": [],
+      "generation_ms": 0.0
+    },
+    {
+      "question": "Doktora programında lisans derecesinden alınan dersleri en fazla kaç adet transfer edebilirim?",
+      "answerable": true,
+      "retrieved_ids": [
+        "lisansustu_egitim_ogretim_yonetmeligi::85",
+        "lisansustu_egitim_ogretim_yonetmeligi::81",
+        "lisansustu_egitim_ogretim_yonetmeligi::80",
+        "lisansustu_egitim_ogretim_yonetmeligi::82",
+        "lisansustu_egitim_ogretim_yonetmeligi::64"
+      ],
+      "metrics": {
+        "recall@k": 1.0,
+        "precision@k": 0.2,
+        "mrr": 0.5,
+        "ndcg@k": 0.6309297535714575
+      },
+      "latency_ms": 108.23937500026659,
+      "top_score": 0.03200204813108039,
+      "gold_chunk_ids": [
+        "lisansustu_egitim_ogretim_yonetmeligi::81"
+      ],
+      "variant": "paraphrased",
+      "answer_text": "",
+      "abstained": false,
+      "citations": [],
+      "invalid_citations": [],
+      "generation_ms": 0.0
+    },
+    {
+      "question": "Bir öğrenci dersi tekrar etmek isteyebilirken hangi koşullar altında \"E\" notu verilir?",
+      "answerable": true,
+      "retrieved_ids": [
+        "lisans_egitim_ogretim_yonetmeligi::34",
+        "lisans_egitim_ogretim_yonetmeligi::33",
+        "lisansustu_egitim_ogretim_yonetmeligi::49",
+        "lisans_egitim_ogretim_yonetmeligi::47",
+        "lisansustu_egitim_ogretim_yonetmeligi::59"
+      ],
+      "metrics": {
+        "recall@k": 1.0,
+        "precision@k": 0.2,
+        "mrr": 1.0,
+        "ndcg@k": 1.0
+      },
+      "latency_ms": 140.97458400283358,
+      "top_score": 0.032266458495966696,
+      "gold_chunk_ids": [
+        "lisans_egitim_ogretim_yonetmeligi::34"
+      ],
+      "variant": "paraphrased",
+      "answer_text": "",
+      "abstained": false,
+      "citations": [],
+      "invalid_citations": [],
+      "generation_ms": 0.0
+    },
+    {
+      "question": "Lisans ile birleşmiş yüksek lisans başvurusunda öğretim dilini nasıl seçerler?",
+      "answerable": true,
+      "retrieved_ids": [
+        "lisansustu_egitim_ogretim_yonetmeligi::64",
+        "lisansustu_egitim_ogretim_yonetmeligi::62",
+        "lisansustu_egitim_ogretim_yonetmeligi::77",
+        "lisans_egitim_ogretim_yonetmeligi::12",
+        "lisansustu_egitim_ogretim_yonetmeligi::15"
+      ],
+      "metrics": {
+        "recall@k": 1.0,
+        "precision@k": 0.2,
+        "mrr": 0.25,
+        "ndcg@k": 0.43067655807339306
+      },
+      "latency_ms": 105.33483300241642,
+      "top_score": 0.03149801587301587,
+      "gold_chunk_ids": [
+        "lisans_egitim_ogretim_yonetmeligi::12"
+      ],
+      "variant": "paraphrased",
+      "answer_text": "",
+      "abstained": false,
+      "citations": [],
+      "invalid_citations": [],
+      "generation_ms": 0.0
+    },
+    {
+      "question": "Eğer lisansüstü dersimde FF notunu alırsa ve CC'yi istemiyorsam ne yapmalıyım?",
+      "answerable": true,
+      "retrieved_ids": [
+        "lisansustu_egitim_ogretim_yonetmeligi::60",
+        "lisansustu_egitim_ogretim_yonetmeligi::49",
+        "lisansustu_egitim_ogretim_yonetmeligi::46",
+        "lisansustu_egitim_ogretim_yonetmeligi::47",
+        "lisansustu_egitim_ogretim_yonetmeligi::50"
+      ],
+      "metrics": {
+        "recall@k": 1.0,
+        "precision@k": 0.2,
+        "mrr": 0.5,
+        "ndcg@k": 0.6309297535714575
+      },
+      "latency_ms": 100.96579200035194,
+      "top_score": 0.032266458495966696,
+      "gold_chunk_ids": [
+        "lisansustu_egitim_ogretim_yonetmeligi::49"
+      ],
+      "variant": "paraphrased",
+      "answer_text": "",
+      "abstained": false,
+      "citations": [],
+      "invalid_citations": [],
+      "generation_ms": 0.0
+    },
+    {
+      "question": "Bir dersin kredi değeri neye göre hesaplanır?",
+      "answerable": true,
+      "retrieved_ids": [
+        "lisans_egitim_ogretim_yonetmeligi::41",
+        "lisans_egitim_ogretim_yonetmeligi::23",
+        "lisans_egitim_ogretim_yonetmeligi::22",
+        "lisans_egitim_ogretim_yonetmeligi::10",
+        "lisansustu_egitim_ogretim_yonetmeligi::14"
+      ],
+      "metrics": {
+        "recall@k": 1.0,
+        "precision@k": 0.2,
+        "mrr": 0.25,
+        "ndcg@k": 0.43067655807339306
+      },
+      "latency_ms": 103.21537500203704,
+      "top_score": 0.03252247488101534,
+      "gold_chunk_ids": [
+        "lisans_egitim_ogretim_yonetmeligi::10"
+      ],
+      "variant": "paraphrased",
+      "answer_text": "",
+      "abstained": false,
+      "citations": [],
+      "invalid_citations": [],
+      "generation_ms": 0.0
+    },
+    {
+      "question": "Başvurular değerlendirildikten sonra tezli programı seçmiş öğrenci, tezsiz programda aldığı dersleri tezli programdaki derslere say Kanyeç?",
+      "answerable": true,
+      "retrieved_ids": [
+        "lisansustu_egitim_ogretim_yonetmeligi::77",
+        "lisansustu_egitim_ogretim_yonetmeligi::78",
+        "lisansustu_egitim_ogretim_yonetmeligi::62",
+        "lisansustu_egitim_ogretim_yonetmeligi::28",
+        "lisansustu_egitim_ogretim_yonetmeligi::66"
+      ],
+      "metrics": {
+        "recall@k": 1.0,
+        "precision@k": 0.2,
+        "mrr": 1.0,
+        "ndcg@k": 1.0
+      },
+      "latency_ms": 139.50891599961324,
+      "top_score": 0.03278688524590164,
+      "gold_chunk_ids": [
+        "lisansustu_egitim_ogretim_yonetmeligi::77"
+      ],
+      "variant": "paraphrased",
+      "answer_text": "",
+      "abstained": false,
+      "citations": [],
+      "invalid_citations": [],
+      "generation_ms": 0.0
+    },
+    {
+      "question": "Doktora tezi için danışmanım kimseçe verebilirim?",
+      "answerable": true,
+      "retrieved_ids": [
+        "lisansustu_egitim_ogretim_yonetmeligi::67",
+        "lisansustu_egitim_ogretim_yonetmeligi::99",
+        "lisansustu_egitim_ogretim_yonetmeligi::100",
+        "lisansustu_egitim_ogretim_yonetmeligi::92",
+        "lisansustu_egitim_ogretim_yonetmeligi::87"
+      ],
+      "metrics": {
+        "recall@k": 0.0,
+        "precision@k": 0.0,
+        "mrr": 0.0,
+        "ndcg@k": 0.0
+      },
+      "latency_ms": 102.68291700049303,
+      "top_score": 0.03149801587301587,
+      "gold_chunk_ids": [
+        "lisansustu_egitim_ogretim_yonetmeligi::86"
+      ],
+      "variant": "paraphrased",
+      "answer_text": "",
+      "abstained": false,
+      "citations": [],
+      "invalid_citations": [],
+      "generation_ms": 0.0
+    },
+    {
+      "question": "Rektörlüğün yapması gereken yasal işler hangisidir?",
+      "answerable": true,
+      "retrieved_ids": [
+        "konut_tahsis_yonergesi::24",
+        "lisans_egitim_ogretim_yonetmeligi::1",
+        "lisansustu_egitim_ogretim_yonetmeligi::1",
+        "lisans_egitim_ogretim_yonetmeligi::57",
+        "lisansustu_egitim_ogretim_yonetmeligi::109"
+      ],
+      "metrics": {
+        "recall@k": 1.0,
+        "precision@k": 0.2,
+        "mrr": 1.0,
+        "ndcg@k": 1.0
+      },
+      "latency_ms": 98.38854199915659,
+      "top_score": 0.030834914611005692,
+      "gold_chunk_ids": [
+        "konut_tahsis_yonergesi::24"
+      ],
+      "variant": "paraphrased",
+      "answer_text": "",
+      "abstained": false,
+      "citations": [],
+      "invalid_citations": [],
+      "generation_ms": 0.0
+    },
+    {
+      "question": "Doktora tezindeki intihal tespitolduğunda, komitenin hangi adımlarını atması gerekmektedir?",
+      "answerable": true,
+      "retrieved_ids": [
+        "lisansustu_egitim_ogretim_yonetmeligi::99",
+        "lisansustu_egitim_ogretim_yonetmeligi::92",
+        "lisansustu_egitim_ogretim_yonetmeligi::10",
+        "lisansustu_egitim_ogretim_yonetmeligi::97",
+        "lisansustu_egitim_ogretim_yonetmeligi::94"
+      ],
+      "metrics": {
+        "recall@k": 1.0,
+        "precision@k": 0.2,
+        "mrr": 1.0,
+        "ndcg@k": 1.0
+      },
+      "latency_ms": 127.69683299848111,
+      "top_score": 0.03278688524590164,
+      "gold_chunk_ids": [
+        "lisansustu_egitim_ogretim_yonetmeligi::99"
+      ],
+      "variant": "paraphrased",
+      "answer_text": "",
+      "abstained": false,
+      "citations": [],
+      "invalid_citations": [],
+      "generation_ms": 0.0
+    },
+    {
+      "question": "Kampüs hizmetleri bölümünden kafeteryalar ve kantinler hakkında ne öğrenebilirim?",
+      "answerable": true,
+      "retrieved_ids": [
+        "lisans_egitim_ogretim_yonetmeligi::4",
+        "lisansustu_egitim_ogretim_yonetmeligi::4",
+        "lisansustu_egitim_ogretim_yonetmeligi::111",
+        "lisans_egitim_ogretim_yonetmeligi::59",
+        "lisans_egitim_ogretim_yonetmeligi::3"
+      ],
+      "metrics": {
+        "recall@k": 1.0,
+        "precision@k": 0.2,
+        "mrr": 1.0,
+        "ndcg@k": 1.0
+      },
+      "latency_ms": 102.82758399989689,
+      "top_score": 0.032018442622950824,
+      "gold_chunk_ids": [
+        "lisans_egitim_ogretim_yonetmeligi::4"
+      ],
+      "variant": "paraphrased",
+      "answer_text": "",
+      "abstained": false,
+      "citations": [],
+      "invalid_citations": [],
+      "generation_ms": 0.0
+    },
+    {
+      "question": "Boğaziçi Üniversitesindeki dersleri hangi yarıda verebilirim veya alabilirim?",
+      "answerable": true,
+      "retrieved_ids": [
+        "lisansustu_egitim_ogretim_yonetmeligi::6",
+        "lisans_egitim_ogretim_yonetmeligi::29",
+        "lisans_egitim_ogretim_yonetmeligi::6",
+        "lisans_egitim_ogretim_yonetmeligi::44",
+        "lisansustu_egitim_ogretim_yonetmeligi::12"
+      ],
+      "metrics": {
+        "recall@k": 0.0,
+        "precision@k": 0.0,
+        "mrr": 0.0,
+        "ndcg@k": 0.0
+      },
+      "latency_ms": 100.51770800055237,
+      "top_score": 0.01639344262295082,
+      "gold_chunk_ids": [
+        "lisans_egitim_ogretim_yonetmeligi::15"
+      ],
+      "variant": "paraphrased",
+      "answer_text": "",
+      "abstained": false,
+      "citations": [],
+      "invalid_citations": [],
+      "generation_ms": 0.0
+    },
+    {
+      "question": "Öğretmenlik Uygulaması dersinde, okulu gözlemlemede hangi yönlerden bakmam gerekiyor?",
+      "answerable": true,
+      "retrieved_ids": [
+        "pedagojik_formasyon::24",
+        "pedagojik_formasyon::17",
+        "pedagojik_formasyon::18",
+        "pedagojik_formasyon::16",
+        "pedagojik_formasyon::15"
+      ],
+      "metrics": {
+        "recall@k": 1.0,
+        "precision@k": 0.2,
+        "mrr": 1.0,
+        "ndcg@k": 1.0
+      },
+      "latency_ms": 128.0090830005065,
+      "top_score": 0.03278688524590164,
+      "gold_chunk_ids": [
+        "pedagojik_formasyon::24"
+      ],
+      "variant": "paraphrased",
+      "answer_text": "",
+      "abstained": false,
+      "citations": [],
+      "invalid_citations": [],
+      "generation_ms": 0.0
+    },
+    {
+      "question": "Bir öğrenci sertifika programına başvurabilmek için mezuniyet aşamasında olmalı mı?",
+      "answerable": true,
+      "retrieved_ids": [
+        "sertifika_programlari_yonergesi::4",
+        "lisans_egitim_ogretim_yonetmeligi::53",
+        "sertifika_programlari_yonergesi::10",
+        "sertifika_programlari_yonergesi::6",
+        "sertifika_programlari_yonergesi::7"
+      ],
+      "metrics": {
+        "recall@k": 1.0,
+        "precision@k": 0.2,
+        "mrr": 1.0,
+        "ndcg@k": 1.0
+      },
+      "latency_ms": 105.21716700168326,
+      "top_score": 0.03252247488101534,
+      "gold_chunk_ids": [
+        "sertifika_programlari_yonergesi::4"
+      ],
+      "variant": "paraphrased",
+      "answer_text": "",
+      "abstained": false,
+      "citations": [],
+      "invalid_citations": [],
+      "generation_ms": 0.0
+    },
+    {
+      "question": "Disiplin cezasını vermek için zamanaşımın başlangıcı ne zaman olur?",
+      "answerable": true,
+      "retrieved_ids": [
+        "ogrenci_disiplin_yonetmeligi::18",
+        "ogrenci_disiplin_yonetmeligi::30",
+        "ogrenci_disiplin_yonetmeligi::3",
+        "ogrenci_disiplin_yonetmeligi::4",
+        "ogrenci_disiplin_yonetmeligi::31"
+      ],
+      "metrics": {
+        "recall@k": 1.0,
+        "precision@k": 0.2,
+        "mrr": 1.0,
+        "ndcg@k": 1.0
+      },
+      "latency_ms": 101.22908300036215,
+      "top_score": 0.03278688524590164,
+      "gold_chunk_ids": [
+        "ogrenci_disiplin_yonetmeligi::18"
+      ],
+      "variant": "paraphrased",
+      "answer_text": "",
+      "abstained": false,
+      "citations": [],
+      "invalid_citations": [],
+      "generation_ms": 0.0
+    },
+    {
+      "question": "E-kayıt yapmadım ve kaydı da istemiyorum. İlan edilen tarihlerde üniversitede kayıtlarımı yaptırabilirim mi?",
+      "answerable": true,
+      "retrieved_ids": [
+        "kayit_yonergesi::11",
+        "kayit_yonergesi::6",
+        "kayit_yonergesi::7",
+        "kayit_yonergesi::10",
+        "kayit_yonergesi::12"
+      ],
+      "metrics": {
+        "recall@k": 1.0,
+        "precision@k": 0.2,
+        "mrr": 0.3333333333333333,
+        "ndcg@k": 0.5
+      },
+      "latency_ms": 173.46279199773562,
+      "top_score": 0.031754032258064516,
+      "gold_chunk_ids": [
+        "kayit_yonergesi::7"
+      ],
+      "variant": "paraphrased",
+      "answer_text": "",
+      "abstained": false,
+      "citations": [],
+      "invalid_citations": [],
+      "generation_ms": 0.0
+    },
+    {
+      "question": "Neden sadece dil hazırlık sınıflarında değil diğer akademik yarıyıl kayıtları da çevrimiçi olarak yapılır?",
+      "answerable": true,
+      "retrieved_ids": [
+        "kayit_yonergesi::19",
+        "kayit_yonergesi::15",
+        "lisans_egitim_ogretim_yonetmeligi::14",
+        "lisansustu_egitim_ogretim_yonetmeligi::29",
+        "lisansustu_egitim_ogretim_yonetmeligi::30"
+      ],
+      "metrics": {
+        "recall@k": 1.0,
+        "precision@k": 0.2,
+        "mrr": 0.5,
+        "ndcg@k": 0.6309297535714575
+      },
+      "latency_ms": 165.98000000158208,
+      "top_score": 0.03278688524590164,
+      "gold_chunk_ids": [
+        "kayit_yonergesi::15"
+      ],
+      "variant": "paraphrased",
+      "answer_text": "",
+      "abstained": false,
+      "citations": [],
+      "invalid_citations": [],
+      "generation_ms": 0.0
+    },
+    {
+      "question": "Bir tezli yüksek lisans'tan aldığım dersler doktora programına nasıl sayılır?",
+      "answerable": true,
+      "retrieved_ids": [
+        "lisansustu_egitim_ogretim_yonetmeligi::79",
+        "lisansustu_egitim_ogretim_yonetmeligi::78",
+        "lisansustu_egitim_ogretim_yonetmeligi::83",
+        "lisansustu_egitim_ogretim_yonetmeligi::62",
+        "lisansustu_egitim_ogretim_yonetmeligi::86"
+      ],
+      "metrics": {
+        "recall@k": 1.0,
+        "precision@k": 0.2,
+        "mrr": 1.0,
+        "ndcg@k": 1.0
+      },
+      "latency_ms": 114.95645800096099,
+      "top_score": 0.03200204813108039,
+      "gold_chunk_ids": [
+        "lisansustu_egitim_ogretim_yonetmeligi::79"
+      ],
+      "variant": "paraphrased",
+      "answer_text": "",
+      "abstained": false,
+      "citations": [],
+      "invalid_citations": [],
+      "generation_ms": 0.0
+    },
+    {
+      "question": "15 gün içinde konut taşınmazları yapmazsa, konut tahsis başvurusunda hakkını kaybetmiş ve tahsis edilen konotta ki diğer haklarını da kaybedebilecekler mi?",
+      "answerable": true,
+      "retrieved_ids": [
+        "konut_tahsis_yonergesi::9",
+        "konut_tahsis_yonergesi::10",
+        "konut_tahsis_yonergesi::20",
+        "konut_tahsis_yonergesi::17",
+        "konut_tahsis_yonergesi::25"
+      ],
+      "metrics": {
+        "recall@k": 1.0,
+        "precision@k": 0.2,
+        "mrr": 0.5,
+        "ndcg@k": 0.6309297535714575
+      },
+      "latency_ms": 178.56741699870327,
+      "top_score": 0.03278688524590164,
+      "gold_chunk_ids": [
+        "konut_tahsis_yonergesi::10"
+      ],
+      "variant": "paraphrased",
+      "answer_text": "",
+      "abstained": false,
+      "citations": [],
+      "invalid_citations": [],
+      "generation_ms": 0.0
+    },
+    {
+      "question": "Bilimsel hazırlık programında bir dersi tekrar alabilmem için ne yapmalıyım?",
+      "answerable": true,
+      "retrieved_ids": [
+        "lisansustu_egitim_ogretim_yonetmeligi::32",
+        "lisansustu_egitim_ogretim_yonetmeligi::34",
+        "lisans_egitim_ogretim_yonetmeligi::40",
+        "lisansustu_egitim_ogretim_yonetmeligi::31",
+        "lisansustu_egitim_ogretim_yonetmeligi::33"
+      ],
+      "metrics": {
+        "recall@k": 1.0,
+        "precision@k": 0.2,
+        "mrr": 0.2,
+        "ndcg@k": 0.38685280723454163
+      },
+      "latency_ms": 109.64716599846724,
+      "top_score": 0.03149801587301587,
+      "gold_chunk_ids": [
+        "lisansustu_egitim_ogretim_yonetmeligi::33"
+      ],
+      "variant": "paraphrased",
+      "answer_text": "",
+      "abstained": false,
+      "citations": [],
+      "invalid_citations": [],
+      "generation_ms": 0.0
+    },
+    {
+      "question": "Tezli yüksek lisansta P notu alabilmek için hangi dersleri ve en az kaç GNO puanı elde etmem gerekmektedir?",
+      "answerable": true,
+      "retrieved_ids": [
+        "lisansustu_egitim_ogretim_yonetmeligi::66",
+        "lisansustu_egitim_ogretim_yonetmeligi::63",
+        "lisansustu_egitim_ogretim_yonetmeligi::65",
+        "lisansustu_egitim_ogretim_yonetmeligi::70",
+        "lisansustu_egitim_ogretim_yonetmeligi::33"
+      ],
+      "metrics": {
+        "recall@k": 1.0,
+        "precision@k": 0.2,
+        "mrr": 1.0,
+        "ndcg@k": 1.0
+      },
+      "latency_ms": 140.27666699985275,
+      "top_score": 0.032018442622950824,
+      "gold_chunk_ids": [
+        "lisansustu_egitim_ogretim_yonetmeligi::66"
+      ],
+      "variant": "paraphrased",
+      "answer_text": "",
+      "abstained": false,
+      "citations": [],
+      "invalid_citations": [],
+      "generation_ms": 0.0
+    },
+    {
+      "question": "Resmî Gazeteden hangi tarihli sayfalarda yapılan değişikliklerin bildirildiği bilgileri bulabilirim?",
+      "answerable": true,
+      "retrieved_ids": [
+        "ogrenci_disiplin_yonetmeligi::39",
+        "ogrenci_disiplin_yonetmeligi::37",
+        "lisans_egitim_ogretim_yonetmeligi::7",
+        "lisansustu_egitim_ogretim_yonetmeligi::7",
+        "kayit_yonergesi::34"
+      ],
+      "metrics": {
+        "recall@k": 1.0,
+        "precision@k": 0.2,
+        "mrr": 1.0,
+        "ndcg@k": 1.0
+      },
+      "latency_ms": 136.1585830018157,
+      "top_score": 0.03278688524590164,
+      "gold_chunk_ids": [
+        "ogrenci_disiplin_yonetmeligi::39"
+      ],
+      "variant": "paraphrased",
+      "answer_text": "",
+      "abstained": false,
+      "citations": [],
+      "invalid_citations": [],
+      "generation_ms": 0.0
+    },
+    {
+      "question": "Yürütülmemiş kurumların adlarını bilirim mi?",
+      "answerable": true,
+      "retrieved_ids": [
+        "ogrenci_disiplin_yonetmeligi::2",
+        "burs_yonergesi::13",
+        "ogrenci_disiplin_yonetmeligi::11",
+        "lisansustu_egitim_ogretim_yonetmeligi::4",
+        "ogrenci_disiplin_yonetmeligi::8"
+      ],
+      "metrics": {
+        "recall@k": 0.0,
+        "precision@k": 0.0,
+        "mrr": 0.0,
+        "ndcg@k": 0.0
+      },
+      "latency_ms": 76.79020899740863,
+      "top_score": 0.029116045245077504,
+      "gold_chunk_ids": [
+        "ogrenci_disiplin_yonetmeligi::38"
+      ],
+      "variant": "paraphrased",
+      "answer_text": "",
+      "abstained": false,
+      "citations": [],
+      "invalid_citations": [],
+      "generation_ms": 0.0
+    },
+    {
+      "question": "Soruşturma raporunda hangi kısımlarda daha detaylı açıklama yapılması gerekiyor?",
+      "answerable": true,
+      "retrieved_ids": [
+        "ogrenci_disiplin_yonetmeligi::24",
+        "ogrenci_disiplin_yonetmeligi::28",
+        "ogrenci_disiplin_yonetmeligi::23",
+        "ogrenci_disiplin_yonetmeligi::16",
+        "ogrenci_disiplin_yonetmeligi::29"
+      ],
+      "metrics": {
+        "recall@k": 1.0,
+        "precision@k": 0.2,
+        "mrr": 1.0,
+        "ndcg@k": 1.0
+      },
+      "latency_ms": 91.21837500060792,
+      "top_score": 0.03278688524590164,
+      "gold_chunk_ids": [
+        "ogrenci_disiplin_yonetmeligi::24"
+      ],
+      "variant": "paraphrased",
+      "answer_text": "",
+      "abstained": false,
+      "citations": [],
+      "invalid_citations": [],
+      "generation_ms": 0.0
+    },
+    {
+      "question": "Bir öğrenci, hangi yıllardan sonra yarıyıl eğitiminin sayılacağından, hangi yıllardan sonra sayılmayacağından bilmiyor?",
+      "answerable": true,
+      "retrieved_ids": [
+        "kayit_yonergesi::16",
+        "kayit_yonergesi::28",
+        "kayit_yonergesi::19",
+        "kayit_yonergesi::20",
+        "lisans_egitim_ogretim_yonetmeligi::35"
+      ],
+      "metrics": {
+        "recall@k": 0.0,
+        "precision@k": 0.0,
+        "mrr": 0.0,
+        "ndcg@k": 0.0
+      },
+      "latency_ms": 126.61070800095331,
+      "top_score": 0.0304147465437788,
+      "gold_chunk_ids": [
+        "lisansustu_egitim_ogretim_yonetmeligi::16"
+      ],
+      "variant": "paraphrased",
+      "answer_text": "",
+      "abstained": false,
+      "citations": [],
+      "invalid_citations": [],
+      "generation_ms": 0.0
+    },
+    {
+      "question": "Öğretim planlarında en önemli faktörler hakkında ne düşünürler?",
+      "answerable": true,
+      "retrieved_ids": [
+        "pedagojik_formasyon::23",
+        "pedagojik_formasyon::17",
+        "pedagojik_formasyon::22",
+        "pedagojik_formasyon::21",
+        "lisansustu_egitim_ogretim_yonetmeligi::45"
+      ],
+      "metrics": {
+        "recall@k": 1.0,
+        "precision@k": 0.2,
+        "mrr": 0.5,
+        "ndcg@k": 0.6309297535714575
+      },
+      "latency_ms": 99.8467499994149,
+      "top_score": 0.03252247488101534,
+      "gold_chunk_ids": [
+        "pedagojik_formasyon::17"
+      ],
+      "variant": "paraphrased",
+      "answer_text": "",
+      "abstained": false,
+      "citations": [],
+      "invalid_citations": [],
+      "generation_ms": 0.0
+    },
+    {
+      "question": "Enstitü yönetim kurulu onayını almadan tez danışmanımın adını nasıl değiştirebilirim?",
+      "answerable": true,
+      "retrieved_ids": [
+        "lisansustu_egitim_ogretim_yonetmeligi::87",
+        "lisansustu_egitim_ogretim_yonetmeligi::67",
+        "lisansustu_egitim_ogretim_yonetmeligi::39",
+        "lisansustu_egitim_ogretim_yonetmeligi::68",
+        "lisansustu_egitim_ogretim_yonetmeligi::94"
+      ],
+      "metrics": {
+        "recall@k": 1.0,
+        "precision@k": 0.2,
+        "mrr": 0.25,
+        "ndcg@k": 0.43067655807339306
+      },
+      "latency_ms": 102.5944579996576,
+      "top_score": 0.03149801587301587,
+      "gold_chunk_ids": [
+        "lisansustu_egitim_ogretim_yonetmeligi::68"
+      ],
+      "variant": "paraphrased",
+      "answer_text": "",
+      "abstained": false,
+      "citations": [],
+      "invalid_citations": [],
+      "generation_ms": 0.0
+    },
+    {
+      "question": "Bir adayın tezi reddedildiğinde üniversite hangi adımları atmalı?",
+      "answerable": true,
+      "retrieved_ids": [
+        "lisansustu_egitim_ogretim_yonetmeligi::101",
+        "lisansustu_egitim_ogretim_yonetmeligi::96",
+        "lisansustu_egitim_ogretim_yonetmeligi::102",
+        "lisansustu_egitim_ogretim_yonetmeligi::99",
+        "lisansustu_egitim_ogretim_yonetmeligi::71"
+      ],
+      "metrics": {
+        "recall@k": 1.0,
+        "precision@k": 0.2,
+        "mrr": 1.0,
+        "ndcg@k": 1.0
+      },
+      "latency_ms": 99.35370799939847,
+      "top_score": 0.032266458495966696,
+      "gold_chunk_ids": [
+        "lisansustu_egitim_ogretim_yonetmeligi::101"
+      ],
+      "variant": "paraphrased",
+      "answer_text": "",
+      "abstained": false,
+      "citations": [],
+      "invalid_citations": [],
+      "generation_ms": 0.0
+    },
+    {
+      "question": "Yarıyıl boyunca alabilirimizin en fazla kaç dersi öğrenci neye göre hesaplıyor?",
+      "answerable": true,
+      "retrieved_ids": [
+        "lisans_egitim_ogretim_yonetmeligi::23",
+        "lisans_egitim_ogretim_yonetmeligi::15",
+        "lisansustu_egitim_ogretim_yonetmeligi::17",
+        "lisans_egitim_ogretim_yonetmeligi::44",
+        "lisans_egitim_ogretim_yonetmeligi::29"
+      ],
+      "metrics": {
+        "recall@k": 1.0,
+        "precision@k": 0.2,
+        "mrr": 1.0,
+        "ndcg@k": 1.0
+      },
+      "latency_ms": 98.31004099760321,
+      "top_score": 0.03278688524590164,
+      "gold_chunk_ids": [
+        "lisans_egitim_ogretim_yonetmeligi::23"
+      ],
+      "variant": "paraphrased",
+      "answer_text": "",
+      "abstained": false,
+      "citations": [],
+      "invalid_citations": [],
+      "generation_ms": 0.0
+    },
+    {
+      "question": "Hangi durumda disiplin kurulundan soruşturma yaptırabilirsiniz?",
+      "answerable": true,
+      "retrieved_ids": [
+        "ogrenci_disiplin_yonetmeligi::15",
+        "ogrenci_disiplin_yonetmeligi::20",
+        "ogrenci_disiplin_yonetmeligi::24",
+        "ogrenci_disiplin_yonetmeligi::27",
+        "ogrenci_disiplin_yonetmeligi::30"
+      ],
+      "metrics": {
+        "recall@k": 0.0,
+        "precision@k": 0.0,
+        "mrr": 0.0,
+        "ndcg@k": 0.0
+      },
+      "latency_ms": 96.86841700022342,
+      "top_score": 0.032018442622950824,
+      "gold_chunk_ids": [
+        "ogrenci_disiplin_yonetmeligi::28"
+      ],
+      "variant": "paraphrased",
+      "answer_text": "",
+      "abstained": false,
+      "citations": [],
+      "invalid_citations": [],
+      "generation_ms": 0.0
+    },
+    {
+      "question": "Doktora programında lisans derecesi ile kabul edilen öğrencilerin en fazla kaç kredi alabilirler?",
+      "answerable": true,
+      "retrieved_ids": [
+        "lisansustu_egitim_ogretim_yonetmeligi::80",
+        "lisansustu_egitim_ogretim_yonetmeligi::83",
+        "lisansustu_egitim_ogretim_yonetmeligi::81",
+        "lisansustu_egitim_ogretim_yonetmeligi::88",
+        "lisansustu_egitim_ogretim_yonetmeligi::15"
+      ],
+      "metrics": {
+        "recall@k": 1.0,
+        "precision@k": 0.2,
+        "mrr": 1.0,
+        "ndcg@k": 1.0
+      },
+      "latency_ms": 101.00383300232352,
+      "top_score": 0.032018442622950824,
+      "gold_chunk_ids": [
+        "lisansustu_egitim_ogretim_yonetmeligi::80"
+      ],
+      "variant": "paraphrased",
+      "answer_text": "",
+      "abstained": false,
+      "citations": [],
+      "invalid_citations": [],
+      "generation_ms": 0.0
+    },
+    {
+      "question": "Yedek listedeki öğrenciler, eksik belgelerini tamamladıktan sonra ders ekleme-bırakma dönemi içinde ilk kayıtlımı nasıl yaptırabilirim?",
+      "answerable": true,
+      "retrieved_ids": [
+        "kayit_yonergesi::11",
+        "kayit_yonergesi::12",
+        "kayit_yonergesi::13",
+        "kayit_yonergesi::10",
+        "kayit_yonergesi::28"
+      ],
+      "metrics": {
+        "recall@k": 1.0,
+        "precision@k": 0.2,
+        "mrr": 1.0,
+        "ndcg@k": 1.0
+      },
+      "latency_ms": 129.34599999789498,
+      "top_score": 0.03278688524590164,
+      "gold_chunk_ids": [
+        "kayit_yonergesi::11"
+      ],
+      "variant": "paraphrased",
+      "answer_text": "",
+      "abstained": false,
+      "citations": [],
+      "invalid_citations": [],
+      "generation_ms": 0.0
+    },
+    {
+      "question": "Bölüm programında teoride sadece okuyacağım ve pratiğine şimdilik değilmeyen ders hangisidir?",
+      "answerable": true,
+      "retrieved_ids": [
+        "lisansustu_egitim_ogretim_yonetmeligi::34",
+        "lisans_egitim_ogretim_yonetmeligi::10",
+        "lisans_egitim_ogretim_yonetmeligi::21",
+        "lisansustu_egitim_ogretim_yonetmeligi::62",
+        "lisansustu_egitim_ogretim_yonetmeligi::18"
+      ],
+      "metrics": {
+        "recall@k": 0.0,
+        "precision@k": 0.0,
+        "mrr": 0.0,
+        "ndcg@k": 0.0
+      },
+      "latency_ms": 132.91512500290992,
+      "top_score": 0.03057889822595705,
+      "gold_chunk_ids": [
+        "pedagojik_formasyon::1"
+      ],
+      "variant": "paraphrased",
+      "answer_text": "",
+      "abstained": false,
+      "citations": [],
+      "invalid_citations": [],
+      "generation_ms": 0.0
+    },
+    {
+      "question": "Yurt dışına giden öğrencilerin iznine hangi koşulları uymaları gerekiyor?",
+      "answerable": true,
+      "retrieved_ids": [
+        "lisansustu_egitim_ogretim_yonetmeligi::111",
+        "lisans_egitim_ogretim_yonetmeligi::59",
+        "burs_yonergesi::13",
+        "lisans_egitim_ogretim_yonetmeligi::3",
+        "lisansustu_egitim_ogretim_yonetmeligi::3"
+      ],
+      "metrics": {
+        "recall@k": 1.0,
+        "precision@k": 0.2,
+        "mrr": 0.3333333333333333,
+        "ndcg@k": 0.5
+      },
+      "latency_ms": 102.33620799772325,
+      "top_score": 0.03131881575727918,
+      "gold_chunk_ids": [
+        "burs_yonergesi::13"
+      ],
+      "variant": "paraphrased",
+      "answer_text": "",
+      "abstained": false,
+      "citations": [],
+      "invalid_citations": [],
+      "generation_ms": 0.0
+    },
+    {
+      "question": "Başarısız olanlar en fazla kaç kredi alabilir ve bu krediler hangi notlardan olabilir?",
+      "answerable": true,
+      "retrieved_ids": [
+        "lisans_egitim_ogretim_yonetmeligi::44",
+        "lisans_egitim_ogretim_yonetmeligi::23",
+        "lisans_egitim_ogretim_yonetmeligi::22",
+        "lisans_egitim_ogretim_yonetmeligi::41",
+        "lisans_egitim_ogretim_yonetmeligi::45"
+      ],
+      "metrics": {
+        "recall@k": 1.0,
+        "precision@k": 0.2,
+        "mrr": 1.0,
+        "ndcg@k": 1.0
+      },
+      "latency_ms": 101.6123340014019,
+      "top_score": 0.03278688524590164,
+      "gold_chunk_ids": [
+        "lisans_egitim_ogretim_yonetmeligi::44"
+      ],
+      "variant": "paraphrased",
+      "answer_text": "",
+      "abstained": false,
+      "citations": [],
+      "invalid_citations": [],
+      "generation_ms": 0.0
+    },
+    {
+      "question": "Yeni başvuruların sadece yıllık olarak yapılması nedendir?",
+      "answerable": true,
+      "retrieved_ids": [
+        "kayit_yonergesi::4",
+        "kayit_yonergesi::10",
+        "lisans_egitim_ogretim_yonetmeligi::29",
+        "konut_tahsis_yonergesi::19",
+        "burs_yonergesi::2"
+      ],
+      "metrics": {
+        "recall@k": 1.0,
+        "precision@k": 0.2,
+        "mrr": 0.25,
+        "ndcg@k": 0.43067655807339306
+      },
+      "latency_ms": 71.8036670004949,
+      "top_score": 0.028958333333333336,
+      "gold_chunk_ids": [
+        "konut_tahsis_yonergesi::19"
+      ],
+      "variant": "paraphrased",
+      "answer_text": "",
+      "abstained": false,
+      "citations": [],
+      "invalid_citations": [],
+      "generation_ms": 0.0
+    },
+    {
+      "question": "Çerez politikasını nereden görebilirim?",
+      "answerable": true,
+      "retrieved_ids": [
+        "lisansustu_egitim_ogretim_yonetmeligi::112",
+        "lisans_egitim_ogretim_yonetmeligi::60",
+        "pedagojik_formasyon::25",
+        "ogrenci_disiplin_yonetmeligi::19",
+        "ogrenci_disiplin_yonetmeligi::16"
+      ],
+      "metrics": {
+        "recall@k": 1.0,
+        "precision@k": 0.2,
+        "mrr": 0.5,
+        "ndcg@k": 0.6309297535714575
+      },
+      "latency_ms": 62.94733399772667,
+      "top_score": 0.03252247488101534,
+      "gold_chunk_ids": [
+        "lisans_egitim_ogretim_yonetmeligi::60"
+      ],
+      "variant": "paraphrased",
+      "answer_text": "",
+      "abstained": false,
+      "citations": [],
+      "invalid_citations": [],
+      "generation_ms": 0.0
+    },
+    {
+      "question": "Rektör Yardımcısı olmadığında, kimin Komisyon başkanlığını yapar?",
+      "answerable": true,
+      "retrieved_ids": [
+        "burs_yonergesi::3",
+        "konut_tahsis_yonergesi::14",
+        "konut_tahsis_yonergesi::15",
+        "lisansustu_egitim_ogretim_yonetmeligi::10",
+        "burs_yonergesi::9"
+      ],
+      "metrics": {
+        "recall@k": 1.0,
+        "precision@k": 0.2,
+        "mrr": 0.5,
+        "ndcg@k": 0.6309297535714575
+      },
+      "latency_ms": 85.65720900151064,
+      "top_score": 0.03252247488101534,
+      "gold_chunk_ids": [
+        "konut_tahsis_yonergesi::14"
+      ],
+      "variant": "paraphrased",
+      "answer_text": "",
+      "abstained": false,
+      "citations": [],
+      "invalid_citations": [],
+      "generation_ms": 0.0
+    },
+    {
+      "question": "Hangi durumlarda öğrenciye tez sunma zamanı verilir?",
+      "answerable": true,
+      "retrieved_ids": [
+        "lisansustu_egitim_ogretim_yonetmeligi::45",
+        "lisansustu_egitim_ogretim_yonetmeligi::97",
+        "lisansustu_egitim_ogretim_yonetmeligi::39",
+        "ogrenci_disiplin_yonetmeligi::23",
+        "lisansustu_egitim_ogretim_yonetmeligi::47"
+      ],
+      "metrics": {
+        "recall@k": 1.0,
+        "precision@k": 0.2,
+        "mrr": 0.25,
+        "ndcg@k": 0.43067655807339306
+      },
+      "latency_ms": 93.14762500071083,
+      "top_score": 0.02532051282051282,
+      "gold_chunk_ids": [
+        "ogrenci_disiplin_yonetmeligi::23"
+      ],
+      "variant": "paraphrased",
+      "answer_text": "",
+      "abstained": false,
+      "citations": [],
+      "invalid_citations": [],
+      "generation_ms": 0.0
+    },
+    {
+      "question": "Motivasyonumu artırmak için farklı öğretim teknolojileri nerede kullanabiliyoruz?",
+      "answerable": true,
+      "retrieved_ids": [
+        "pedagojik_formasyon::23",
+        "pedagojik_formasyon::17",
+        "pedagojik_formasyon::18",
+        "pedagojik_formasyon::25",
+        "pedagojik_formasyon::19"
+      ],
+      "metrics": {
+        "recall@k": 1.0,
+        "precision@k": 0.2,
+        "mrr": 1.0,
+        "ndcg@k": 1.0
+      },
+      "latency_ms": 101.4267499995185,
+      "top_score": 0.03278688524590164,
+      "gold_chunk_ids": [
+        "pedagojik_formasyon::23"
+      ],
+      "variant": "paraphrased",
+      "answer_text": "",
+      "abstained": false,
+      "citations": [],
+      "invalid_citations": [],
+      "generation_ms": 0.0
+    },
+    {
+      "question": "Sertifikayı almak istiyorum ama hangi dersleri seçmem gerektiğini ana danışmanımdan önce bilmesi gerekecek mi?",
+      "answerable": true,
+      "retrieved_ids": [
+        "sertifika_programlari_yonergesi::8",
+        "sertifika_programlari_yonergesi::6",
+        "sertifika_programlari_yonergesi::9",
+        "sertifika_programlari_yonergesi::7",
+        "sertifika_programlari_yonergesi::10"
+      ],
+      "metrics": {
+        "recall@k": 1.0,
+        "precision@k": 0.2,
+        "mrr": 1.0,
+        "ndcg@k": 1.0
+      },
+      "latency_ms": 131.93379099902813,
+      "top_score": 0.03278688524590164,
+      "gold_chunk_ids": [
+        "sertifika_programlari_yonergesi::8"
+      ],
+      "variant": "paraphrased",
+      "answer_text": "",
+      "abstained": false,
+      "citations": [],
+      "invalid_citations": [],
+      "generation_ms": 0.0
+    },
+    {
+      "question": "Hangi belirli kitapları ve makaleleri inceleyeceğiz ve değerlendirebileceğiz?",
+      "answerable": true,
+      "retrieved_ids": [
+        "ogrenci_disiplin_yonetmeligi::27",
+        "pedagojik_formasyon::25",
+        "pedagojik_formasyon::24",
+        "pedagojik_formasyon::21",
+        "burs_yonergesi::9"
+      ],
+      "metrics": {
+        "recall@k": 0.0,
+        "precision@k": 0.0,
+        "mrr": 0.0,
+        "ndcg@k": 0.0
+      },
+      "latency_ms": 104.70824999720207,
+      "top_score": 0.028985507246376812,
+      "gold_chunk_ids": [
+        "pedagojik_formasyon::13"
+      ],
+      "variant": "paraphrased",
+      "answer_text": "",
+      "abstained": false,
+      "citations": [],
+      "invalid_citations": [],
+      "generation_ms": 0.0
+    },
+    {
+      "question": "Onur derecesini alabilmek için en az kaç GNO puanı gerekiyor?",
+      "answerable": true,
+      "retrieved_ids": [
+        "lisans_egitim_ogretim_yonetmeligi::50",
+        "lisans_egitim_ogretim_yonetmeligi::51",
+        "lisans_egitim_ogretim_yonetmeligi::52",
+        "lisans_egitim_ogretim_yonetmeligi::42",
+        "lisans_egitim_ogretim_yonetmeligi::43"
+      ],
+      "metrics": {
+        "recall@k": 1.0,
+        "precision@k": 0.2,
+        "mrr": 0.5,
+        "ndcg@k": 0.6309297535714575
+      },
+      "latency_ms": 98.53404200111981,
+      "top_score": 0.03252247488101534,
+      "gold_chunk_ids": [
+        "lisans_egitim_ogretim_yonetmeligi::51"
+      ],
+      "variant": "paraphrased",
+      "answer_text": "",
+      "abstained": false,
+      "citations": [],
+      "invalid_citations": [],
+      "generation_ms": 0.0
+    },
+    {
+      "question": "Nerede itiraz hakkı var ki disiplin cezasından kaçınabilirim?",
+      "answerable": true,
+      "retrieved_ids": [
+        "ogrenci_disiplin_yonetmeligi::33",
+        "ogrenci_disiplin_yonetmeligi::14",
+        "ogrenci_disiplin_yonetmeligi::31",
+        "ogrenci_disiplin_yonetmeligi::18",
+        "ogrenci_disiplin_yonetmeligi::32"
+      ],
+      "metrics": {
+        "recall@k": 1.0,
+        "precision@k": 0.2,
+        "mrr": 1.0,
+        "ndcg@k": 1.0
+      },
+      "latency_ms": 97.8776249976363,
+      "top_score": 0.032018442622950824,
+      "gold_chunk_ids": [
+        "ogrenci_disiplin_yonetmeligi::33"
+      ],
+      "variant": "paraphrased",
+      "answer_text": "",
+      "abstained": false,
+      "citations": [],
+      "invalid_citations": [],
+      "generation_ms": 0.0
+    },
+    {
+      "question": "Ders ekleme-bırkaema işlemlerimin eksik kalabileceğinde hangi aşamada bildirilir?",
+      "answerable": true,
+      "retrieved_ids": [
+        "kayit_yonergesi::29",
+        "kayit_yonergesi::12",
+        "kayit_yonergesi::28",
+        "kayit_yonergesi::30",
+        "kayit_yonergesi::31"
+      ],
+      "metrics": {
+        "recall@k": 1.0,
+        "precision@k": 0.2,
+        "mrr": 0.3333333333333333,
+        "ndcg@k": 0.5
+      },
+      "latency_ms": 97.89083299983758,
+      "top_score": 0.032018442622950824,
+      "gold_chunk_ids": [
+        "kayit_yonergesi::28"
+      ],
+      "variant": "paraphrased",
+      "answer_text": "",
+      "abstained": false,
+      "citations": [],
+      "invalid_citations": [],
+      "generation_ms": 0.0
+    },
+    {
+      "question": "Bir öğrenci tez savunmasında reddetmeseydi üniversiteden nasıl ayrılabilir?",
+      "answerable": true,
+      "retrieved_ids": [
+        "lisansustu_egitim_ogretim_yonetmeligi::96",
+        "lisansustu_egitim_ogretim_yonetmeligi::67",
+        "lisansustu_egitim_ogretim_yonetmeligi::97",
+        "lisansustu_egitim_ogretim_yonetmeligi::71",
+        "lisansustu_egitim_ogretim_yonetmeligi::98"
+      ],
+      "metrics": {
+        "recall@k": 1.0,
+        "precision@k": 0.2,
+        "mrr": 0.3333333333333333,
+        "ndcg@k": 0.5
+      },
+      "latency_ms": 99.0423750008631,
+      "top_score": 0.029051670471052088,
+      "gold_chunk_ids": [
+        "lisansustu_egitim_ogretim_yonetmeligi::97"
+      ],
+      "variant": "paraphrased",
+      "answer_text": "",
+      "abstained": false,
+      "citations": [],
+      "invalid_citations": [],
+      "generation_ms": 0.0
+    },
+    {
+      "question": "İzin verilen öğrenci, birinci yarıyıldan sonra üniversitede dönmek istemiyorsa ne yapmalıdır?",
+      "answerable": true,
+      "retrieved_ids": [
+        "lisansustu_egitim_ogretim_yonetmeligi::43",
+        "lisansustu_egitim_ogretim_yonetmeligi::42",
+        "lisans_egitim_ogretim_yonetmeligi::30",
+        "lisans_egitim_ogretim_yonetmeligi::29",
+        "lisansustu_egitim_ogretim_yonetmeligi::41"
+      ],
+      "metrics": {
+        "recall@k": 1.0,
+        "precision@k": 0.2,
+        "mrr": 0.3333333333333333,
+        "ndcg@k": 0.5
+      },
+      "latency_ms": 97.54879200045252,
+      "top_score": 0.03252247488101534,
+      "gold_chunk_ids": [
+        "lisans_egitim_ogretim_yonetmeligi::30"
+      ],
+      "variant": "paraphrased",
+      "answer_text": "",
+      "abstained": false,
+      "citations": [],
+      "invalid_citations": [],
+      "generation_ms": 0.0
+    },
+    {
+      "question": "Bir yüksek lisans dersinde en az bir konu hangisini içermesi gerekmektedir?",
+      "answerable": true,
+      "retrieved_ids": [
+        "lisansustu_egitim_ogretim_yonetmeligi::14",
+        "lisansustu_egitim_ogretim_yonetmeligi::63",
+        "lisansustu_egitim_ogretim_yonetmeligi::74",
+        "lisansustu_egitim_ogretim_yonetmeligi::13",
+        "lisansustu_egitim_ogretim_yonetmeligi::85"
+      ],
+      "metrics": {
+        "recall@k": 1.0,
+        "precision@k": 0.2,
+        "mrr": 0.25,
+        "ndcg@k": 0.43067655807339306
+      },
+      "latency_ms": 98.4372919992893,
+      "top_score": 0.03149801587301587,
+      "gold_chunk_ids": [
+        "lisansustu_egitim_ogretim_yonetmeligi::13"
+      ],
+      "variant": "paraphrased",
+      "answer_text": "",
+      "abstained": false,
+      "citations": [],
+      "invalid_citations": [],
+      "generation_ms": 0.0
+    },
+    {
+      "question": "Lisans öğrenimini bitirmeden de yüksek lisans programına başvurabilirim mi?",
+      "answerable": true,
+      "retrieved_ids": [
+        "lisansustu_egitim_ogretim_yonetmeligi::77",
+        "lisansustu_egitim_ogretim_yonetmeligi::24",
+        "lisansustu_egitim_ogretim_yonetmeligi::23",
+        "lisansustu_egitim_ogretim_yonetmeligi::78",
+        "lisansustu_egitim_ogretim_yonetmeligi::28"
+      ],
+      "metrics": {
+        "recall@k": 0.0,
+        "precision@k": 0.0,
+        "mrr": 0.0,
+        "ndcg@k": 0.0
+      },
+      "latency_ms": 92.78945800178917,
+      "top_score": 0.032018442622950824,
+      "gold_chunk_ids": [
+        "lisansustu_egitim_ogretim_yonetmeligi::22"
+      ],
+      "variant": "paraphrased",
+      "answer_text": "",
+      "abstained": false,
+      "citations": [],
+      "invalid_citations": [],
+      "generation_ms": 0.0
+    },
+    {
+      "question": "Bir öğrencinin dersden çıkma kararı verebileceği en son tarih nedir?",
+      "answerable": true,
+      "retrieved_ids": [
+        "lisans_egitim_ogretim_yonetmeligi::32",
+        "lisansustu_egitim_ogretim_yonetmeligi::45",
+        "lisans_egitim_ogretim_yonetmeligi::33",
+        "lisansustu_egitim_ogretim_yonetmeligi::40",
+        "lisans_egitim_ogretim_yonetmeligi::21"
+      ],
+      "metrics": {
+        "recall@k": 0.0,
+        "precision@k": 0.0,
+        "mrr": 0.0,
+        "ndcg@k": 0.0
+      },
+      "latency_ms": 94.50974999708706,
+      "top_score": 0.0315136476426799,
+      "gold_chunk_ids": [
+        "lisansustu_egitim_ogretim_yonetmeligi::46"
+      ],
+      "variant": "paraphrased",
+      "answer_text": "",
+      "abstained": false,
+      "citations": [],
+      "invalid_citations": [],
+      "generation_ms": 0.0
+    },
+    {
+      "question": "Burs Komisyonu'nun her yıl belirlediği limitin üzerinde nakit burs aldığı öğrenciye başka nakit burs verilemeyeceğinden emin olmak için neden emin olabilirim?",
+      "answerable": true,
+      "retrieved_ids": [
+        "burs_yonergesi::10",
+        "burs_yonergesi::7",
+        "burs_yonergesi::9",
+        "burs_yonergesi::16",
+        "burs_yonergesi::13"
+      ],
+      "metrics": {
+        "recall@k": 1.0,
+        "precision@k": 0.2,
+        "mrr": 1.0,
+        "ndcg@k": 1.0
+      },
+      "latency_ms": 169.6354160012561,
+      "top_score": 0.03278688524590164,
+      "gold_chunk_ids": [
+        "burs_yonergesi::10"
+      ],
+      "variant": "paraphrased",
+      "answer_text": "",
+      "abstained": false,
+      "citations": [],
+      "invalid_citations": [],
+      "generation_ms": 0.0
+    },
+    {
+      "question": "GNO puanları 3.50 ve üzeri olan öğrencilerin yüksek onur listesine alınabilmesi için hangi şartların sağlanmış belirtilmiştir?",
+      "answerable": true,
+      "retrieved_ids": [
+        "lisans_egitim_ogretim_yonetmeligi::52",
+        "lisans_egitim_ogretim_yonetmeligi::51",
+        "lisans_egitim_ogretim_yonetmeligi::50",
+        "ozel_ogrenci_yonergesi::4",
+        "lisans_egitim_ogretim_yonetmeligi::43"
+      ],
+      "metrics": {
+        "recall@k": 1.0,
+        "precision@k": 0.2,
+        "mrr": 1.0,
+        "ndcg@k": 1.0
+      },
+      "latency_ms": 135.00829199983855,
+      "top_score": 0.03278688524590164,
+      "gold_chunk_ids": [
+        "lisans_egitim_ogretim_yonetmeligi::52"
+      ],
+      "variant": "paraphrased",
+      "answer_text": "",
+      "abstained": false,
+      "citations": [],
+      "invalid_citations": [],
+      "generation_ms": 0.0
+    }
+  ]
+}

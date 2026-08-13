@@ -22,6 +22,7 @@ sys.path.insert(0, "src")
 
 from frag.config import RunConfig  # noqa: E402
 from frag.evaluation.qagen import (  # noqa: E402
+    FIXED_UNANSWERABLE,
     build_unanswerable,
     eval_set_stats,
     generate_questions,
@@ -51,6 +52,9 @@ def main() -> int:
     parser.add_argument("--paraphrase-only", action="store_true",
                         help="keep the existing generated questions and rebuild "
                              "only their paraphrases")
+    parser.add_argument("--unanswerable-only", action="store_true",
+                        help="keep every answerable question and refresh only the "
+                             "hand-written unanswerable set (no model calls)")
     args = parser.parse_args()
 
     logging.basicConfig(level=logging.WARNING, format="%(levelname)s: %(message)s")
@@ -66,7 +70,17 @@ def main() -> int:
 
     started = time.perf_counter()
 
-    if args.paraphrase_only:
+    if args.unanswerable_only:
+        # The negatives are hand-written constants, so refreshing them needs no
+        # model and no runtime. Kept as its own mode because extending the
+        # negative set is the cheapest way to improve threshold calibration,
+        # and it must not force a 55-minute regeneration of the positives.
+        existing = load_eval_set(args.out)
+        questions = [q for q in existing if q.answerable]
+        print(f"Keeping {len(questions)} answerable questions from {args.out}")
+        questions.extend(build_unanswerable())
+        print(f"Refreshed unanswerable set: {len(FIXED_UNANSWERABLE)} questions")
+    elif args.paraphrase_only:
         # Generation is the expensive half (~55 minutes for 60 questions on
         # qwen2.5-7b) and it is not what usually needs fixing - the paraphrase
         # prompt is. Reusing the saved questions keeps the gold labels and the

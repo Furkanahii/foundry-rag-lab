@@ -1,0 +1,41 @@
+
+=== paraphrase fidelity (60 pairs) ===
+  mean   0.8604
+  median 0.8721
+  min    0.5837
+  p10    0.7382
+
+  below 0.8: 11/60 (18%)
+
+--- 6 lowest-similarity pairs ---
+
+  cos=0.584
+  ORJ: Neler gözlemlemek ve raporlamak istediğinize dair daha fazla bilgi verebileceğimiz bir sınıf programı kapsamında hangi belirli öğretim materyallerini değerlendireceğiz?
+  PAR: Hangi belirli kitapları ve makaleleri inceleyeceğiz ve değerlendirebileceğiz?
+
+  cos=0.678
+  ORJ: Öğrencinin bir yarıyılda fazla kredi alabileceği maksimum ders sayısını neye göre hesaplar?
+  PAR: Yarıyıl boyunca alabilirimizin en fazla kaç dersi öğrenci neye göre hesaplıyor?
+
+  cos=0.684
+  ORJ: Başvuruların sadece yıllık olarak gerçekleştirilmesi nedenidir?
+  PAR: Yeni başvuruların sadece yıllık olarak yapılması nedendir?
+
+  cos=0.704
+  ORJ: Bir öğrenci tez önerisini savunmada reddedildiyse, Üniversite ile hangi ilişkiyi keser? TP işareti almadan önce.
+  PAR: Bir öğrenci tez savunmasında reddetmeseydi üniversiteden nasıl ayrılabilir?
+
+  cos=0.704
+  ORJ: Yürürlükten kaldırılan kurumların listesini verebilir misiniz?
+  PAR: Yürütülmemiş kurumların adlarını bilirim mi?
+
+  cos=0.714
+  ORJ: Hangi durumlarda öğrenciye savunma süresi verilir?
+  PAR: Hangi durumlarda öğrenciye tez sunma zamanı verilir?
+
+Annotated 60 items in data/eval/eval_set.json
+
+Reading: a low-similarity pair means the paraphrase drifted, so its
+gold label may no longer be correct. Those items depress the paraphrased
+variant for a reason unrelated to vocabulary, which makes the measured
+wording gap an *upper* bound on the true lexical advantage.

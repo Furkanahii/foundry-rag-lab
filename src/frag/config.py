@@ -94,10 +94,29 @@ class RetrievalConfig:
 
     dense_top_k: int = 30
     lexical_top_k: int = 30
-    fusion: Literal["rrf", "weighted", "dense_only", "lexical_only"] = "rrf"
+    # Chosen by measurement, and against the author's prior. RRF is the usual
+    # recommendation and was this project's default until the first *valid*
+    # benchmark (60 questions per wording variant, data/results/):
+    #
+    #   config          generated  paraphrased  vs dense-only baseline
+    #   weighted-0.5       0.7370       0.6295  +0.157 (p=0.0006) / +0.114 (p=0.0002)
+    #   rrf                0.6817       0.6130  +0.102 (p=0.026)  / +0.097 (p=0.0088)
+    #
+    # Both weighted variants survive Holm-Bonferroni on both wording variants;
+    # no RRF variant survives on either. The gap is not large, but it is the
+    # only retrieval result in this project that is significant after
+    # correction, and it replicates across two independently worded question
+    # sets - which is the closest thing to a held-out confirmation available
+    # here. See docs/06 for why "survives correction on both variants" is a
+    # much stronger claim than "scored higher".
+    fusion: Literal["rrf", "weighted", "dense_only", "lexical_only"] = "weighted"
     # RRF smoothing constant. Larger values flatten the contribution of rank.
+    # Kept because `fusion="rrf"` remains a supported, benchmarked option.
     rrf_k: int = 60
     # weighted fusion: final = alpha * dense_norm + (1 - alpha) * lexical_norm
+    # 0.5 measured above 0.7 on both variants (0.7370 vs 0.7001 generated,
+    # 0.6295 vs 0.5915 paraphrased): the two arms deserve equal weight, which
+    # is also the reading that needs no corpus-specific tuning to defend.
     alpha: float = 0.5
     # "none" | "llm" (listwise, single call - see retrieve/rerank.py)
     rerank: Literal["none", "llm"] = "none"
@@ -120,10 +139,26 @@ class GenerationConfig:
     temperature: float = 0.1
     max_tokens: int = 700
     require_citations: bool = True
-    # Below this fused retrieval score the system refuses to answer.
-    # The default is a placeholder: docs/05-kalibrasyon-abstention.md derives a
-    # calibrated value from the evaluation set instead of guessing.
-    abstention_threshold: float = 0.0
+    # Which retrieval score drives the refusal decision. Chosen by measurement
+    # (scripts/calibrate_abstention.py, 60 positives / 52 negatives):
+    #
+    #   lexical_raw  AUC 0.843   <- selected
+    #   dense_raw    AUC 0.792
+    #   fused        AUC 0.727
+    #
+    # The fused score loses for a structural reason, not a tuning one:
+    # `weighted_fusion` min-max normalises within each query's own candidates,
+    # so the best hit scores 1.0 whether or not it is any good - one
+    # unanswerable question scored a perfect 1.000. A quantity that cannot say
+    # "I found nothing" cannot decide whether anything was found. The raw arm
+    # scores are not normalised and survive on `FusedHit.dense_score` /
+    # `.lexical_score`. See docs/05-kalibrasyon-abstention.md.
+    abstention_signal: Literal["fused", "dense_raw", "lexical_raw"] = "lexical_raw"
+    # Below this score the system refuses to answer. Calibrated, not guessed:
+    # the strictest cut-off that still answers 90% of answerable questions.
+    # Units follow `abstention_signal` - this value is a BM25 score, so it is
+    # not comparable to a cosine and must be re-derived if the signal changes.
+    abstention_threshold: float = 6.865533
     enable_abstention: bool = True
     language: Literal["tr", "en", "auto"] = "auto"
 

@@ -396,7 +396,16 @@ def paraphrase_questions(
 # we must be *certain* the corpus cannot answer them, and a generated question
 # might accidentally land on a topic the regulations do cover - silently
 # corrupting the abstention metric.
+#
+# The list is graded by difficulty on purpose, because a threshold calibrated
+# only against obvious negatives is calibrated against nothing. "Mars'ta yaşam
+# var mı" shares no vocabulary with the corpus and any threshold rejects it;
+# the interesting negatives are the ones written in the corpus's own register -
+# they mention students, registration, and faculties, so they score high on
+# both retrieval arms while still having no answer anywhere in the documents.
+# Those are the items that set the threshold.
 FIXED_UNANSWERABLE = [
+    # --- easy: unrelated vocabulary -------------------------------------
     "Yemekhanede bugün ne var",
     "Kampüs wifi şifresi nedir",
     "Otopark ücreti aylık kaç lira",
@@ -407,6 +416,24 @@ FIXED_UNANSWERABLE = [
     "Servis otobüsü saatleri nedir",
     "Mars'ta yaşam var mı",
     "Python'da liste nasıl sıralanır",
+    # --- medium: campus topics the regulations do not govern -------------
+    "Öğrenci kulüplerine nasıl üye olurum",
+    "Yurtta internet hızı ne kadar",
+    "Kampüste kedi beslemek serbest mi",
+    "Öğrenci kartımı kaybedersem nereye başvurmalıyım",
+    "Fotokopi merkezi hangi saatlerde açık",
+    "Kampüse bisikletle girebilir miyim",
+    # --- hard: regulation register, but no such rule exists --------------
+    "Öğrencinin ders notunu beğenmezse hangi maddeye göre dersi sildirebilir",
+    "Yaz okulunda alınan derslerin not ortalamasına katkısı hangi maddede yasaklanmıştır",
+    "Öğrencinin kayıt yenileme ücretini üç taksitle ödemesi hangi yönergeye tabidir",
+    "Lisans öğrencisinin danışmanını değiştirme talebi kaç iş gününde sonuçlandırılır",
+    "Disiplin cezası alan öğrencinin bursunun kaç katı tazminat ödemesi gerekir",
+    "Öğrencinin yurt dışı değişim programındaki notlarının hangi katsayıyla çarpılacağı",
+    "Tez savunmasında jüri üyelerine ödenecek huzur hakkı tutarı nedir",
+    "Öğretim üyesinin derse geç kalması durumunda öğrencinin bekleme süresi kaç dakikadır",
+    "Fakülte kurulunun toplantı yeri hangi maddede belirtilmiştir",
+    "Öğrencinin sınav kağıdını fotoğraflama hakkı hangi yönergede düzenlenmiştir",
 ]
 
 

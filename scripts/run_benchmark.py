@@ -40,6 +40,7 @@ from frag.config import RunConfig  # noqa: E402
 from frag.evaluation.qagen import EvalQuestion, load_eval_set  # noqa: E402
 from frag.evaluation.runner import (  # noqa: E402
     EvalReport,
+    compare,
     compare_by_gold,
     compare_many,
     evaluate_retrieval_config,
@@ -181,9 +182,16 @@ def print_wording_gap(
     print("-" * 78)
     for comparison, survives in zip(comparisons, flags):
         t = comparison.test
-        verdict = "significant drop" if survives and t.difference < 0 else (
-            "significant gain" if survives else "no measurable change"
-        )
+        if survives:
+            verdict = "significant drop" if t.difference < 0 else "significant gain"
+        elif t.p_value < 0.05:
+            # Distinguished from a genuine null: a raw p below 0.05 that lost to
+            # the correction is weak evidence, not absence of evidence, and
+            # collapsing the two into one label is the error this harness spends
+            # most of its code preventing.
+            verdict = "n.s. (raw p<0.05, lost to Holm)"
+        else:
+            verdict = "n.s."
         print(
             f"{comparison.name_a:<16}{t.mean_a:>10.4f}{t.mean_b:>12.4f}"
             f"{t.difference:>+10.4f}{t.p_value:>10.4f}  {verdict}"
@@ -192,6 +200,42 @@ def print_wording_gap(
     print("\nA large drop means the configuration was scoring on shared vocabulary")
     print("rather than on retrieval. Read the paraphrased column as the estimate of")
     print("how the system behaves on questions a user actually types.")
+
+
+# Comparisons stated as hypotheses before the sweep ran, each isolating one
+# mechanism by holding everything else fixed. They are reported outside the
+# Holm family on purpose: Holm corrects for *searching* across configurations,
+# and a planned comparison is not a search. Saying so out loud is the point -
+# an unplanned comparison presented as planned is how a sweep launders itself
+# into a discovery.
+PLANNED = [
+    ("lexical-only", "lexical-nostem",
+     "Türkçe gövdeleme, BM25 kolunda"),
+    ("rrf", "baseline-dense",
+     "hibrit füzyon, saf yoğun aramaya karşı"),
+]
+
+
+def print_planned(
+    by_variant: "OrderedDict[str, list[EvalReport]]", metric: str
+) -> None:
+    print(f"\n{'=' * 78}")
+    print(f"Planned comparisons ({metric}, not part of the Holm family)")
+    print(f"{'=' * 78}")
+    print(f"{'hypothesis':<38}{'variant':<13}{'diff':>9}{'p':>9}{'d':>7}")
+    print("-" * 78)
+
+    for name_a, name_b, label in PLANNED:
+        for variant, reports in by_variant.items():
+            index = {r.config_name: r for r in reports}
+            if name_a not in index or name_b not in index:
+                continue
+            # Ordered so a positive difference means the mechanism helped.
+            t = compare(index[name_b], index[name_a], metric=metric).test
+            print(
+                f"{label[:37]:<38}{variant[:12]:<13}{t.difference:>+9.4f}"
+                f"{t.p_value:>9.4f}{t.effect_size:>7.2f}"
+            )
 
 
 def print_power(n: int) -> None:
@@ -247,6 +291,7 @@ def main() -> int:
 
     print(f"total {time.perf_counter() - started:.1f}s")
 
+    print_planned(by_variant, args.metric)
     print_wording_gap(by_variant, args.metric)
     print("\nHolm-Bonferroni applied within each family of comparisons: with 10")
     print("comparisons at alpha=0.05 there is a ~40% chance of at least one false")
