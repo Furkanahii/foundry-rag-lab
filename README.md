@@ -349,3 +349,11 @@ füzyon `rrf` → `weighted` (alpha=0.5), çekimserlik sinyali ham BM25, eşik 6
   karıştırıcı kontrol edilmedi.
 - Bağlam bütçesi ablasyonu n=5 ile yapıldı. Etkinin yönü güvenilir, 1600
   karakter rakamı gürültülü.
+
+---
+
+## Lisans
+
+Kod MIT lisanslı ([LICENSE](LICENSE)). `data/corpus/` altındaki Boğaziçi
+Üniversitesi yönetmelikleri ve onlardan türetilen eval seti bu kapsamın
+dışında — ayrıntı ve korpusu değiştirme adımları: [NOTICE.md](NOTICE.md).

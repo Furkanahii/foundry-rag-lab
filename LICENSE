@@ -19,15 +19,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
----
-
-NOTE ON THE CORPUS
-
-`data/corpus/` contains publicly published regulations and directives of
-Boğaziçi University (bogazici.edu.tr), included here as evaluation material.
-Those documents are the property of their publisher and are not covered by the
-MIT license above. They are redistributed on the understanding that they are
-public documents; if you reuse this repository, review that assumption for your
-jurisdiction and consider swapping in your own corpus - `scripts/build_index.py`
-rebuilds the index from whatever is in that directory.
