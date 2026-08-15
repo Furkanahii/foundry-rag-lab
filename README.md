@@ -51,12 +51,12 @@ Gerçek bir Türkçe yönetmelik korpusunda ölçtüğümüz sorunlar:
 | Sorun | Ölçüm | Çözüm |
 |---|---|---|
 | Kısa metinlerde gömme geometrisi bozuluyor | alakasız kısa cümleler 0.62 kosinüs | `min_chunk_chars` alt sınırı |
-| Tam eşleşme gereken sorgular (ders kodu) | dense marj 0.368 vs 0.304 | BM25 kolu + RRF füzyonu |
+| Tam eşleşme gereken sorgular (ders kodu) | dense marj 0.368 vs 0.304 | BM25 kolu + ağırlıklı füzyon |
 | `MADDE` 9 dokümanın hepsinde, 195 kez | IDF = log(N/df) = 0 | BM25 tek başına yetersiz, hibrit şart |
 | Türkçe `lower()` bozuk | `IŞIK → işik` | dile özgü normalizasyon |
 | Çekim ekleri eşleşmiyor | `kayıtların` vs `kayıt` | Türkçe gövdeleme |
 | PDF kelimeleri kırıyor | 21 gerçek kopukluk | sözlük kanıtlı onarım |
-| Kullanıcı ile belge farklı kelime kullanıyor | "kayıt dondurma" korpusta **yok**, terim "izinli sayılma" | sorgu genişletme + korpustan üretilen eval seti |
+| Kullanıcı ile belge farklı kelime kullanıyor | "kayıt dondurma" korpusta **yok**, terim "izinli sayılma" | korpustan üretilen eval seti (sorgu genişletme henüz yok) |
 | Uzun bağlam talimat takibini bozuyor | 1200 kr'de 2/3 doğru reddetme → 4000 kr'de **0/3** | bağlam bütçesi 1600 kr; geniş getir, dar besle |
 
 ### Bağlam bütçesi: sezginin tersi
@@ -125,9 +125,16 @@ data/corpus/*.pdf,*.html
         │                  chunk_vec  → sqlite-vec (yoğun, C'de)
         │                  chunks_fts → FTS5 BM25 (sözcüksel, C'de)
         ▼
-  index/fusion.py        RRF | weighted | dense_only | lexical_only + MMR
+  index/fusion.py        weighted (varsayılan) | RRF | dense_only |
+        │                lexical_only, + opsiyonel MMR
         ▼
-  (sırada) retrieve/ → generate/ → evaluation/
+  retrieve/retriever.py  füzyon sonrası top_k, opsiyonel LLM yeniden sıralama
+        ▼
+  generate/answerer.py   eşik altındaysa modeli hiç çağırmadan reddet;
+        │                yoksa 1600 kr bağlamla üret, atıfları doğrula
+        ▼
+  evaluation/            nDCG/MRR/Recall, bootstrap CI, eşleştirilmiş
+                         permütasyon testi, Holm, eşik kalibrasyonu
 ```
 
 Sunucu yok, Docker yok. İndeks tek bir `.db` dosyası — USB'ye kopyalanır, çalışır.
