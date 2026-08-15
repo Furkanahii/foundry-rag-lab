@@ -1,11 +1,42 @@
 # Foundry RAG Lab
 
+[![tests](https://github.com/Furkanahii/foundry-rag-lab/actions/workflows/tests.yml/badge.svg)](https://github.com/Furkanahii/foundry-rag-lab/actions/workflows/tests.yml)
+
 Tamamen cihaz üzerinde çalışan, hibrit erişimli ve **istatistiksel olarak
 doğrulanan** bir Türkçe RAG sistemi. Microsoft Foundry Local üzerine kurulu;
 hiçbir aşamada internet veya bulut hesabı gerekmiyor.
 
 Bu bir RAG *demosu* değil, bir RAG *laboratuvarı*: her tasarım kararı ölçümle
 gerekçelendiriliyor, ve sistemin kendisi o ölçümü yapacak araçları içeriyor.
+
+## Hızlı başlangıç
+
+```bash
+/opt/homebrew/bin/python3.12 -m venv .venv        # x86_64 Python OLMAZ, bkz. docs/07
+./.venv/bin/python -m pip install -r requirements.txt
+PYTHONPATH=src ./.venv/bin/python scripts/smoke_test.py    # modelleri indirir
+PYTHONPATH=src ./.venv/bin/streamlit run app/dashboard.py
+```
+
+İndeks (`data/index/bogazici.db`) depoda hazır geliyor, yani ilk çalıştırma için
+yeniden gömme gerekmiyor. Korpusu değiştirirsen:
+
+```bash
+PYTHONPATH=src ./.venv/bin/python scripts/build_index.py --force
+```
+
+### Komutlar
+
+| script | ne yapar |
+|---|---|
+| `build_index.py` | Korpustan hibrit indeksi kurar (dense + BM25) |
+| `build_eval_set.py` | Değerlendirme setini korpustan üretir |
+| `run_benchmark.py` | 11 konfigürasyonu iki kelime varyantında karşılaştırır |
+| `calibrate_abstention.py` | Çekimserlik sinyalini ve eşiğini veriden türetir |
+| `check_paraphrase_fidelity.py` | Parafrazların anlamı koruduğunu ölçer |
+| `compare_chat_models.py` | Üretim modellerini gecikme/tekrar/reddetme ile karşılaştırır |
+| `prompt_ablation.py` | Bağlam bütçesini tarar |
+| `smoke_test.py` | Ortamı ve modelleri doğrular |
 
 ---
 
@@ -49,23 +80,26 @@ ulaşmasını sağlar. **Geniş getir, dar besle.**
 
 ---
 
-## Kurulum
+## Kurulum notu: mimari tuzağı
 
-Apple Silicon Mac veya Windows. **Önemli:** `foundry-local-sdk` paketinin arm64
-sürümü (1.2.x) native runtime'ı da getirir; Homebrew kurulumuna gerek yoktur.
-x86_64 üzerinde PyPI yalnızca 0.5.x sunar ve API'si tamamen farklıdır — Anaconda
-Python'u genelde x86_64'tür, bu yüzden native bir Python şart.
+Apple Silicon Mac veya Windows. Kurulum komutları yukarıda; buradaki tek konu
+kolay kaçırılan bir tuzak.
 
-```bash
-/opt/homebrew/bin/python3.12 -m venv .venv
-./.venv/bin/python -m pip install -r requirements.txt
-```
+`foundry-local-sdk` **mimariye göre iki farklı kütüphane** kuruyor ve ikisinin
+API'si ortak değil:
 
-Ortamı doğrula (modelleri indirir, ilk çalıştırma uzun sürer):
+| mimari | sürüm | ne geliyor |
+|---|---|---|
+| arm64 (Apple Silicon) | 1.2.x | native runtime dahil; Homebrew kurulumuna gerek yok |
+| x86_64 | 0.5.x | ince HTTP istemcisi, tamamen farklı çağrılar |
 
-```bash
-PYTHONPATH=src ./.venv/bin/python scripts/smoke_test.py
-```
+Bu proje 1.x API'sini hedefliyor. Anaconda Python'u genelde x86_64 olduğu için
+sanal ortamı `/opt/homebrew/bin/python3.12` ile kurmak şart. `requirements.txt`
+tabanı bu yüzden `>=1.2`: x86_64 üzerinde pip çözümlemeyi **başarısız kılar**,
+ki doğru davranış budur — 0.5.x kurulsaydı gereksinimi karşılar ve ilk çağrıda
+kırılırdı.
+
+Ayrıntı ve diğer ortam tuzakları: [docs/07](docs/07-model-secimi.md).
 
 ---
 
@@ -103,21 +137,25 @@ Sunucu yok, Docker yok. İndeks tek bir `.db` dosyası — USB'ye kopyalanır, �
 ## Kullanım
 
 ```bash
-# İndeksi kur
-PYTHONPATH=src ./.venv/bin/python -c "
-from frag.config import RunConfig
-from frag.runtime.foundry import FoundryRuntime
-from frag.index.builder import build_index
-cfg = RunConfig(); rt = FoundryRuntime(cfg.runtime)
-build_index(cfg, rt, 'data/corpus', 'data/index/bogazici.db', progress=print)
-"
-```
+# İndeksi kur (chunking veya gömme modeli değiştiyse --force gerekir)
+PYTHONPATH=src ./.venv/bin/python scripts/build_index.py
 
-Model seçimini yeniden ölçmek için:
+# Farklı bir chunking stratejisi dene
+PYTHONPATH=src ./.venv/bin/python scripts/build_index.py --strategy sentence_window --force
 
-```bash
+# Model seçimini yeniden ölç
 PYTHONPATH=src ./.venv/bin/python scripts/compare_chat_models.py
 ```
+
+`RunConfig` chunking ve gömme modelini geri kalan ayarlardan **ayrı** hashliyor
+(`index_fingerprint`). Erişim ve üretim ayarları sorgu anında uygulandığı için
+yeniden gömme gerektirmiyor; çoğu deney 20 dakikalık bir yeniden indekslemeden
+2 saniyelik bir config yüklemesine iniyor. `build_index.py` bu parmak izini
+kontrol edip indeks güncelse hiç çalışmıyor.
+
+**Uyarı:** indeksi yeniden kurmak chunk id'lerini değiştirir, dolayısıyla
+`data/eval/eval_set.json` içindeki gold etiketleri geçersizleşir. Script bunu
+hatırlatıyor; eval setini yeniden üretmeden koşulan bir benchmark anlamsızdır.
 
 ---
 

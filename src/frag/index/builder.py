@@ -94,7 +94,10 @@ def build_index(
         return BuildReport(
             n_documents=store.count_documents(),
             n_chunks=store.count_chunks(),
-            embedding_dim=store.embedding_dim or 0,
+            # From metadata, not from the attribute: `store.embedding_dim` is
+            # populated when vectors are *written*, so on the reuse path - the
+            # one this branch is - it is still None and would report 0.
+            embedding_dim=int(store.get_meta("embedding_dim") or 0),
             chunking_strategy=store.get_meta("chunking_strategy") or "?",
             elapsed_s=time.perf_counter() - started,
             embed_s=0.0,

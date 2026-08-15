@@ -1,16 +1,28 @@
 # ---- Foundry Local runtime -------------------------------------------------
-# NOTE: The published PyPI package (0.5.x) is a *service manager*, not an
-# inference library. It boots the local Foundry service and hands us an
-# OpenAI-compatible HTTP endpoint. Actual inference calls go through `openai`.
-# (Microsoft Learn currently documents a newer native SDK that is not on PyPI.)
-foundry-local-sdk>=0.5.1
+# IMPORTANT: this package resolves to two different libraries depending on CPU
+# architecture, and they do not share an API.
+#
+#   arm64 (Apple Silicon)  -> 1.2.x  native SDK, bundles the inference runtime
+#                             (foundry-local-core, onnxruntime-genai-core).
+#                             No Homebrew `foundrylocal` install is needed.
+#   x86_64                 -> 0.5.x  thin HTTP client for a separately
+#                             installed service. Completely different calls.
+#
+# This project targets the 1.x API (`FoundryLocalManager.initialize`,
+# `catalog.get_model`, `model.get_embedding_client`). The floor is therefore
+# >=1.2 rather than >=0.5: pip on an x86_64 interpreter will fail to resolve it,
+# which is the correct outcome - installing 0.5.x would satisfy the requirement
+# and then break at the first call. Anaconda's Python is usually x86_64, so on
+# a Mac use /opt/homebrew/bin/python3.12 to create the venv. See docs/07.
+foundry-local-sdk>=1.2
+# Generation goes through the OpenAI-compatible local web service, because the
+# native chat client exposes no temperature/max_tokens. See runtime/foundry.py.
 openai>=1.40.0
 
 # ---- Numerics & statistics -------------------------------------------------
 numpy>=1.26
-scipy>=1.11            # permutation tests, distributions
-scikit-learn>=1.4      # calibration curves, metrics helpers
-pandas>=2.1
+scipy>=1.11            # normal quantiles for the power calculation
+pandas>=2.1            # dashboard tables
 
 # ---- Storage ---------------------------------------------------------------
 sqlite-vec>=0.1.6      # dense vector search as a SQLite extension
@@ -18,18 +30,13 @@ sqlite-vec>=0.1.6      # dense vector search as a SQLite extension
 # ---- Document ingestion ----------------------------------------------------
 pypdf>=4.2             # PDF text extraction
 beautifulsoup4>=4.12   # HTML parsing
-lxml>=5.0
-markdown-it-py>=3.0
+lxml>=5.0              # the parser BeautifulSoup is constructed with
 
-# ---- Interface & reporting -------------------------------------------------
+# ---- Interface -------------------------------------------------------------
 streamlit>=1.36
-altair>=5.3
-matplotlib>=3.8
 
 # ---- Utilities -------------------------------------------------------------
-pyyaml>=6.0
-rich>=13.7             # readable CLI output
-tqdm>=4.66
+pyyaml>=6.0            # RunConfig.load / .save
 
 # ---- Tests -----------------------------------------------------------------
 pytest>=8.0

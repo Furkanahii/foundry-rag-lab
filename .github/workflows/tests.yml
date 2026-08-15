@@ -1,0 +1,42 @@
+name: tests
+
+# The test suite deliberately avoids Foundry Local: every model call in
+# `tests/` goes through a fake runtime. That is what makes CI possible at all -
+# GitHub runners have no local inference runtime, and the arm64 SDK this project
+# depends on does not install on the x86_64 runners. So this workflow installs
+# only what the tested modules import, and skips `requirements.txt` for exactly
+# the reason documented at the top of that file.
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  pytest:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.11", "3.12"]
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: pip
+
+      - name: Install test dependencies
+        # numpy for the vector maths, scipy for the power calculation's normal
+        # quantiles, pyyaml because RunConfig imports it at module level. The
+        # heavier dependencies (sqlite-vec, pypdf, streamlit) are imported
+        # inside functions the tests never reach, and the Foundry SDK is never
+        # imported at all - the fake runtime stands in for it.
+        run: python -m pip install --upgrade pip numpy scipy pyyaml pytest
+
+      - name: Run tests
+        env:
+          PYTHONPATH: src
+        run: python -m pytest tests/ -q

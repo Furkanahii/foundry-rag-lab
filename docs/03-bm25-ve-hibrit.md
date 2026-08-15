@@ -204,6 +204,35 @@ $\alpha = 1$ ve $\alpha = 0$ aynı zamanda tek-kol temel çizgilerini
 (`dense_only`, `lexical_only`) verir — bu yüzden dört strateji de aynı kod
 yolundan geçer ve normalizasyondaki bir hata temel çizgide saklanamaz.
 
+### 3.6.1 Teori RRF diyor, ölçüm weighted dedi
+
+Yukarıdaki iki bölüm okunduğunda beklenen sonuç RRF'nin kazanmasıdır: ölçekten
+bağımsız, aday derinliğine bağlı değil, kalibrasyon problemi yok. Projenin
+varsayılanı da bu gerekçeyle RRF idi.
+
+Ölçüm başka söyledi. 60 üretilmiş + 60 parafraz soruluk sette, Holm-Bonferroni
+düzeltmesinden sonra ayakta kalan **tek** erişim kazancı ağırlıklı füzyon oldu,
+üstelik her iki kelime varyantında da:
+
+| strateji | üretilmiş | parafraz | temele karşı |
+|---|---|---|---|
+| weighted-0.5 | 0.7370 | 0.6295 | +0.157 (p=0.0006) ✓ / +0.114 (p=0.0002) ✓ |
+| rrf | 0.6817 | 0.6130 | +0.102 (p=0.026) / +0.097 (p=0.0088) |
+
+Neden şaşırtıcı değil, sadece beklenmedik: RRF, büyüklük bilgisini **atarak**
+kalibrasyon problemini çözüyor. Bu bir taviz — ve bu korpusta atılan bilgi işe
+yarar bilgiymiş. Yönetmelik sorgularında birinci ile ikinci aday arasındaki
+uçurum genelde gerçek bir fark; sıraya indirgemek onu siliyor.
+
+**Ama §3.6'daki tuzak ortadan kalkmadı.** `dense_top_k` değişirse $\alpha$
+yeniden ayarlanmalı, çünkü normalizasyon aday derinliğine bağlı. Yani bu bir
+korpus ve derinlik özelinde ölçülmüş seçim, evrensel bir sonuç değil — RRF'nin
+teorik üstünlüğü hâlâ geçerli, sadece bu ölçekte karşılığını vermiyor.
+
+Aynı normalizasyon, çekimserlik sinyali olarak füzyon skorunun neden
+kullanılamayacağının da sebebi:
+[05 — Kalibrasyon ve çekimserlik](05-kalibrasyon-abstention.md).
+
 ---
 
 ## 3.7 MMR: çeşitlilik
@@ -232,6 +261,7 @@ bu fazlasıyla yeterlidir.
 | Hibrit | Hata modları bağımsız → füzyon her iki koldan iyi |
 | Skor toplamamak | Ölçekler karşılaştırılamaz (0.998 vs 0.368) |
 | RRF | Sıra ordinal → kalibrasyon problemi ortadan kalkar |
+| **Varsayılan: weighted-0.5** | **Teori RRF'i tercih etti, ölçüm etmedi (§3.6.1)** |
 | $k = 60$ | Üst sıra baskınlığı ile uzlaşma arasında denge |
 | Türkçe gövdeleme | Sondan eklemeli dilde tam eşleşme çalışmaz |
 | MMR açgözlü | Submodüler → $(1-1/e)$ garantisi |

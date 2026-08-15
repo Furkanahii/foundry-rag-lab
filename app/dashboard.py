@@ -70,37 +70,67 @@ chat_model = st.sidebar.selectbox(
 )
 
 st.sidebar.subheader("Erişim")
+# Every widget below starts on the value `RunConfig` ships, so what the demo
+# shows on open is the configuration the benchmark actually selected. Hardcoded
+# indices drift the moment a default changes - which is exactly what happened
+# once here, leaving the dashboard opening on RRF and a 2400-character context
+# after both had been measured and replaced.
+_defaults = RunConfig()
+_fusion_options = ["rrf", "weighted", "dense_only", "lexical_only"]
 fusion = st.sidebar.selectbox(
-    "Füzyon", ["rrf", "weighted", "dense_only", "lexical_only"], index=0
+    "Füzyon", _fusion_options,
+    index=_fusion_options.index(_defaults.retrieval.fusion),
+    help="Ölçüm: weighted-0.5, Holm düzeltmesinden sonra ayakta kalan tek kazanç.",
 )
 alpha = st.sidebar.slider(
-    "alpha (weighted)", 0.0, 1.0, 0.5, 0.05,
+    "alpha (weighted)", 0.0, 1.0, _defaults.retrieval.alpha, 0.05,
     help="1.0 = sadece yoğun, 0.0 = sadece BM25",
     disabled=(fusion != "weighted"),
 )
-rrf_k = st.sidebar.slider("RRF k", 1, 120, 60, 1, disabled=(fusion != "rrf"))
-top_k = st.sidebar.slider("top_k", 1, 12, 5, 1)
-dense_k = st.sidebar.slider("dense aday sayısı", 5, 60, 30, 5)
-lexical_k = st.sidebar.slider("BM25 aday sayısı", 5, 60, 30, 5)
+rrf_k = st.sidebar.slider("RRF k", 1, 120, _defaults.retrieval.rrf_k, 1,
+                          disabled=(fusion != "rrf"))
+top_k = st.sidebar.slider("top_k", 1, 12, _defaults.retrieval.top_k, 1)
+dense_k = st.sidebar.slider("dense aday sayısı", 5, 60,
+                            _defaults.retrieval.dense_top_k, 5)
+lexical_k = st.sidebar.slider("BM25 aday sayısı", 5, 60,
+                              _defaults.retrieval.lexical_top_k, 5)
 
 st.sidebar.subheader("İyileştirmeler")
-lexical_stem = st.sidebar.checkbox("Türkçe gövdeleme", True)
+lexical_stem = st.sidebar.checkbox(
+    "Türkçe gövdeleme", _defaults.retrieval.lexical_stem,
+    help="Ölçüm: projenin en büyük tek etkisi (+0.21 nDCG, p=0.0014).",
+)
 query_instruction = st.sidebar.checkbox("Sorgu talimat öneki", False)
 use_mmr = st.sidebar.checkbox("MMR çeşitlilik", False)
 mmr_lambda = st.sidebar.slider("MMR lambda", 0.0, 1.0, 0.7, 0.05, disabled=not use_mmr)
 rerank = st.sidebar.selectbox("Yeniden sıralama", ["none", "llm"], index=0)
 
 st.sidebar.subheader("Üretim")
-enable_abstention = st.sidebar.checkbox("Çekimserlik açık", False)
-threshold = st.sidebar.number_input(
-    "Çekimserlik eşiği", value=0.0, step=0.001, format="%.5f",
-    disabled=not enable_abstention,
-    help="evaluation/stats.find_best_threshold ile kalibre edilmeli.",
+enable_abstention = st.sidebar.checkbox(
+    "Çekimserlik açık", _defaults.generation.enable_abstention
 )
-temperature = st.sidebar.slider("Sıcaklık", 0.0, 1.0, 0.1, 0.05)
+st.sidebar.caption(
+    f"Sinyal: `{_defaults.generation.abstention_signal}` "
+    f"(AUC 0.843; füzyon skoru 0.727 ile kaybediyor — sorgu içinde "
+    f"normalize edildiği için mutlak güven ifade edemiyor)."
+)
+threshold = st.sidebar.number_input(
+    "Çekimserlik eşiği", value=_defaults.generation.abstention_threshold,
+    step=0.1, format="%.5f",
+    disabled=not enable_abstention,
+    help="scripts/calibrate_abstention.py ile kalibre edildi: duyarlılığı "
+         "%90'da tutan en katı eşik. Birim, seçilen sinyale bağlı (BM25 skoru).",
+)
+temperature = st.sidebar.slider(
+    "Sıcaklık", 0.0, 1.0, _defaults.generation.temperature, 0.05
+)
+# Answerer's own default, not a widget-local guess: 1600 is the measured
+# budget, and the slider previously opened at 2400 - a value the ablation
+# showed already degrades instruction-following.
 max_context = st.sidebar.slider(
-    "Bağlam bütçesi (karakter)", 800, 8000, 2400, 200,
-    help="Ölçüm: uzun bağlam talimat takibini bozuyor ve gecikmeyi büyütüyor.",
+    "Bağlam bütçesi (karakter)", 800, 8000, 1600, 200,
+    help="Ölçüm: 1200 kr'de 2/3 doğru reddetme, 4000 kr'de 0/3. "
+         "Uzun bağlam talimat takibini bozuyor ve gecikmeyi büyütüyor.",
 )
 
 cfg = build_config(**{
@@ -193,6 +223,22 @@ with tab_ask:
                 "MMR": result.mmr_applied,
                 **{k: round(v, 1) for k, v in result.stage_ms.items()},
             })
+
+            # The refusal decision, shown as an inequality rather than a verdict:
+            # a demo that says "refused" teaches nothing, while one that shows
+            # 4.54 < 6.87 explains itself and makes the threshold arguable.
+            st.subheader("Çekimserlik kararı")
+            score = pipeline.answerer.abstention_score(result)
+            if not enable_abstention:
+                st.caption("Kapalı — sistem her durumda cevap üretiyor.")
+            else:
+                comparison = "<" if score < threshold else "≥"
+                st.metric(
+                    f"{cfg.generation.abstention_signal}",
+                    f"{score:.3f} {comparison} {threshold:.3f}",
+                    delta="reddedildi" if score < threshold else "cevaplandı",
+                    delta_color="inverse" if score < threshold else "normal",
+                )
 
         st.subheader("Getirilen pasajlar — neden bunlar?")
         rows = []
