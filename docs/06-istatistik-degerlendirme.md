@@ -204,12 +204,30 @@ kararında ortalama değil en kötü durum önemli olabilir.
 **Brier skoru** da raporlanır çünkü **proper scoring rule**'dur: ECE'nin aksine,
 sürekli taban oranını tahmin eden bir model tarafından kandırılamaz.
 
-Kendi doğrulamamız:
+Kendi doğrulamamız — bunlar **sentetik** veri üzerinde, uygulamanın doğru
+çalıştığını göstermek için; sistemin kalibrasyon sonucu değil:
 
 ```
 iyi kalibre  : ECE=0.0385  MCE=0.0795  Brier=0.1687
 kötü kalibre : ECE=0.2562  MCE=0.4525  Brier=0.3337
 ```
+
+### Ve bu projede ECE neden hesaplanmadı
+
+Yukarıdaki her şey doğru, ama seçilen çekimserlik sinyaline **uygulanamadı**.
+Sinyal ham BM25 skoru ve $[0,1]$ aralığında değil (bu korpusta 2.41–47.78).
+ECE bir skoru doğrulukla karşılaştırır; sınırsız bir sayıda tanımsızdır.
+Kutulara zorlandığında tüm değerler son kutuya yığılıyor ve **ECE = 0.0000**
+gibi gurur verici bir sonuç çıkıyor — yanında Brier = 152 dururken. İkisi aynı
+anda doğru olamaz.
+
+`calibrate_abstention.py` bu yüzden metriği raporlamak yerine **reddediyor** ve
+nedenini yazıyor. Sessizce yanlış bir sayı üreten bir metrik, hiç
+hesaplanmayandan tehlikelidir.
+
+Eşiğin geçerliliği bundan etkilenmiyor: bir eşik yalnızca **monotonluk**
+gerektirir, skorun olasılık olmasını değil. Ayrıntı:
+[05 — Kalibrasyon ve çekimserlik](05-kalibrasyon-abstention.md).
 
 ### Eşiği veriden öğrenmek
 

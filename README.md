@@ -268,6 +268,32 @@ Geçersiz ilk koşuda sözlüksel arama 0.86 ile yoğun aramanın 0.58'ini eziyo
 görünüyordu. Şimdi: üretilmiş sette avantaj anlamsız (p=0.065), parafraz sette
 tamamen yok (p=0.47). O üstünlük soruların yazılış biçiminden geliyormuş.
 
+### LLM yeniden sıralama: yapıldı, ölçüldü, kapatıldı
+
+Listwise yeniden sıralama literatürün standart iyileştirmesi ve `retrieve/rerank.py`
+içinde 157 satır olarak duruyordu — ama hiç ölçülmemişti. Ölçüldüğünde sonuç net:
+
+| planlı karşılaştırma | varyant | fark | p | d |
+|---|---|---|---|---|
+| yeniden sıralama, `weighted-0.5` üzerine | üretilmiş | **−0.308** | 0.0001 | −0.73 |
+| yeniden sıralama, `weighted-0.5` üzerine | parafraz | **−0.217** | 0.0015 | −0.44 |
+
+nDCG 0.7370 → 0.4295. Üstelik sorgu başına ~41 saniye: erişim 0.2 saniye sürüyordu,
+yani iki yüz kat yavaşlatıp sonucu bozuyor.
+
+**Nedeni zaten ölçülmüştü.** Yeniden sıralayıcı modele 12 pasajı birden veriyor —
+yaklaşık 4800 karakter. Bağlam bütçesi ablasyonu tam da bu bölgede talimat takibinin
+çöktüğünü göstermişti (4000 karakterde 0/3 doğru reddetme). İki bağımsız deney aynı
+sınırı işaret ediyor: küçük bir modelde uzun bağlam gerektiren her özellik aynı duvara
+çarpıyor.
+
+Özellik kodda kalıyor ama `rerank="none"` varsayılanıyla kapalı — daha büyük bir
+modelle yeniden ölçülebilsin diye.
+
+```bash
+PYTHONPATH=src ./.venv/bin/python scripts/run_benchmark.py --with-rerank
+```
+
 ### Çekimserlik: füzyon skoru yanlış sinyal
 
 Sistemin cevabı bilmediğinde susması gerekiyor, ve eşik tahmin edilmemeli.

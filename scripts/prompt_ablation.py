@@ -91,9 +91,29 @@ def leaked(text: str) -> bool:
 
 
 def main() -> int:
+    # Every other script in this project takes arguments; this one used to load
+    # multi-gigabyte models the instant it was invoked, with no way to see what
+    # it would do first. `--help` costing nothing is a small thing that matters
+    # when the alternative is a five-minute accidental download.
+    import argparse
+
+    parser = argparse.ArgumentParser(
+        description="Cross prompt language with context budget and measure "
+                    "grounding behaviour."
+    )
+    parser.add_argument("--index", default="data/index/bogazici.db")
+    parser.add_argument("--model", default=None,
+                        help="override the chat model under test")
+    parser.add_argument("--budgets", type=int, nargs="+", default=CONTEXT_BUDGETS,
+                        help=f"context budgets in characters "
+                             f"(default: {' '.join(map(str, CONTEXT_BUDGETS))})")
+    args = parser.parse_args()
+
     cfg = RunConfig()
+    if args.model:
+        cfg.runtime.chat_model = args.model
     cfg.generation.enable_abstention = False  # isolate the *prompt* effect
-    pipeline = RagPipeline(cfg, "data/index/bogazici.db")
+    pipeline = RagPipeline(cfg, args.index)
 
     print(f"model: {cfg.runtime.chat_model}")
     print(f"{'lang':<6}{'ctx':>6}{'refuse_ok':>11}{'leak':>7}{'answer_ok':>11}"
@@ -102,7 +122,7 @@ def main() -> int:
 
     rows = []
     for language in LANGUAGES:
-        for budget in CONTEXT_BUDGETS:
+        for budget in args.budgets:
             pipeline.answerer.max_context_chars = budget
             if language == "en":
                 import frag.generate.answerer as mod

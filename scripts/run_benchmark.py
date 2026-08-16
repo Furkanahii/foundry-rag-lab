@@ -56,13 +56,20 @@ DEFAULT_EVAL = "data/eval/eval_set.json"
 VARIANT_ORDER = ["generated", "paraphrased"]
 
 
-def make_configs() -> list[RunConfig]:
+def make_configs(with_rerank: bool = False) -> list[RunConfig]:
     """The configurations to compare.
 
     The first entry is the baseline - deliberately the naive setup the project
     plan describes (dense-only, no stemming, no fusion), so that every later
     number is stated as an improvement over the obvious thing rather than over
     another tuned system.
+
+    `with_rerank` is opt-in because it changes the cost class of the whole run.
+    Every other configuration here is pure retrieval at ~0.2 s per query;
+    listwise reranking adds one LLM call per query, turning a 3-minute sweep
+    into a 20-minute one. It is measured all the same - shipping 157 lines of
+    reranker whose value was never checked would be exactly the assumption this
+    project exists to eliminate.
     """
     configs: list[RunConfig] = []
 
@@ -83,6 +90,12 @@ def make_configs() -> list[RunConfig]:
     configs.append(build("rrf-instruct", fusion="rrf", query_instruction=True))
     configs.append(build("rrf-truncate6", fusion="rrf", lexical_truncate=6))
     configs.append(build("rrf-mmr", fusion="rrf", use_mmr=True))
+    if with_rerank:
+        # Applied on top of the selected default rather than on the baseline:
+        # the question a reranker has to answer is "do you improve the system we
+        # actually ship", not "can you beat the worst configuration".
+        configs.append(build("weighted-rerank", fusion="weighted", alpha=0.5,
+                             rerank="llm"))
     return configs
 
 
@@ -213,6 +226,8 @@ PLANNED = [
      "Türkçe gövdeleme, BM25 kolunda"),
     ("rrf", "baseline-dense",
      "hibrit füzyon, saf yoğun aramaya karşı"),
+    ("weighted-rerank", "weighted-0.5",
+     "LLM yeniden sıralama, seçilen varsayılan üzerine"),
 ]
 
 
@@ -257,6 +272,9 @@ def main() -> int:
     parser.add_argument("--save", default="data/results")
     parser.add_argument("--variant", default=None,
                         help="restrict to one wording variant (default: all)")
+    parser.add_argument("--with-rerank", action="store_true",
+                        help="also measure listwise LLM reranking (adds one "
+                             "model call per query; minutes, not seconds)")
     args = parser.parse_args()
 
     logging.basicConfig(level=logging.WARNING, format="%(levelname)s: %(message)s")
@@ -274,7 +292,9 @@ def main() -> int:
     cfg0 = RunConfig()
     runtime = FoundryRuntime(cfg0.runtime)
 
-    configs = make_configs()
+    configs = make_configs(with_rerank=args.with_rerank)
+    if args.with_rerank:
+        print("reranking is on: expect minutes per variant, not seconds\n")
     by_variant: OrderedDict[str, list[EvalReport]] = OrderedDict()
     started = time.perf_counter()
 

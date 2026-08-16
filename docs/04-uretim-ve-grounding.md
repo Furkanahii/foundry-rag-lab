@@ -44,6 +44,26 @@ metriği başarı sayıyor, kullanıcı ise yanlış cevap alıyor. Erişim metr
 uçtan uca doğruluk arasındaki bu boşluk, `evaluate_end_to_end`'in neden ayrı
 bir fonksiyon olduğunun cevabı.
 
+### Aynı sınır, ikinci bir deneyde
+
+Bu bulgu tek bir ablasyona dayansaydı zayıf olurdu (n = 5). Ama bağımsız bir
+ölçüm aynı sınıra çarptı: **listwise LLM yeniden sıralama**, modele 12 pasajı
+birden veriyor — yaklaşık 4800 karakter, yani tam ablasyonun çöküş bölgesi.
+Sonuç, `weighted-0.5` üzerine uygulandığında:
+
+| varyant | fark | p | d |
+|---|---|---|---|
+| üretilmiş | −0.308 | 0.0001 | −0.73 |
+| parafraz | −0.217 | 0.0015 | −0.44 |
+
+Yeniden sıralayıcı, sıralamayı düzeltmesi beklenirken bozuyor — üstelik sorgu
+başına ~41 saniye ödeyerek. Bu, bağlam bütçesi bulgusunun bir tekrarı sayılır:
+küçük bir modelde uzun bağlam gerektiren her özellik, o özellik ne kadar
+"standart iyileştirme" olursa olsun, aynı duvara çarpıyor.
+
+Pratik sonuç: `rerank` varsayılanı `"none"`. Kod siliniyor değil — daha büyük
+bir modelle yeniden ölçülebilsin diye duruyor, ve ölçüm komutu README'de.
+
 ---
 
 ## 2. Atıf doğrulama: modelin kendi kendini ele vermesi

@@ -154,8 +154,22 @@ def evaluate(alias: str) -> Result | None:
 
 
 def main() -> int:
+    # Downloading and loading four models is the most expensive thing any
+    # script here does, and it used to start on invocation with no way to
+    # preview or narrow it. `--models` also makes the comparison re-runnable
+    # against a single candidate without editing the file.
+    import argparse
+
+    parser = argparse.ArgumentParser(
+        description="Compare chat models on latency, repetition, grounding and "
+                    "refusal. Downloads any model not already cached."
+    )
+    parser.add_argument("--models", nargs="+", default=CANDIDATES,
+                        help=f"aliases to test (default: {' '.join(CANDIDATES)})")
+    args = parser.parse_args()
+
     results: list[Result] = []
-    for alias in CANDIDATES:
+    for alias in args.models:
         print(f"\n### {alias}")
         r = evaluate(alias)
         if r is None:

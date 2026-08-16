@@ -1,6 +1,6 @@
 {
   "config_name": "rrf-k120",
-  "fingerprint": "8d720222b8c5",
+  "fingerprint": "49c2c5bf4261",
   "n_queries": 60,
   "retrieval_metrics": {
     "recall@k": 0.8,
@@ -12,10 +12,10 @@
   },
   "answer_metrics": {},
   "latency": {
-    "p50_ms": 123.60087499837391,
-    "p95_ms": 209.69229099864606,
-    "max_ms": 245.92033400040236,
-    "mean_ms": 137.227504166367
+    "p50_ms": 167.26145800203085,
+    "p95_ms": 322.8891249746084,
+    "max_ms": 447.03845799085684,
+    "mean_ms": 184.38627991563408
   },
   "intervals": {
     "recall@k": {
@@ -77,13 +77,14 @@
       "temperature": 0.1,
       "max_tokens": 700,
       "require_citations": true,
-      "abstention_threshold": 0.0,
+      "abstention_signal": "lexical_raw",
+      "abstention_threshold": 6.865533,
       "enable_abstention": true,
       "language": "auto"
     },
     "seed": 20260801
   },
-  "elapsed_s": 8.256344500001433,
+  "elapsed_s": 11.091961124999216,
   "records": [
     {
       "question": "Hangi dersleri en fazla iki adet kredi olarak seçebilirim?",
@@ -101,7 +102,7 @@
         "mrr": 0.5,
         "ndcg@k": 0.6309297535714575
       },
-      "latency_ms": 140.10741599850007,
+      "latency_ms": 119.09266700968146,
       "top_score": 0.016264462809917356,
       "gold_chunk_ids": [
         "lisansustu_egitim_ogretim_yonetmeligi::63"
@@ -129,7 +130,7 @@
         "mrr": 0.0,
         "ndcg@k": 0.0
       },
-      "latency_ms": 189.1979159991024,
+      "latency_ms": 132.06475001061335,
       "top_score": 0.016196721311475412,
       "gold_chunk_ids": [
         "lisansustu_egitim_ogretim_yonetmeligi::38"
@@ -157,7 +158,7 @@
         "mrr": 0.0,
         "ndcg@k": 0.0
       },
-      "latency_ms": 163.12399999878835,
+      "latency_ms": 126.33745901985094,
       "top_score": 0.01620097074642529,
       "gold_chunk_ids": [
         "kayit_yonergesi::18"
@@ -185,7 +186,7 @@
         "mrr": 1.0,
         "ndcg@k": 1.0
       },
-      "latency_ms": 149.70970899958047,
+      "latency_ms": 121.36616598581895,
       "top_score": 0.016394544110730366,
       "gold_chunk_ids": [
         "lisansustu_egitim_ogretim_yonetmeligi::71"
@@ -213,7 +214,7 @@
         "mrr": 0.5,
         "ndcg@k": 0.6309297535714575
       },
-      "latency_ms": 147.33691699802876,
+      "latency_ms": 142.9208329936955,
       "top_score": 0.016260162601626018,
       "gold_chunk_ids": [
         "konut_tahsis_yonergesi::8"
@@ -241,7 +242,7 @@
         "mrr": 0.3333333333333333,
         "ndcg@k": 0.5
       },
-      "latency_ms": 123.60087499837391,
+      "latency_ms": 146.57304200227372,
       "top_score": 0.016461184121392768,
       "gold_chunk_ids": [
         "lisansustu_egitim_ogretim_yonetmeligi::40"
@@ -269,7 +270,7 @@
         "mrr": 0.0,
         "ndcg@k": 0.0
       },
-      "latency_ms": 84.75325000108569,
+      "latency_ms": 98.02029200363904,
       "top_score": 0.016394544110730366,
       "gold_chunk_ids": [
         "lisansustu_egitim_ogretim_yonetmeligi::76"
@@ -297,7 +298,7 @@
         "mrr": 0.3333333333333333,
         "ndcg@k": 0.5
       },
-      "latency_ms": 101.82262499802164,
+      "latency_ms": 119.01749999378808,
       "top_score": 0.016461184121392768,
       "gold_chunk_ids": [
         "kayit_yonergesi::10"
@@ -325,7 +326,7 @@
         "mrr": 1.0,
         "ndcg@k": 1.0
       },
-      "latency_ms": 104.23974999866914,
+      "latency_ms": 129.06529099564068,
       "top_score": 0.016461184121392768,
       "gold_chunk_ids": [
         "lisansustu_egitim_ogretim_yonetmeligi::54"
@@ -353,7 +354,7 @@
         "mrr": 0.5,
         "ndcg@k": 0.6309297535714575
       },
-      "latency_ms": 109.50958299872582,
+      "latency_ms": 146.24445801018737,
       "top_score": 0.01632680261228842,
       "gold_chunk_ids": [
         "lisansustu_egitim_ogretim_yonetmeligi::81"
@@ -381,7 +382,7 @@
         "mrr": 1.0,
         "ndcg@k": 1.0
       },
-      "latency_ms": 161.59716699985438,
+      "latency_ms": 191.38641702011228,
       "top_score": 0.016394544110730366,
       "gold_chunk_ids": [
         "lisans_egitim_ogretim_yonetmeligi::34"
@@ -409,7 +410,7 @@
         "mrr": 0.25,
         "ndcg@k": 0.43067655807339306
       },
-      "latency_ms": 125.26262499886798,
+      "latency_ms": 133.03924998035654,
       "top_score": 0.01619459742984527,
       "gold_chunk_ids": [
         "lisans_egitim_ogretim_yonetmeligi::12"
@@ -437,7 +438,7 @@
         "mrr": 0.5,
         "ndcg@k": 0.6309297535714575
       },
-      "latency_ms": 112.45050000070478,
+      "latency_ms": 133.84745799703524,
       "top_score": 0.016394544110730366,
       "gold_chunk_ids": [
         "lisansustu_egitim_ogretim_yonetmeligi::49"
@@ -465,7 +466,7 @@
         "mrr": 0.25,
         "ndcg@k": 0.43067655807339306
       },
-      "latency_ms": 114.35316699862597,
+      "latency_ms": 126.87249999726191,
       "top_score": 0.016461184121392768,
       "gold_chunk_ids": [
         "lisans_egitim_ogretim_yonetmeligi::10"
@@ -493,7 +494,7 @@
         "mrr": 1.0,
         "ndcg@k": 1.0
       },
-      "latency_ms": 174.66937499921187,
+      "latency_ms": 178.9852080109995,
       "top_score": 0.01652892561983471,
       "gold_chunk_ids": [
         "lisansustu_egitim_ogretim_yonetmeligi::77"
@@ -521,7 +522,7 @@
         "mrr": 0.0,
         "ndcg@k": 0.0
       },
-      "latency_ms": 143.8725420011906,
+      "latency_ms": 129.9830419884529,
       "top_score": 0.01619459742984527,
       "gold_chunk_ids": [
         "lisansustu_egitim_ogretim_yonetmeligi::86"
@@ -549,7 +550,7 @@
         "mrr": 1.0,
         "ndcg@k": 1.0
       },
-      "latency_ms": 153.2275829995342,
+      "latency_ms": 129.62629200774245,
       "top_score": 0.016009221311475412,
       "gold_chunk_ids": [
         "konut_tahsis_yonergesi::24"
@@ -577,7 +578,7 @@
         "mrr": 1.0,
         "ndcg@k": 1.0
       },
-      "latency_ms": 202.99774999875808,
+      "latency_ms": 211.34099998744205,
       "top_score": 0.01652892561983471,
       "gold_chunk_ids": [
         "lisansustu_egitim_ogretim_yonetmeligi::99"
@@ -605,7 +606,7 @@
         "mrr": 1.0,
         "ndcg@k": 1.0
       },
-      "latency_ms": 161.1390409998421,
+      "latency_ms": 154.6551249921322,
       "top_score": 0.016328978938949613,
       "gold_chunk_ids": [
         "lisans_egitim_ogretim_yonetmeligi::4"
@@ -633,7 +634,7 @@
         "mrr": 0.0,
         "ndcg@k": 0.0
       },
-      "latency_ms": 156.92629199838848,
+      "latency_ms": 146.4488329947926,
       "top_score": 0.008264462809917356,
       "gold_chunk_ids": [
         "lisans_egitim_ogretim_yonetmeligi::15"
@@ -661,7 +662,7 @@
         "mrr": 1.0,
         "ndcg@k": 1.0
       },
-      "latency_ms": 207.8875830011384,
+      "latency_ms": 187.47970898402855,
       "top_score": 0.01652892561983471,
       "gold_chunk_ids": [
         "pedagojik_formasyon::24"
@@ -689,7 +690,7 @@
         "mrr": 1.0,
         "ndcg@k": 1.0
       },
-      "latency_ms": 138.3187910032575,
+      "latency_ms": 144.071333023021,
       "top_score": 0.016461184121392768,
       "gold_chunk_ids": [
         "sertifika_programlari_yonergesi::4"
@@ -717,7 +718,7 @@
         "mrr": 1.0,
         "ndcg@k": 1.0
       },
-      "latency_ms": 157.82666700033587,
+      "latency_ms": 123.62983397906646,
       "top_score": 0.01652892561983471,
       "gold_chunk_ids": [
         "ogrenci_disiplin_yonetmeligi::18"
@@ -745,7 +746,7 @@
         "mrr": 0.3333333333333333,
         "ndcg@k": 0.5
       },
-      "latency_ms": 238.03208300159895,
+      "latency_ms": 183.83162500686012,
       "top_score": 0.01626123744050767,
       "gold_chunk_ids": [
         "kayit_yonergesi::7"
@@ -773,7 +774,7 @@
         "mrr": 0.5,
         "ndcg@k": 0.6309297535714575
       },
-      "latency_ms": 235.7943749993865,
+      "latency_ms": 212.4194160278421,
       "top_score": 0.01652892561983471,
       "gold_chunk_ids": [
         "kayit_yonergesi::15"
@@ -801,7 +802,7 @@
         "mrr": 1.0,
         "ndcg@k": 1.0
       },
-      "latency_ms": 154.77316699980292,
+      "latency_ms": 167.26145800203085,
       "top_score": 0.01632680261228842,
       "gold_chunk_ids": [
         "lisansustu_egitim_ogretim_yonetmeligi::79"
@@ -829,7 +830,7 @@
         "mrr": 0.5,
         "ndcg@k": 0.6309297535714575
       },
-      "latency_ms": 245.92033400040236,
+      "latency_ms": 271.51616700575687,
       "top_score": 0.01652892561983471,
       "gold_chunk_ids": [
         "konut_tahsis_yonergesi::10"
@@ -857,7 +858,7 @@
         "mrr": 0.2,
         "ndcg@k": 0.38685280723454163
       },
-      "latency_ms": 189.29062499955762,
+      "latency_ms": 167.64995799167082,
       "top_score": 0.01619459742984527,
       "gold_chunk_ids": [
         "lisansustu_egitim_ogretim_yonetmeligi::33"
@@ -885,7 +886,7 @@
         "mrr": 1.0,
         "ndcg@k": 1.0
       },
-      "latency_ms": 209.69229099864606,
+      "latency_ms": 222.737333009718,
       "top_score": 0.016328978938949613,
       "gold_chunk_ids": [
         "lisansustu_egitim_ogretim_yonetmeligi::66"
@@ -913,7 +914,7 @@
         "mrr": 1.0,
         "ndcg@k": 1.0
       },
-      "latency_ms": 174.59458300072583,
+      "latency_ms": 229.58250000374392,
       "top_score": 0.01652892561983471,
       "gold_chunk_ids": [
         "ogrenci_disiplin_yonetmeligi::39"
@@ -941,7 +942,7 @@
         "mrr": 0.0,
         "ndcg@k": 0.0
       },
-      "latency_ms": 87.63116599948262,
+      "latency_ms": 115.46212501707487,
       "top_score": 0.01549599138446811,
       "gold_chunk_ids": [
         "ogrenci_disiplin_yonetmeligi::38"
@@ -969,7 +970,7 @@
         "mrr": 1.0,
         "ndcg@k": 1.0
       },
-      "latency_ms": 98.50091699991026,
+      "latency_ms": 134.71225000103004,
       "top_score": 0.01652892561983471,
       "gold_chunk_ids": [
         "ogrenci_disiplin_yonetmeligi::24"
@@ -997,7 +998,7 @@
         "mrr": 0.0,
         "ndcg@k": 0.0
       },
-      "latency_ms": 141.6971670005296,
+      "latency_ms": 191.39333299244754,
       "top_score": 0.015889029003783105,
       "gold_chunk_ids": [
         "lisansustu_egitim_ogretim_yonetmeligi::16"
@@ -1025,7 +1026,7 @@
         "mrr": 0.5,
         "ndcg@k": 0.6309297535714575
       },
-      "latency_ms": 110.85070799890673,
+      "latency_ms": 190.24154197541066,
       "top_score": 0.016461184121392768,
       "gold_chunk_ids": [
         "pedagojik_formasyon::17"
@@ -1053,7 +1054,7 @@
         "mrr": 0.25,
         "ndcg@k": 0.43067655807339306
       },
-      "latency_ms": 104.86879200107069,
+      "latency_ms": 281.4383750082925,
       "top_score": 0.01619459742984527,
       "gold_chunk_ids": [
         "lisansustu_egitim_ogretim_yonetmeligi::68"
@@ -1081,7 +1082,7 @@
         "mrr": 1.0,
         "ndcg@k": 1.0
       },
-      "latency_ms": 100.3353749983944,
+      "latency_ms": 220.32237498206086,
       "top_score": 0.016394544110730366,
       "gold_chunk_ids": [
         "lisansustu_egitim_ogretim_yonetmeligi::101"
@@ -1109,7 +1110,7 @@
         "mrr": 1.0,
         "ndcg@k": 1.0
       },
-      "latency_ms": 104.21608400065452,
+      "latency_ms": 206.2149590055924,
       "top_score": 0.01652892561983471,
       "gold_chunk_ids": [
         "lisans_egitim_ogretim_yonetmeligi::23"
@@ -1137,7 +1138,7 @@
         "mrr": 0.0,
         "ndcg@k": 0.0
       },
-      "latency_ms": 111.64054199980455,
+      "latency_ms": 181.42879198421724,
       "top_score": 0.016328978938949613,
       "gold_chunk_ids": [
         "ogrenci_disiplin_yonetmeligi::28"
@@ -1165,7 +1166,7 @@
         "mrr": 1.0,
         "ndcg@k": 1.0
       },
-      "latency_ms": 112.00366699995357,
+      "latency_ms": 153.7292920111213,
       "top_score": 0.016328978938949613,
       "gold_chunk_ids": [
         "lisansustu_egitim_ogretim_yonetmeligi::80"
@@ -1193,7 +1194,7 @@
         "mrr": 1.0,
         "ndcg@k": 1.0
       },
-      "latency_ms": 166.73474999697646,
+      "latency_ms": 185.67533401073888,
       "top_score": 0.01652892561983471,
       "gold_chunk_ids": [
         "kayit_yonergesi::11"
@@ -1221,7 +1222,7 @@
         "mrr": 0.0,
         "ndcg@k": 0.0
       },
-      "latency_ms": 162.85200000129407,
+      "latency_ms": 161.95299997343682,
       "top_score": 0.01594258130081301,
       "gold_chunk_ids": [
         "pedagojik_formasyon::1"
@@ -1249,7 +1250,7 @@
         "mrr": 0.3333333333333333,
         "ndcg@k": 0.5
       },
-      "latency_ms": 115.79833400173811,
+      "latency_ms": 113.94491701503284,
       "top_score": 0.01613847855794885,
       "gold_chunk_ids": [
         "burs_yonergesi::13"
@@ -1277,7 +1278,7 @@
         "mrr": 1.0,
         "ndcg@k": 1.0
       },
-      "latency_ms": 113.7353330013866,
+      "latency_ms": 100.20841599907726,
       "top_score": 0.01652892561983471,
       "gold_chunk_ids": [
         "lisans_egitim_ogretim_yonetmeligi::44"
@@ -1305,7 +1306,7 @@
         "mrr": 0.25,
         "ndcg@k": 0.43067655807339306
       },
-      "latency_ms": 80.11316599731799,
+      "latency_ms": 141.93266700021923,
       "top_score": 0.015471923536439666,
       "gold_chunk_ids": [
         "konut_tahsis_yonergesi::19"
@@ -1333,7 +1334,7 @@
         "mrr": 0.5,
         "ndcg@k": 0.6309297535714575
       },
-      "latency_ms": 70.22924999910174,
+      "latency_ms": 258.16908400156535,
       "top_score": 0.016461184121392768,
       "gold_chunk_ids": [
         "lisans_egitim_ogretim_yonetmeligi::60"
@@ -1361,7 +1362,7 @@
         "mrr": 0.5,
         "ndcg@k": 0.6309297535714575
       },
-      "latency_ms": 91.23579200240783,
+      "latency_ms": 372.01824999647215,
       "top_score": 0.016461184121392768,
       "gold_chunk_ids": [
         "konut_tahsis_yonergesi::14"
@@ -1389,7 +1390,7 @@
         "mrr": 0.25,
         "ndcg@k": 0.43067655807339306
       },
-      "latency_ms": 103.41479199996684,
+      "latency_ms": 276.9382080005016,
       "top_score": 0.014389233954451346,
       "gold_chunk_ids": [
         "ogrenci_disiplin_yonetmeligi::23"
@@ -1417,7 +1418,7 @@
         "mrr": 1.0,
         "ndcg@k": 1.0
       },
-      "latency_ms": 104.13941699880525,
+      "latency_ms": 386.3495419791434,
       "top_score": 0.01652892561983471,
       "gold_chunk_ids": [
         "pedagojik_formasyon::23"
@@ -1445,7 +1446,7 @@
         "mrr": 1.0,
         "ndcg@k": 1.0
       },
-      "latency_ms": 140.94049999766867,
+      "latency_ms": 166.1857920116745,
       "top_score": 0.01652892561983471,
       "gold_chunk_ids": [
         "sertifika_programlari_yonergesi::8"
@@ -1473,7 +1474,7 @@
         "mrr": 0.0,
         "ndcg@k": 0.0
       },
-      "latency_ms": 110.9645830001682,
+      "latency_ms": 217.00575001887046,
       "top_score": 0.015503875968992248,
       "gold_chunk_ids": [
         "pedagojik_formasyon::13"
@@ -1501,7 +1502,7 @@
         "mrr": 0.5,
         "ndcg@k": 0.6309297535714575
       },
-      "latency_ms": 105.14433300340897,
+      "latency_ms": 447.03845799085684,
       "top_score": 0.016461184121392768,
       "gold_chunk_ids": [
         "lisans_egitim_ogretim_yonetmeligi::51"
@@ -1529,7 +1530,7 @@
         "mrr": 1.0,
         "ndcg@k": 1.0
       },
-      "latency_ms": 104.5144169984269,
+      "latency_ms": 322.8891249746084,
       "top_score": 0.016328978938949613,
       "gold_chunk_ids": [
         "ogrenci_disiplin_yonetmeligi::33"
@@ -1557,7 +1558,7 @@
         "mrr": 0.3333333333333333,
         "ndcg@k": 0.5
       },
-      "latency_ms": 109.11820799810812,
+      "latency_ms": 181.7060000030324,
       "top_score": 0.016328978938949613,
       "gold_chunk_ids": [
         "kayit_yonergesi::28"
@@ -1585,7 +1586,7 @@
         "mrr": 0.3333333333333333,
         "ndcg@k": 0.5
       },
-      "latency_ms": 107.80870799862896,
+      "latency_ms": 246.89424998359755,
       "top_score": 0.015458707414233903,
       "gold_chunk_ids": [
         "lisansustu_egitim_ogretim_yonetmeligi::97"
@@ -1613,7 +1614,7 @@
         "mrr": 0.3333333333333333,
         "ndcg@k": 0.5
       },
-      "latency_ms": 106.46600000109174,
+      "latency_ms": 181.62404198665172,
       "top_score": 0.016461184121392768,
       "gold_chunk_ids": [
         "lisans_egitim_ogretim_yonetmeligi::30"
@@ -1641,7 +1642,7 @@
         "mrr": 0.25,
         "ndcg@k": 0.43067655807339306
       },
-      "latency_ms": 107.07637499945122,
+      "latency_ms": 210.29808398452587,
       "top_score": 0.01619459742984527,
       "gold_chunk_ids": [
         "lisansustu_egitim_ogretim_yonetmeligi::13"
@@ -1669,7 +1670,7 @@
         "mrr": 0.0,
         "ndcg@k": 0.0
       },
-      "latency_ms": 112.11099999854923,
+      "latency_ms": 156.04799997527152,
       "top_score": 0.016328978938949613,
       "gold_chunk_ids": [
         "lisansustu_egitim_ogretim_yonetmeligi::22"
@@ -1697,7 +1698,7 @@
         "mrr": 0.0,
         "ndcg@k": 0.0
       },
-      "latency_ms": 117.9056250002759,
+      "latency_ms": 142.78083402314223,
       "top_score": 0.016196721311475412,
       "gold_chunk_ids": [
         "lisansustu_egitim_ogretim_yonetmeligi::46"
@@ -1725,7 +1726,7 @@
         "mrr": 1.0,
         "ndcg@k": 1.0
       },
-      "latency_ms": 198.52837500002352,
+      "latency_ms": 225.81933299079537,
       "top_score": 0.01652892561983471,
       "gold_chunk_ids": [
         "burs_yonergesi::10"
@@ -1753,7 +1754,7 @@
         "mrr": 1.0,
         "ndcg@k": 1.0
       },
-      "latency_ms": 161.0462919998099,
+      "latency_ms": 165.6877500063274,
       "top_score": 0.01652892561983471,
       "gold_chunk_ids": [
         "lisans_egitim_ogretim_yonetmeligi::52"
