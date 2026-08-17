@@ -447,11 +447,21 @@ class HybridStore:
         ]
 
     def stats(self) -> dict[str, Any]:
+        # `self.embedding_dim` is only populated once vectors are written or a
+        # dense search runs, so on a freshly opened index it is still None and
+        # the dashboard showed an em dash where 1024 belongs. The value is in
+        # the metadata table either way; read it there rather than reporting a
+        # blank for an index that plainly has vectors in it.
+        dim = self.embedding_dim
+        if dim is None:
+            stored = self.get_meta("embedding_dim")
+            dim = int(stored) if stored is not None else None
+
         return {
             "path": str(self.path),
             "n_documents": self.count_documents(),
             "n_chunks": self.count_chunks(),
-            "embedding_dim": self.embedding_dim,
+            "embedding_dim": dim,
             "size_mb": round(self.path.stat().st_size / 1_048_576, 2)
             if self.path.exists() else 0.0,
             "index_fingerprint": self.get_meta("index_fingerprint"),
