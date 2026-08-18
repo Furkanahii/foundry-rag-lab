@@ -34,3 +34,6 @@ data/eval/*.bak.json
 .vscode/
 .idea/
 *.swp
+
+# Office geçici kilit dosyaları (belge açıkken oluşur)
+~$*
