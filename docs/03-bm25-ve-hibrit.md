@@ -32,22 +32,39 @@ oranından türetilmiştir.
 
 ### Ölçtüğümüz IDF çöküşü
 
-Korpusumuzda:
+**Önce bir düzeltme.** Bu bölümün ilk hali şöyle diyordu: "`MADDE` 9 dokümanın
+9'unda da var, dolayısıyla $n_t = N$ ve IDF sıfır veya negatif." İki hata
+vardı ve ikisi de sunum öncesi kontrolde yakalandı:
 
-```
-'MADDE' → 9 dokümanın 9'unda da var, toplam 195 kez
-```
+1. `MADDE` dokuz belgenin **sekizinde** geçiyor. Dokuzuncu belge (pedagojik
+   formasyon programı) İngilizce ve bu terimi içermiyor.
+2. Daha önemlisi: **BM25 indeksi belgeler üzerinde değil, chunk'lar üzerinde
+   kurulu.** `index/store.py` FTS5 tablosunu chunk başına bir satır olacak
+   şekilde dolduruyor. Dolayısıyla IDF hesabında $N = 347$ (chunk sayısı),
+   $n_t$ = terimi içeren chunk sayısıdır. Belge seviyesinde yapılan bir hesap
+   indeksin gerçekte ne yaptığını tarif etmiyordu.
 
-$n_t = N$ olduğunda:
+Doğru ölçüm, 347 chunk üzerinde:
 
-$$ \text{IDF} = \log \frac{N - N + 0.5}{N + 0.5} = \log \frac{0.5}{9.5} < 0 $$
+| terim | $n_t$ | $\log(N/n_t)$ |
+|---|---|---|
+| öğrenci | 245 | **0,348** |
+| madde | 179 | 0,662 |
+| kayıt | 121 | 1,054 |
+| tez | 41 | 2,136 |
+| disiplin | 40 | 2,160 |
+| burs | 24 | **2,671** |
 
-Yani `MADDE` terimi skorlamaya **sıfır veya negatif** katkı yapar. "MADDE 14"
-sorgusunda BM25'in elinde neredeyse hiç bilgi yoktur — ve gerçekten de bu sorgu
-her iki kolda da başarısız oldu.
+IDF sıfıra düşmüyor, ama asıl mesele oran: yönetmelik kalıp sözcükleri
+(`öğrenci`, `madde`) konu sözcüklerinin (`burs`, `disiplin`, `tez`) **dörtte
+biri ile sekizde biri kadar** ağırlık taşıyor. Sorgu ağırlıklı olarak kalıp
+sözcüklerden oluşuyorsa — ki bir öğrencinin doğal sorusu genelde öyledir —
+BM25'in elindeki ayırt edici bilgi çok azalıyor.
 
 Bu, sunumda anlatılacak temiz bir örnek: **BM25'in gücü nadir terimlerdedir;
-sorgu yaygın terimlerden oluşuyorsa çöker.**
+sorgu yaygın terimlerden oluşuyorsa zayıflar.** Ve düzeltmenin kendisi de bir
+ders: bir metriği hangi birim üzerinde hesapladığını bilmek, formülü doğru
+yazmak kadar önemli.
 
 ---
 

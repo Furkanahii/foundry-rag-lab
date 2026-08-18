@@ -30,6 +30,7 @@ PYTHONPATH=src ./.venv/bin/python scripts/build_index.py --force
 | script | ne yapar |
 |---|---|
 | `build_index.py` | Korpustan hibrit indeksi kurar (dense + BM25) |
+| `corpus_stats.py` | Korpus istatistikleri ve IDF'i chunk seviyesinde ölçer |
 | `build_eval_set.py` | Değerlendirme setini korpustan üretir |
 | `run_benchmark.py` | 11 konfigürasyonu iki kelime varyantında karşılaştırır |
 | `calibrate_abstention.py` | Çekimserlik sinyalini ve eşiğini veriden türetir |
@@ -52,7 +53,7 @@ Gerçek bir Türkçe yönetmelik korpusunda ölçtüğümüz sorunlar:
 |---|---|---|
 | Kısa metinlerde gömme geometrisi bozuluyor | alakasız kısa cümleler 0.62 kosinüs | `min_chunk_chars` alt sınırı |
 | Tam eşleşme gereken sorgular (ders kodu) | dense marj 0.368 vs 0.304 | BM25 kolu + ağırlıklı füzyon |
-| `MADDE` 9 dokümanın hepsinde, 195 kez | IDF = log(N/df) = 0 | BM25 tek başına yetersiz, hibrit şart |
+| Yönetmelik kalıp sözcükleri ayırt etmiyor | `öğrenci` IDF 0.35, `burs` IDF 2.67 (347 chunk üzerinde) | BM25 tek başına yetersiz, hibrit şart |
 | Türkçe `lower()` bozuk | `IŞIK → işik` | dile özgü normalizasyon |
 | Çekim ekleri eşleşmiyor | `kayıtların` vs `kayıt` | Türkçe gövdeleme |
 | PDF kelimeleri kırıyor | 21 gerçek kopukluk | sözlük kanıtlı onarım |
@@ -189,7 +190,11 @@ Boğaziçi Üniversitesi'nin kamuya açık yönetmelik ve yönergeleri
 (`bogazici.edu.tr`): kayıt, burs, özel öğrenci, disiplin, konut tahsis,
 sertifika programları, lisans ve lisansüstü eğitim-öğretim yönetmelikleri.
 
-9 doküman · 214.982 karakter · 347 chunk · 4.63 MB indeks
+9 doküman · 214.961 karakter · 347 chunk · 4.63 MB indeks
+
+Sekiz belge Türkçe, biri (pedagojik formasyon programı) İngilizce. Dil algılama
+bunu doğru tespit ediyor ve sistem sorunun diline göre cevap veriyor, ama
+İngilizce bir değerlendirme seti kurulmadığı için dil karşılaştırması yapılamıyor.
 
 ---
 
@@ -374,7 +379,8 @@ füzyon `rrf` → `weighted` (alpha=0.5), çekimserlik sinyali ham BM25, eşik 6
   benzerlik gösteriyor (`scripts/check_paraphrase_fidelity.py`), yani ölçülen
   kelime farkı gerçek sözlüksel avantajın bir **üst** sınırı.
 - Küçük etkiler için güç yetersiz: n=60, d=0.2'yi görmek için 197 gerekiyor.
-- Korpus tek kurum, tek dil. İngilizce kontrol seti yok.
+- Korpus tek kurumdan. Dokuz belgeden biri İngilizce ama İngilizce bir
+  değerlendirme seti yok, dolayısıyla dile göre karşılaştırma yapılamıyor.
 - Gövdeleme morfolojik analizci değil; çekim eklerinde çalışıyor, türetim
   eklerinde çalışmıyor ("dondurulması" ile "dondurma" hâlâ eşleşmiyor).
 - Çekimserlik eşiği 52 negatif üzerinde kalibre edildi ve cevaplanamaz

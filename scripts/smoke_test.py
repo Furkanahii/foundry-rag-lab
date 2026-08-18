@@ -29,6 +29,21 @@ def section(title: str) -> None:
 
 
 def main() -> int:
+    # This is the first command the README tells a new user to run, and until
+    # it took arguments, `--help` began downloading multi-gigabyte models
+    # instead of printing a usage line. Parsing first costs nothing and makes
+    # the expensive behaviour opt-in rather than accidental.
+    import argparse
+
+    parser = argparse.ArgumentParser(
+        description="Ortamı ve modelleri doğrular. Cache'de olmayan modelleri "
+                    "indirir, bu yüzden ilk çalıştırma uzun sürebilir."
+    )
+    parser.add_argument("--skip-download", action="store_true",
+                        help="katalogda olmayan modelleri indirmeyi atla, "
+                            "sadece ortamı ve SDK'yı kontrol et")
+    args = parser.parse_args()
+
     section("1. Environment")
     print(f"python : {platform.python_version()} ({platform.machine()})")
     print(f"system : {platform.system()} {platform.release()}")
@@ -82,6 +97,9 @@ def main() -> int:
         return 1
     print(f"  id={emb_model.id}  cached={emb_model.is_cached}")
     if not emb_model.is_cached:
+        if args.skip_download:
+            print("  SKIP: model cache'de değil ve --skip-download verildi.")
+            return 0
         emb_model.download(lambda p: print(f"\r  downloading {p:5.1f}%", end="", flush=True))
         print()
     t0 = time.perf_counter()
@@ -117,6 +135,9 @@ def main() -> int:
         return 1
     print(f"  id={chat_model.id}  cached={chat_model.is_cached}")
     if not chat_model.is_cached:
+        if args.skip_download:
+            print("  SKIP: model cache'de değil ve --skip-download verildi.")
+            return 0
         chat_model.download(lambda p: print(f"\r  downloading {p:5.1f}%", end="", flush=True))
         print()
     t0 = time.perf_counter()

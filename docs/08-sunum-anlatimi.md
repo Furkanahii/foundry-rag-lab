@@ -101,9 +101,10 @@ Sonra üç teknik bulguyu hızlıca, her birini tek cümleyle geç:
   indeks bu yüzden dile özgü normalizasyon istiyor.
 - **Çekim ekleri eşleşmiyor.** "kayıtların" ile "kayıt" BM25 için iki ayrı
   kelime. Türkçe eklemeli bir dil; bir kök arka arkaya beş ek taşıyabiliyor.
-- **`MADDE` kelimesi dokuz belgenin hepsinde, 195 kez geçiyor.** BM25'in IDF
-  terimi `log(N/df)`, burada `N = df = 9`, yani IDF sıfır. Yönetmelik metninin
-  en karakteristik kelimesi sıfır bilgi taşıyor.
+- **Yönetmelik kalıp sözcükleri ayırt edici değil.** BM25 indeksi 347 chunk
+  üzerinde kurulu. `öğrenci` 245 chunk'ta geçiyor (IDF 0,35), `burs` ise 24
+  chunk'ta (IDF 2,67). Kalıp sözcükler konu sözcüklerinin dörtte biri kadar
+  ağırlık taşıyor, yani sorgu kalıp sözcüklerden oluşuyorsa BM25 zayıflıyor.
 
 > "Bu üçü birlikte şunu söylüyor: tek başına sözlüksel arama Türkçe'de
 > yetmiyor. Ama sadece anlamsal arama da yetmiyor — çünkü biri 'CMPE 150' diye
@@ -326,7 +327,8 @@ birinin bulmasından çok daha iyi.
 > sınırlarını ilişkilendiriyor. Parafraz katmanı bunu hafifletiyor ama
 > çözmüyor; gerçek çözüm insan yazımı bir set.
 >
-> **Korpus tek kurumdan, tek dilde.** Bulgularımın hepsi Türkçe yönetmelik
+> **Korpus tek kurumdan.** Dokuz belgeden biri İngilizce, ama İngilizce bir
+> değerlendirme seti kurmadım. Bulgularımın hepsi Türkçe yönetmelik
 > metnine özgü olabilir. İngilizce bir kontrol seti bunu test ederdi.
 >
 > **Gövdeleme gerçek bir morfolojik analizci değil**, sezgisel bir ek soyucu.
